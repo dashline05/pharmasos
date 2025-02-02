@@ -2,25 +2,25 @@
 // Header & Navigation UI displayed on each page.
 
 import LocaleSelect from "@/components/i18n/LocaleSelect.astro";
-import { Image } from "astro:assets";
 import { useTranslations, type Lang } from "@/i18n";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import Logo from "./Logo.astro";
+
 const t = useTranslations(Astro.currentLocale as Lang);
-
-import PharmaLogo from "@/assets/pharma logo.png"; // Updated import name
-
 const locale = Astro.currentLocale as Lang;
 
 const isActive = (path: string) =>
   getRelativeLocaleUrl(locale, path) === Astro.url.pathname;
 ---
 
-<header class="l-header">
-  <h1 dir="ltr">
-    <a href={getRelativeLocaleUrl(locale, "/")}>
-      <Image src={PharmaLogo} alt="Pharma Logo" width="300" height="120" /> <!-- Increased size -->
-    </a>
-  </h1>
+<header class="header">
+  <div class="header-content">
+    <h1>
+      <a href={getRelativeLocaleUrl(locale, "/")} class="logo-link">
+        <Logo size="large" />
+      </a>
+    </h1>
+  </div>
 
   <LocaleSelect />
 
@@ -141,6 +141,41 @@ const isActive = (path: string) =>
         margin-inline-start: -0.2em;
         font-size: 0.9em;
       }
+    }
+  }
+
+  .header {
+    padding: 1rem;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .logo-link:hover {
+    transform: scale(1.05);
+  }
+
+  .logo {
+    max-width: 300px;
+    height: auto;
+  }
+
+  @media (max-width: 640px) {
+    .logo {
+      max-width: 200px;
     }
   }
 </style>
