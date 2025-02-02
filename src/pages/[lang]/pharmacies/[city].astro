@@ -106,7 +106,7 @@ const translations = {
 
             <div class="info-row phone">
               <span class="icon">📞</span>
-              <span>{pharmacy.phone}</span>
+              <span dir="ltr" class="phone-number">{pharmacy.phone}</span>
             </div>
           </div>
 
@@ -219,9 +219,17 @@ const translations = {
     text-align: center;
   }
 
+  .phone-number {
+    unicode-bidi: embed;
+    direction: ltr;
+    display: inline-block;
+  }
+
   .phone {
     color: #22C55E;
     font-weight: 500;
+    display: flex;
+    align-items: center;
   }
 
   .card-footer {
