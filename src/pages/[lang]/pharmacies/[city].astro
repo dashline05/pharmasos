@@ -262,6 +262,27 @@ const translations = {
     color: white;
   }
 
+  /* Add media query for mobile screens */
+  @media (max-width: 640px) {
+    .nav-buttons {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .nav-button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-button:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-footer {
+      padding: 1.25rem 1rem;
+    }
+  }
+
   /* RTL support for Arabic */
   [dir="rtl"] .pharmacy-page {
     direction: rtl;
