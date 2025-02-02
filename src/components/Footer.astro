@@ -1,121 +1,83 @@
 ---
 // src/components/Footer.astro
-import LocalesHomeList from "./i18n/LocalesHomeList.astro";
 import { useTranslations, type Lang } from "@/i18n";
 const t = useTranslations(Astro.currentLocale as Lang);
 ---
 
-<footer class="l-footer l-content">
-  <div class="language-message">
-    {
-      t({
-        fr: "Changer la langue ici",
-        en: "Change language from here",
-        ar: "غير اللغة من هنا",
-      })
-    }
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href={`/${Astro.currentLocale}/about`}>{t({ fr: "À propos", en: "About", ar: "من نحن" })}</a>
+      <span class="separator">•</span>
+      <a href={`/${Astro.currentLocale}/contact-us`}>{t({ fr: "Nous contacter", en: "Contact Us", ar: "اتصل بنا" })}</a>
+      <span class="separator">•</span>
+      <a href={`/${Astro.currentLocale}/privacy-policy`}>{t({ fr: "Politique de confidentialité", en: "Privacy Policy", ar: "سياسة الخصوصية" })}</a>
+    </div>
+    
+    <div class="copyright">
+      © {new Date().getFullYear()} PharmaSOS. {t({
+        fr: "Tous droits réservés",
+        en: "All rights reserved",
+        ar: "جميع الحقوق محفوظة"
+      })}
+    </div>
   </div>
-
-  <ul>
-    <LocalesHomeList />
-  </ul>
-
-  <!-- Add links to About, Contact Us, and Privacy Policy pages -->
-  <div class="footer-links">
-    <a href={`/${Astro.currentLocale}/about`}>{t({ fr: "À propos", en: "About", ar: "من نحن" })}</a>
-    <span class="separator">|</span>
-    <a href={`/${Astro.currentLocale}/contact-us`}>{t({ fr: "Nous contacter", en: "Contact Us", ar: "اتصل بنا" })}</a>
-    <span class="separator">|</span>
-    <a href={`/${Astro.currentLocale}/privacy-policy`}>{t({ fr: "Politique de confidentialité", en: "Privacy Policy", ar: "سياسة الخصوصية" })}</a>
-  </div>
-
-  <a class="copy" href="http://localhost:4321/" target="_blank" dir="ltr">
-    © RAKED {new Date().getFullYear()}.
-  </a>
 </footer>
 
 <style>
-  /* Your existing styles */
-</style>
+  .footer {
+    padding: 2rem 1rem;
+    background: #000;
+    margin-top: 4rem;
+  }
 
-<style>
-  footer {
-    padding-block: var(--sp-m) var(--sp-l);
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    background-color: var(--color-theme);
-    color: var(--color-base);
-    border-radius: 16px;
-    margin-block-end: -16px;
-  }
-
-  .language-message {
-    display: inline-block;
-    margin-block-start: calc(var(--sp-m) * -1 - 24px);
-    margin-inline: auto;
-    padding: 12px 24px;
-    background: var(--color-main);
-    color: var(--color-base);
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 0.01em;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease;
-  }
-
-  .language-message:hover {
-    background: color-mix(in srgb, var(--color-main) 90%, transparent);
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-block-start: var(--sp-m);
-    gap: var(--sp-s);
-    a {
-      display: block;
-      padding-inline: 0.5em;
-      background: color-mix(in srgb, var(--color-main) 30%, transparent);
-      border-radius: 0.5em;
-    }
-    a::before {
-      content: "translate";
-      font-family: "Material Icons Sharp";
-      vertical-align: middle;
-      margin-inline-end: 0.2em;
-      opacity: 0.5;
-    }
   }
 
   .footer-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--sp-s);
-    margin-block-start: var(--sp-m);
-    margin-block-end: var(--sp-s);
-    a {
-      color: var(--color-base);
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
-    }
-    a:hover {
-      opacity: 0.8;
-    }
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #F3F4F6;
   }
 
   .separator {
-    color: var(--color-base);
-    opacity: 0.6;
-    margin-inline: var(--sp-xs);
+    color: #4B5563;
+    font-size: 0.8rem;
   }
 
-  .copy {
-    display: block;
-    margin-block-start: var(--sp-m);
-    opacity: 0.8;
-    letter-spacing: 0.05em;
+  .copyright {
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    .footer {
+      padding: 1.5rem 1rem;
+    }
+
+    .footer-links {
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+    }
   }
 </style>

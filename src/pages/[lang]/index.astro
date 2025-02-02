@@ -34,9 +34,9 @@ const translations = {
     ar: "الرئيسية"
   },
   welcome: {
-    fr: "Bienvenue sur PharmaGarde",
-    en: "Welcome to PharmaGarde",
-    ar: "مرحباً بكم في فارماغارد"
+    fr: "Pharmacies de Garde",
+    en: "On-Duty Pharmacies",
+    ar: "صيدليات الحراسة"
   },
   pharmacies: {
     fr: "pharmacies",
@@ -45,7 +45,7 @@ const translations = {
   },
   open24h: {
     fr: "ouvertes 24h/24",
-    en: "open 24/7",
+    en: "open 24h/24",
     ar: "مفتوحة 24/24"
   },
   lastUpdate: {
@@ -105,164 +105,247 @@ function getCitySlug(city: CityInfo) {
   <main class="main">
     <div class="header">
       <h1>{translations.welcome[currentLang]}</h1>
-    </div>
-
-    <div class="content">
-      <div class="cities-list">
-        {cityList.map((city) => {
-          const citySlug = getCitySlug(city);
-          return citySlug && (
-            <a href={`/${currentLang}/pharmacies/${citySlug}`} class="city-item">
-              <div class="city-left">
-                <svg class="pharmacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"></path>
-                  <path d="M12 8v8"></path>
-                  <path d="M8 12h8"></path>
-                </svg>
-                <span class="city-name">{city.name[currentLang]}</span>
-              </div>
-              <div class="city-data">
-                <span class="pharmacy-count">
-                  {city.count} {translations.pharmacies[currentLang]}
-                </span>
-                {city.open24h > 0 && (
-                  <span class="open-24h">
-                    {city.open24h} {translations.open24h[currentLang]}
-                  </span>
-                )}
-              </div>
-            </a>
-          );
-        })}
+      <div class="header-description">
+        {currentLang === 'fr' && (
+          <>
+            <h2>Vous cherchez une pharmacie de garde ?</h2>
+            <p>Que ce soit pour des médicaments essentiels en pleine nuit, tôt le matin ou en cas d'urgence, Pharma SOS est votre partenaire fiable. Localisez la pharmacie la plus proche en quelques clics et obtenez l'aide dont vous avez besoin, quand vous en avez besoin.</p>
+          </>
+        )}
+        {currentLang === 'ar' && (
+          <>
+            <h2>هل تبحث عن صيدلية حراسة مفتوحة ؟</h2>
+            <p>سواء كنت بحاجة إلى أدوية أساسية في منتصف الليل، أو في الصباح الباكر، أو في حالة الطوارئ، فإن Pharma SOS هو شريكك الموثوق. حدد موقع الصيدلية الأقرب إليك ببضع نقرات واحصل على المساعدة التي تحتاجها، عندما تحتاجها.</p>
+          </>
+        )}
+        {currentLang === 'en' && (
+          <>
+            <h2>Are you looking for an on-duty pharmacy?</h2>
+            <p>Whether it's for essential medications in the middle of the night, early in the morning, or in case of an emergency, Pharma SOS is your reliable partner. Locate the nearest pharmacy in just a few clicks and get the help you need, when you need it.</p>
+          </>
+        )}
       </div>
-
-      <footer class="footer">
-        <small>{translations.lastUpdate[currentLang]}: {lastUpdated}</small>
-      </footer>
     </div>
+
+    <div class="cities-grid">
+      {cityList.map((city) => {
+        const citySlug = getCitySlug(city);
+        return citySlug && (
+          <a href={`/${currentLang}/pharmacies/${citySlug}`} class="city-card">
+            <div class="card-header">
+              <h2 class="city-name">{city.name[currentLang]}</h2>
+              <div class="pill">
+                <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 21s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 7.2c0 7.3-8 11.8-8 11.8z"/>
+                  <circle cx="12" cy="9" r="3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <span class="stat-number">{city.count}</span>
+                <span class="stat-label">{translations.pharmacies[currentLang]}</span>
+              </div>
+            </div>
+            <div class="card-overlay"></div>
+          </a>
+        );
+      })}
+    </div>
+
+    <footer class="footer">
+      <small>{translations.lastUpdate[currentLang]}: {lastUpdated}</small>
+    </footer>
   </main>
 </Layout>
 
 <style>
-  :root {
-    --color-green: #10b981;
-    --color-green-dark: #059669;
-    --color-black: #111827;
-    --color-gray: #374151;
-    --color-light: #f9fafb;
-  }
-
   .main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem;
   }
 
   .header {
     text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
+    margin-bottom: 4rem;
   }
 
   .header h1 {
-    font-size: 2.25rem;
-    color: var(--color-black);
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
     position: relative;
     display: inline-block;
+    padding: 0 1rem;
   }
 
   .header h1::after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
     height: 4px;
-    background: var(--color-green);
+    background: linear-gradient(90deg, transparent, #4CAF48, transparent);
     border-radius: 2px;
   }
 
-  .content {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border: 1px solid #e5e7eb;
-    overflow: hidden;
+  .header-description {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
   }
 
-  .cities-list {
+  .header-description h2,
+  .header-description p {
+    text-align: center;
+  }
+
+  .header-description h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+
+  .header-description p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #6b7280;
+  }
+
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .city-card {
+    background: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 20px;
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .city-item {
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(130deg, #4CAF48, #45a049);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    border-radius: 20px;
+  }
+
+  .city-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.12);
+  }
+
+  .city-card:hover .card-overlay {
+    opacity: 0.05;
+  }
+
+  .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 1.5rem;
-    text-decoration: none;
-    color: var(--color-black);
-    border-bottom: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
-  }
-
-  .city-item:last-child {
-    border-bottom: none;
-  }
-
-  .city-item:hover {
-    background-color: #f8faf8;
-    transform: translateX(4px);
-  }
-
-  .city-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .pharmacy-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke: var(--color-green);
+    position: relative;
+    z-index: 2;
   }
 
   .city-name {
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f9fafb;
+    margin: 0;
+    background: linear-gradient(90deg, #f9fafb, #e5e7eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .city-data {
+  .pill {
     display: flex;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    color: var(--color-gray);
+    align-items: center;
+    justify-content: center;
+    background: #374151;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
   }
 
-  .pharmacy-count {
-    padding: 0.25rem 0.75rem;
-    background: #f0fdf4;
-    border-radius: 999px;
-    color: var(--color-green-dark);
-    font-weight: 500;
+  .city-card:hover .pill {
+    background: #4CAF48;
   }
 
-  .open-24h {
-    padding: 0.25rem 0.75rem;
-    background: #dcfce7;
-    border-radius: 999px;
-    color: var(--color-green-dark);
+  .location-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: #9ca3af;
+    transition: stroke 0.3s ease;
+  }
+
+  .city-card:hover .location-icon {
+    stroke: white;
+  }
+
+  .card-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.75rem;
+    background: #2d3748;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .city-card:hover .stat {
+    background: #f0f9f0;
+  }
+
+  .stat-number {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #4CAF48;
+    text-shadow: 0 2px 4px rgba(76, 175, 72, 0.1);
+  }
+
+  .stat-label {
+    margin-top: 0.75rem;
+    font-size: 0.925rem;
+    color: #9ca3af;
+    text-align: center;
     font-weight: 500;
+    letter-spacing: 0.025em;
   }
 
   .footer {
     text-align: center;
-    padding: 1rem;
-    color: var(--color-gray);
+    margin-top: 4rem;
+    padding: 2rem 0;
+    color: #6b7280;
     border-top: 1px solid #e5e7eb;
-    background: #f9fafb;
   }
 
   @media (max-width: 640px) {
@@ -271,80 +354,80 @@ function getCitySlug(city: CityInfo) {
     }
 
     .header h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
 
-    .city-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 1rem;
+    .cities-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
 
-    .city-data {
-      flex-direction: column;
-      gap: 0.5rem;
-      width: 100%;
+    .header-description {
+      margin-top: 2rem;
     }
 
-    .pharmacy-count, .open-24h {
-      display: inline-block;
-    }
-  }
-
-  [dir="rtl"] {
-    .city-item {
-      flex-direction: row-reverse;
+    .header-description h2 {
+      font-size: 1.25rem;
     }
 
-    .city-item:hover {
-      transform: translateX(-4px);
-    }
-
-    .city-left {
-      flex-direction: row-reverse;
-    }
-
-    .city-data {
-      flex-direction: row-reverse;
+    .header-description p {
+      font-size: 1rem;
     }
   }
 
   @media (prefers-color-scheme: dark) {
-    :root {
-      --color-green: #059669;
-      --color-green-dark: #10b981;
-      --color-black: #f9fafb;
-      --color-gray: #9ca3af;
-      --color-light: #1f2937;
+    .header h1 {
+      color: #f9fafb;
     }
 
-    .content {
-      background: #111827;
-      border-color: #374151;
+    .header h1::after {
+      background: linear-gradient(90deg, transparent, #4CAF48, transparent);
     }
 
-    .city-item {
-      border-bottom-color: #374151;
+    .city-card {
+      background: #1F2937;
     }
 
-    .city-item:hover {
-      background-color: #1f2937;
+    .city-name {
+      background: linear-gradient(90deg, #f9fafb, #e5e7eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .pharmacy-count {
-      background: #064e3b;
-      color: #ecfdf5;
+    .pill {
+      background: #374151;
     }
 
-    .open-24h {
-      background: #065f46;
-      color: #ecfdf5;
+    .location-icon {
+      stroke: #9ca3af;
     }
 
-    .footer {
-      border-top-color: #374151;
-      background: #1f2937;
+    .stat {
+      background: #2d3748;
+    }
+
+    .city-card:hover .stat {
+      background: #243042;
+    }
+
+    .stat-label {
+      color: #9ca3af;
+    }
+
+    .card-overlay {
+      opacity: 0;
+    }
+
+    .city-card:hover .card-overlay {
+      opacity: 0.1;
+    }
+
+    .header-description h2 {
+      color: #e5e7eb;
+    }
+
+    .header-description p {
+      color: #9ca3af;
     }
   }
 </style>
