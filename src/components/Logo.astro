@@ -12,7 +12,7 @@ const sizes = {
 };
 ---
 
-<div class="logo">
+<div class="logo" dir="ltr">
   <div class="logo-text">
     <span class="pharma">PHARMA</span>
     <span class="sos">SOS</span>
@@ -31,6 +31,7 @@ const sizes = {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(104, 211, 145, 0.2);
     border: 1px solid rgba(104, 211, 145, 0.1);
+    unicode-bidi: isolate;
   }
 
   .logo-text {
@@ -38,6 +39,7 @@ const sizes = {
     align-items: center;
     line-height: 1;
     gap: 0.1em;
+    direction: ltr;
   }
 
   .pharma {

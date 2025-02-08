@@ -5,55 +5,23 @@ import pharmacyData from '@/data/pharmacyData.json';
 import { validLanguages, type ValidLanguage, defaultLanguage } from '@/constants/languages';
 import { getCitySlug } from '@/utils/slug';
 
-export const prerender = true;
+export const prerender = false;
 
 type StaticPath = {
   params: { lang: ValidLanguage; city: string };
   props: { pharmacies: Pharmacy[]; cityName: string };
 };
 
-export async function getStaticPaths(): Promise<StaticPath[]> {
-  const paths: StaticPath[] = [];
-  const pharmacies = pharmacyData.pharmacies as Pharmacy[];
-
-  // Create a map of unique cities with their names in all languages
-  const uniqueCities = new Map();
-  
-  for (const pharmacy of pharmacies) {
-    const frenchName = pharmacy.city.fr;
-    if (!frenchName) continue;
-    
-    const slug = getCitySlug(pharmacy.city, 'fr');
-    if (!slug) continue;
-    
-    uniqueCities.set(slug, pharmacy.city);
-  }
-
-  // Generate paths for each language and valid city
-  for (const lang of validLanguages) {
-    for (const [slug, cityNames] of uniqueCities) {
-      const cityPharmacies = pharmacies.filter(p => 
-        getCitySlug(p.city, 'fr') === slug
-      );
-
-      if (cityPharmacies.length > 0) {
-        paths.push({
-          params: { lang, city: slug },
-          props: { 
-            pharmacies: cityPharmacies,
-            cityName: cityNames[lang] || cityNames.fr // Fallback to French name if translation missing
-          }
-        });
-      }
-    }
-  }
-
-  return paths;
-}
-
 const { lang, city } = Astro.params;
-const { pharmacies, cityName } = Astro.props;
 const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
+
+// Get pharmacies for the current city
+const pharmacies = pharmacyData.pharmacies.filter(p => 
+  getCitySlug(p.city, 'fr') === city
+);
+
+// Get city name in current language
+const cityName = pharmacies[0]?.city[currentLang] || city;
 
 const translations = {
   title: {
@@ -77,17 +45,25 @@ const translations = {
     ar: "انقر للحصول على الاتجاهات على:"
   }
 } as const;
+
+const pageTitle = translations.title[currentLang];
+const pageDescription = translations.subtitle[currentLang];
 ---
 
-<Layout title={translations.title[currentLang]}>
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  lang={currentLang}
+  dir={currentLang === 'ar' ? 'rtl' : 'ltr'}
+>
   <div class="pharmacy-page">
-    <h1>{translations.title[currentLang]}</h1>
-    <p class="subtitle">{translations.subtitle[currentLang]}</p>
+    <h1>{pageTitle}</h1>
+    <p class="subtitle">{pageDescription}</p>
     <p class="important-notice">{translations.important[currentLang]}</p>
 
     <div class="pharmacy-list">
       {pharmacies.map((pharmacy) => (
-        <div class="pharmacy-card">
+        <article class="pharmacy-card">
           <div class="card-header">
             <h2>{pharmacy.name[currentLang]}</h2>
             <span class="hours-badge">{pharmacy.hours}</span>
@@ -124,7 +100,7 @@ const translations = {
               </a>
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
   </div>

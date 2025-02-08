@@ -12,9 +12,23 @@ export default defineConfig({
     runtime: {
       mode: 'local',
       type: 'pages'
-    }
+    },
+    imageService: 'passthrough'
   }),
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'fr',
+        locales: {
+          fr: 'fr-FR',
+          en: 'en-US',
+          ar: 'ar-MA'
+        }
+      },
+      filter: (page) => !page.includes('api/'),
+    })
+  ],
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr', 'ar', 'en'],
@@ -26,5 +40,10 @@ export default defineConfig({
     ssr: {
       noExternal: ['astro:i18n']
     }
+  },
+  site: 'https://pharmasos.ma',
+  server: {
+    host: true,
+    port: 4321
   }
 });
