@@ -29,9 +29,9 @@ const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as Val
 
 const translations = {
   title: {
-    fr: "Accueil",
-    en: "Home",
-    ar: "الرئيسية"
+    fr: "PharmaSOS - Trouvez une pharmacie ouverte",
+    en: "PharmaSOS - Find an open pharmacy",
+    ar: "PharmaSOS - اعثر على صيدلية مفتوحة"
   },
   welcome: {
     fr: "Pharmacies de Garde",
@@ -52,6 +52,11 @@ const translations = {
     fr: "Dernière mise à jour",
     en: "Last updated",
     ar: "آخر تحديث"
+  },
+  description: {
+    fr: "Trouvez facilement une pharmacie de garde près de chez vous au Maroc",
+    en: "Easily find an on-duty pharmacy near you in Morocco",
+    ar: "اعثر بسهولة على صيدلية حراسة بالقرب منك في المغرب"
   }
 } as const;
 
@@ -99,9 +104,18 @@ function getCitySlug(city: CityInfo) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+const locale = Astro.currentLocale as Lang;
+const pageTitle = translations.title[locale];
+const pageDescription = translations.description[locale];
 ---
 
-<Layout title={translations.title[currentLang]}>
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  lang={locale}
+  dir={locale === 'ar' ? 'rtl' : 'ltr'}
+>
   <main class="main">
     <div class="header">
       <h1>{translations.welcome[currentLang]}</h1>

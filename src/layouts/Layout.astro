@@ -1,14 +1,25 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 
 interface Props {
   title: string;
+  description: string;
   lang: string;
   dir?: string;
+  image?: string;
+  article?: boolean;
 }
 
-const { title, lang, dir = 'ltr' } = Astro.props;
+const { 
+  title, 
+  description, 
+  lang, 
+  dir = 'ltr',
+  image,
+  article 
+} = Astro.props;
 ---
 
 <html lang={lang} dir={dir}>
@@ -17,10 +28,18 @@ const { title, lang, dir = 'ltr' } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      article={article}
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    <title>{title}</title>
+    
     <style is:global>
       :root {
         color-scheme: dark;
@@ -36,7 +55,9 @@ const { title, lang, dir = 'ltr' } = Astro.props;
   </head>
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html> 
