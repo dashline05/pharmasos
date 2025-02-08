@@ -7,11 +7,6 @@ import { getCitySlug } from '@/utils/slug';
 
 export const prerender = false;
 
-type StaticPath = {
-  params: { lang: ValidLanguage; city: string };
-  props: { pharmacies: Pharmacy[]; cityName: string };
-};
-
 const { lang, city } = Astro.params;
 const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
 

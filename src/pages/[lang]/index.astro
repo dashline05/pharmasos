@@ -26,6 +26,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
+const locale = currentLang as Lang;
 
 const translations = {
   title: {
@@ -105,7 +106,6 @@ function getCitySlug(city: CityInfo) {
     .replace(/^-+|-+$/g, '');
 }
 
-const locale = Astro.currentLocale as Lang;
 const pageTitle = translations.title[locale];
 const pageDescription = translations.description[locale];
 ---
