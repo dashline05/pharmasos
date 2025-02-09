@@ -27,33 +27,32 @@ export default defineConfig({
         }
       },
       filter: (page) => {
-        // Exclude unwanted routes
         return !page.includes('/api/') && 
                !page.includes('/dev/') && 
                !page.includes('/draft/') &&
                !page.includes('/blog/');
       },
+      lastmod: new Date().toISOString().split('T')[0],
       serialize: (item) => {
-        // Set priorities based on language and page type
         const url = new URL(item.url);
         const path = url.pathname;
         
-        // French homepage gets highest priority
+        // French homepage
         if (path === '/fr/') {
-          return { ...item, priority: 1.0 };
+          return { ...item, priority: 1.00 };
         }
         
-        // Other language homepages
+        // Other homepages
         if (path === '/ar/' || path === '/en/') {
-          return { ...item, priority: 0.8 };
+          return { ...item, priority: 0.80 };
         }
 
-        // French pages get higher priority
+        // French pages
         if (path.startsWith('/fr/')) {
-          return { ...item, priority: 0.8 };
+          return { ...item, priority: 0.80 };
         }
 
-        // All other pages
+        // Other pages
         return { ...item, priority: 0.64 };
       },
       customPages: [

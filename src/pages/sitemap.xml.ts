@@ -6,14 +6,14 @@ export const GET: APIRoute = async ({ site }) => {
     return new Response('Site configuration missing', { status: 500 });
   }
   
-  // Return the same content as sitemap-0.xml instead of redirecting
   const response = await fetch(`${site}/sitemap-0.xml`);
   const xml = await response.text();
   
-  return new Response(xml, {
+  return new Response(xml.trim(), {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600'
+      'Cache-Control': 'no-cache',
+      'X-Content-Type-Options': 'nosniff'
     },
   });
 }; 
