@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import LocaleHtmlHead from "@/components/i18n/LocaleHtmlHead.astro";
 import LocaleSuggest from "@/components/i18n/LocaleSuggest.astro";
+import SEO from '../components/SEO.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION, X_ACCOUNT } from "@/consts";
 import { useTranslations, LOCALES, getLocalePaths, type Lang } from "@/i18n";
@@ -13,9 +14,22 @@ import "@/styles/global.css";
 
 interface Props {
   title: string;
+  description?: string;
+  lang?: string;
+  dir?: string;
+  image?: string;
+  article?: boolean;
 }
 
-const { title } = Astro.props;
+const { 
+  title, 
+  description = '', 
+  lang = 'fr', 
+  dir = 'ltr',
+  image,
+  article 
+} = Astro.props;
+
 const currentLang = Astro.url.pathname.split('/')[1] || 'fr';
 const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
@@ -29,12 +43,54 @@ const metaDescription = t(SITE_DESCRIPTION);
  
 
 -->
-<html lang={currentLang} dir={dir}>
+<html lang={lang} dir={dir}>
   <head>
+    <!-- Google AdSense verification -->
+    <meta name="google-adsense-account" content="ca-pub-3258763863526450">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMCN650SVC"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RMCN650SVC', {
+        page_path: window.location.pathname,
+        send_page_view: true
+      });
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      article={article}
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <style is:global>
+      :root {
+        color-scheme: dark;
+      }
+      
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        margin: 0;
+        font-family: 'Montserrat', system-ui, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <Header />
