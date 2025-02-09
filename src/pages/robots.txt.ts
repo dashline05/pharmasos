@@ -4,7 +4,30 @@ const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: ${sitemapURL.href}
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Prevent crawling of admin or private areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /draft/
 `;
 
 export const GET: APIRoute = ({ site }) => {

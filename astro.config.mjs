@@ -18,7 +18,6 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/api/'),
       i18n: {
         defaultLocale: 'fr',
         locales: {
@@ -30,22 +29,48 @@ export default defineConfig({
       changefreq: 'daily',
       priority: 0.7,
       lastmod: new Date(),
+      filter: (page) => {
+        // Exclude API routes and development pages
+        return !page.includes('/api/') && 
+               !page.includes('/dev/') && 
+               !page.includes('/draft/');
+      },
       serialize: (item) => {
-        // Customize priority for different pages
+        // Pharmacy pages get highest priority and daily updates
         if (item.url.includes('/pharmacies/')) {
           return {
             ...item,
             changefreq: 'daily',
-            priority: 1.0
+            priority: 1.0,
+            lastmod: new Date()
           };
         }
-        if (item.url.includes('/about') || item.url.includes('/contact-us')) {
+        
+        // Static pages get lower priority and monthly updates
+        if (item.url.includes('/about') || 
+            item.url.includes('/contact-us') || 
+            item.url.includes('/privacy-policy')) {
           return {
             ...item,
             changefreq: 'monthly',
-            priority: 0.5
+            priority: 0.5,
+            lastmod: new Date()
           };
         }
+
+        // Homepage for each language
+        if (item.url.endsWith('pharmasos.com/') || 
+            item.url.endsWith('/fr/') || 
+            item.url.endsWith('/en/') || 
+            item.url.endsWith('/ar/')) {
+          return {
+            ...item,
+            changefreq: 'daily',
+            priority: 0.9,
+            lastmod: new Date()
+          };
+        }
+
         return item;
       }
     })
