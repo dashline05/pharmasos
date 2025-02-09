@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro';
-import pharmacyData from "@/data/pharmacyData.json";
 
 const languages = ['fr', 'ar', 'en'];
 const staticPages = ['about', 'contact-us', 'privacy-policy'];
@@ -10,63 +9,63 @@ export const GET: APIRoute = async ({ site }) => {
     return new Response('Site configuration missing', { status: 500 });
   }
 
-  const currentDate = new Date().toISOString().slice(0, 19) + '+01:00';
+  const currentDate = new Date().toISOString().replace(/\.\d+Z$/, '+00:00');
   
   // Generate URL entries
   const urls = [
-    // Home page
+    // French homepage (main language)
     {
-      loc: `${site}/`,
+      loc: `${site}/fr/`,
       lastmod: currentDate,
-      priority: '1.0'
+      priority: '1.00'
     },
     
-    // Language root pages
-    ...languages.map(lang => ({
-      loc: `${site}${lang}/`,
+    // Other language homepages
+    ...['ar', 'en'].map(lang => ({
+      loc: `${site}/${lang}/`,
       lastmod: currentDate,
-      priority: '0.8'
+      priority: '0.80'
     })),
 
-    // Static pages for each language
-    ...languages.flatMap(lang => 
-      staticPages.map(page => [
-        {
-          loc: `${site}${lang}/${page}/`,
-          lastmod: currentDate,
-          priority: '0.6'
-        },
-        {
-          loc: `${site}${lang}/${page}`,
-          lastmod: currentDate,
-          priority: '0.8'
-        }
-      ]).flat()
-    ),
-
-    // City pages for each language
-    ...languages.flatMap(lang =>
-      cities.map(city => [
-        {
-          loc: `${site}${lang}/pharmacies/${city}`,
-          lastmod: currentDate,
-          priority: '0.6'
-        },
-        {
-          loc: `${site}${lang}/pharmacies/${city}/`,
-          lastmod: currentDate,
-          priority: '0.4'
-        }
-      ]).flat()
-    )
+    // Static pages and pharmacies for each language
+    ...languages.flatMap(lang => [
+      // Static pages with trailing slash
+      ...staticPages.map(page => ({
+        loc: `${site}/${lang}/${page}/`,
+        lastmod: currentDate,
+        priority: lang === 'fr' ? '0.80' : '0.64'
+      })),
+      
+      // Static pages without trailing slash
+      ...staticPages.map(page => ({
+        loc: `${site}/${lang}/${page}`,
+        lastmod: currentDate,
+        priority: lang === 'fr' ? '0.80' : '0.64'
+      })),
+      
+      // City pages without trailing slash
+      ...cities.map(city => ({
+        loc: `${site}/${lang}/pharmacies/${city}`,
+        lastmod: currentDate,
+        priority: lang === 'fr' ? '0.80' : '0.64'
+      })),
+      
+      // City pages with trailing slash
+      ...cities.map(city => ({
+        loc: `${site}/${lang}/pharmacies/${city}/`,
+        lastmod: currentDate,
+        priority: '0.64'
+      }))
+    ])
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 ${urls.map(url => `<url>
-  <loc>${url.loc}</loc>
-  <lastmod>${url.lastmod}</lastmod>
-  <priority>${url.priority}</priority>
+<loc>${url.loc}</loc>
+<lastmod>${url.lastmod}</lastmod>
+<priority>${url.priority}</priority>
 </url>`).join('\n')}
 </urlset>`;
 
