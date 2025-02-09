@@ -18,6 +18,23 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
+      customPages: [
+        'https://pharmasos.com/fr',
+        'https://pharmasos.com/en',
+        'https://pharmasos.com/ar',
+        'https://pharmasos.com/fr/pharmacies',
+        'https://pharmasos.com/en/pharmacies',
+        'https://pharmasos.com/ar/pharmacies',
+        'https://pharmasos.com/fr/about',
+        'https://pharmasos.com/en/about',
+        'https://pharmasos.com/ar/about',
+        'https://pharmasos.com/fr/contact-us',
+        'https://pharmasos.com/en/contact-us',
+        'https://pharmasos.com/ar/contact-us',
+        'https://pharmasos.com/fr/privacy-policy',
+        'https://pharmasos.com/en/privacy-policy',
+        'https://pharmasos.com/ar/privacy-policy'
+      ],
       i18n: {
         defaultLocale: 'fr',
         locales: {
