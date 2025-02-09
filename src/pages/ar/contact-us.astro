@@ -3,41 +3,66 @@ import Layout from '@/layouts/Base.astro';
 ---
 
 <Layout title="اتصل بنا" lang="ar" dir="rtl">
-  <div class="page-container">
-    <header class="header">
+  <div class="contact-container">
+    <div class="contact-header">
       <h1>اتصل بنا</h1>
-      <p class="update-info">
-        <span class="live-dot"></span>
-        نحن هنا لمساعدتك
-      </p>
-    </header>
+      <p class="subtitle">نحن هنا لمساعدتك على مدار الساعة</p>
+    </div>
 
-    <div class="intro-section">
-      <h2>تواصل معنا</h2>
-      <p>
-        هل لديك أسئلة حول العثور على صيدلية حراسة؟ 
-        تحتاج إلى مساعدة مع خدمتنا؟ نحن هنا لمساعدتك على مدار الساعة.
-      </p>
-
-      <div class="contact-methods">
-        <div class="contact-card">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
           <h3>البريد الإلكتروني</h3>
           <p>contact@pharmasos.com</p>
         </div>
 
-        <div class="contact-card">
+        <div class="info-card">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
           <h3>الهاتف</h3>
           <p>+212 XXX-XXXXXX</p>
         </div>
+      </div>
 
-        <div class="contact-card">
-          <h3>وسائل التواصل الاجتماعي</h3>
-          <p>تابعنا على وسائل التواصل الاجتماعي للحصول على التحديثات</p>
-          <div class="social-links">
-            <a href="#" class="social-link">تويتر</a>
-            <a href="#" class="social-link">فيسبوك</a>
-            <a href="#" class="social-link">انستغرام</a>
-          </div>
+      <div class="social-section">
+        <h2>تابعنا</h2>
+        <div class="social-grid">
+          <a href="https://x.com/pharmasosGO" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">𝕏</span>
+            <span class="social-name">X</span>
+          </a>
+          
+          <a href="https://www.facebook.com/pharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+              </svg>
+            </span>
+            <span class="social-name">فيسبوك</span>
+          </a>
+
+          <a href="https://www.instagram.com/pharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">📸</span>
+            <span class="social-name">انستغرام</span>
+          </a>
+
+          <a href="https://www.youtube.com/@PharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">▶️</span>
+            <span class="social-name">يوتيوب</span>
+          </a>
+
+          <a href="https://www.pinterest.com/pharmasos/" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">📌</span>
+            <span class="social-name">بينتيريست</span>
+          </a>
         </div>
       </div>
     </div>
@@ -45,126 +70,16 @@ import Layout from '@/layouts/Base.astro';
 </Layout>
 
 <style>
-  /* Same styles as English version plus RTL support */
-  .page-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background: #000000;
+  /* Same styles as French version plus RTL support */
+  [dir="rtl"] .contact-container {
+    direction: rtl;
   }
 
-  .header {
-    text-align: center;
-    margin-bottom: 2rem;
+  [dir="rtl"] .social-card {
+    flex-direction: row-reverse;
   }
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .update-info {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    font-size: 0.875rem;
-  }
-
-  .live-dot {
-    width: 5px;
-    height: 5px;
-    background: #22c55e;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .intro-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .intro-section h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1rem;
-  }
-
-  .intro-section p {
-    color: #e5e7eb;
-    line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .contact-card {
-    background: #111111;
-    border: 1px solid #222222;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
-  }
-
-  .contact-card:hover {
-    border-color: #22c55e;
-    transform: translateY(-2px);
-  }
-
-  .contact-card h3 {
-    color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  .contact-card p {
-    color: #e5e7eb;
-    margin-bottom: 1rem;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .social-link {
-    color: #22c55e;
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
-  }
-
-  .social-link:hover {
-    color: #ffffff;
-  }
-
-  [dir="rtl"] .intro-section h2,
-  [dir="rtl"] .intro-section p,
-  [dir="rtl"] .contact-card h3,
-  [dir="rtl"] .contact-card p {
+  [dir="rtl"] .info-card {
     text-align: right;
-  }
-
-  [dir="rtl"] .social-links {
-    flex-direction: row-reverse;
-  }
-
-  [dir="rtl"] .social-link {
-    flex-direction: row-reverse;
-  }
-
-  [dir="rtl"] .update-info {
-    flex-direction: row-reverse;
   }
 </style> 
