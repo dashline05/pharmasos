@@ -18,23 +18,6 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      customPages: [
-        'https://pharmasos.com/fr',
-        'https://pharmasos.com/en',
-        'https://pharmasos.com/ar',
-        'https://pharmasos.com/fr/pharmacies',
-        'https://pharmasos.com/en/pharmacies',
-        'https://pharmasos.com/ar/pharmacies',
-        'https://pharmasos.com/fr/about',
-        'https://pharmasos.com/en/about',
-        'https://pharmasos.com/ar/about',
-        'https://pharmasos.com/fr/contact-us',
-        'https://pharmasos.com/en/contact-us',
-        'https://pharmasos.com/ar/contact-us',
-        'https://pharmasos.com/fr/privacy-policy',
-        'https://pharmasos.com/en/privacy-policy',
-        'https://pharmasos.com/ar/privacy-policy'
-      ],
       i18n: {
         defaultLocale: 'fr',
         locales: {
@@ -43,53 +26,43 @@ export default defineConfig({
           ar: 'ar-MA'
         }
       },
-      changefreq: 'daily',
-      priority: 0.7,
-      lastmod: new Date(),
       filter: (page) => {
-        // Exclude API routes and development pages
+        // Exclude unwanted routes
         return !page.includes('/api/') && 
                !page.includes('/dev/') && 
-               !page.includes('/draft/');
+               !page.includes('/draft/') &&
+               !page.includes('/blog/');
       },
       serialize: (item) => {
-        // Pharmacy pages get highest priority and daily updates
-        if (item.url.includes('/pharmacies/')) {
-          return {
-            ...item,
-            changefreq: 'daily',
-            priority: 1.0,
-            lastmod: new Date()
-          };
+        // Set priorities based on language and page type
+        const url = new URL(item.url);
+        const path = url.pathname;
+        
+        // French homepage gets highest priority
+        if (path === '/fr/') {
+          return { ...item, priority: 1.0 };
         }
         
-        // Static pages get lower priority and monthly updates
-        if (item.url.includes('/about') || 
-            item.url.includes('/contact-us') || 
-            item.url.includes('/privacy-policy')) {
-          return {
-            ...item,
-            changefreq: 'monthly',
-            priority: 0.5,
-            lastmod: new Date()
-          };
+        // Other language homepages
+        if (path === '/ar/' || path === '/en/') {
+          return { ...item, priority: 0.8 };
         }
 
-        // Homepage for each language
-        if (item.url.endsWith('pharmasos.com/') || 
-            item.url.endsWith('/fr/') || 
-            item.url.endsWith('/en/') || 
-            item.url.endsWith('/ar/')) {
-          return {
-            ...item,
-            changefreq: 'daily',
-            priority: 0.9,
-            lastmod: new Date()
-          };
+        // French pages get higher priority
+        if (path.startsWith('/fr/')) {
+          return { ...item, priority: 0.8 };
         }
 
-        return item;
-      }
+        // All other pages
+        return { ...item, priority: 0.64 };
+      },
+      customPages: [
+        // Cities for each language
+        ...['fr', 'ar', 'en'].flatMap(lang => 
+          ['ain-aouda', 'casablanca', 'marrakech', 'rabat', 'sale', 'temara']
+            .map(city => `https://pharmasos.com/${lang}/pharmacies/${city}`)
+        )
+      ]
     })
   ],
   i18n: {
