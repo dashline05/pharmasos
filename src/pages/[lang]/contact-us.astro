@@ -1,1 +1,201 @@
- 
+---
+import Layout from "@/layouts/Base.astro";
+import { useTranslations } from "@/i18n";
+import type { Lang } from "@/i18n";
+import { validLanguages, defaultLanguage } from '@/constants/languages';
+import type { ValidLanguage } from '@/constants/languages';
+
+const { lang } = Astro.params;
+const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
+
+const translations = {
+  title: {
+    fr: "Contactez-Nous",
+    en: "Contact Us",
+    ar: "اتصل بنا"
+  },
+  subtitle: {
+    fr: "Nous Sommes Là Pour Vous Aider",
+    en: "We're Here to Help",
+    ar: "نحن هنا للمساعدة"
+  },
+  getInTouch: {
+    fr: "Prenez Contact",
+    en: "Get in Touch",
+    ar: "تواصل معنا"
+  },
+  description: {
+    fr: "Vous avez des questions sur la recherche d'une pharmacie de garde ? Besoin d'aide avec notre service ? Nous sommes là pour vous assister 24h/24.",
+    en: "Do you have questions about finding an on-duty pharmacy? Need help with our service? We're here to assist you 24/7.",
+    ar: "هل لديك أسئلة حول البحث عن صيدلية حراسة؟ تحتاج مساعدة مع خدمتنا؟ نحن هنا لمساعدتك على مدار الساعة."
+  },
+  email: "contact@pharmasos.com",
+  phone: "+212 XXX-XXXXXX",
+  socialMedia: {
+    fr: "Réseaux Sociaux",
+    en: "Social Media",
+    ar: "وسائل التواصل الاجتماعي"
+  },
+  followUs: {
+    fr: "Suivez-nous sur les réseaux sociaux pour les mises à jour",
+    en: "Follow us on social media for updates",
+    ar: "تابعنا على وسائل التواصل الاجتماعي للحصول على التحديثات"
+  }
+} as const;
+
+const pageTitle = translations.title[currentLang];
+---
+
+<Layout 
+  title={pageTitle}
+  description={translations.subtitle[currentLang]}
+  lang={currentLang}
+  dir={currentLang === 'ar' ? 'rtl' : 'ltr'}
+>
+  <div class="page-container">
+    <header class="header">
+      <h1>{pageTitle}</h1>
+      <p class="update-info">
+        <span class="live-dot"></span>
+        {translations.subtitle[currentLang]}
+      </p>
+    </header>
+
+    <div class="intro-section">
+      <h2>{translations.getInTouch[currentLang]}</h2>
+      <p>{translations.description[currentLang]}</p>
+
+      <div class="contact-methods">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>{translations.email}</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>{currentLang === 'fr' ? 'Téléphone' : currentLang === 'ar' ? 'الهاتف' : 'Phone'}</h3>
+          <p>{translations.phone}</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>{translations.socialMedia[currentLang]}</h3>
+          <p>{translations.followUs[currentLang]}</p>
+          <div class="social-links">
+            <a href="https://x.com/PharmasosGo" class="social-link">X</a>
+            <a href="https://web.facebook.com/PharmasosGo/" class="social-link">Facebook</a>
+            <a href="https://www.instagram.com/pharmasosgo/" class="social-link">Instagram</a>
+            <a href="https://www.pinterest.com/pharmasos/" class="social-link">Pinterest</a>
+            <a href="https://www.youtube.com/@PharmasosGo" class="social-link">Youtube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+  }
+
+  .update-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+  }
+
+  .live-dot {
+    width: 5px;
+    height: 5px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .intro-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .intro-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    color: #e5e7eb;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-card {
+    background: #111111;
+    border: 1px solid #222222;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .contact-card:hover {
+    border-color: #22c55e;
+    transform: translateY(-2px);
+  }
+
+  .contact-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-card p {
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    color: #22c55e;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+  }
+
+  .social-link:hover {
+    color: #ffffff;
+  }
+
+  [dir="rtl"] .page-container {
+    direction: rtl;
+  }
+</style> 
