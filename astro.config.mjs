@@ -19,6 +19,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
+      filter: (page) => !page.includes('/api/'),
       i18n: {
         defaultLocale: 'fr',
         locales: {
@@ -52,6 +53,7 @@ export default defineConfig({
     partytown({
       config: {
         forward: ["dataLayer.push", "gtag"],
+        debug: true
       },
     }),
   ],
