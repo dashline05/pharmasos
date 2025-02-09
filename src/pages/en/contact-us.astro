@@ -70,106 +70,147 @@ import Layout from '@/layouts/Base.astro';
 </Layout>
 
 <style>
-  .page-container {
-    max-width: 1000px;
+  .contact-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem;
-    background: #000000;
+    padding: 4rem 2rem;
   }
 
-  .header {
+  .contact-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .update-info {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    font-size: 0.875rem;
-  }
-
-  .live-dot {
-    width: 5px;
-    height: 5px;
-    background: #22c55e;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .intro-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .intro-section h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
   }
 
-  .intro-section p {
-    color: #e5e7eb;
-    line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+  .subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
   }
 
-  .contact-methods {
+  .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 4rem;
   }
 
-  .contact-card {
-    background: #111111;
-    border: 1px solid #222222;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 
-  .contact-card:hover {
+  .info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-5px);
     border-color: #22c55e;
-    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.2);
   }
 
-  .contact-card h3 {
-    color: #ffffff;
+  .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+  }
+
+  .icon-wrapper svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .info-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  .contact-card p {
-    color: #e5e7eb;
-    margin-bottom: 1rem;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .social-link {
-    color: #22c55e;
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
-  }
-
-  .social-link:hover {
+    margin-bottom: 0.5rem;
     color: #ffffff;
   }
-</style> 
+
+  .info-card p {
+    color: #94a3b8;
+  }
+
+  .social-section {
+    text-align: center;
+  }
+
+  .social-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .social-card:hover {
+    background: #22c55e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.3);
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .social-name {
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .social-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
