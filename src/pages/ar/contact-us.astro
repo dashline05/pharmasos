@@ -2,17 +2,17 @@
 import Layout from '@/layouts/Base.astro';
 ---
 
-<Layout title="اتصل بنا" lang="ar">
+<Layout title="اتصل بنا" lang="ar" dir="rtl">
   <div class="page-container">
     <header class="header">
       <h1>اتصل بنا</h1>
       <p class="update-info">
         <span class="live-dot"></span>
-        نحن هنا للمساعدة
+        نحن هنا لمساعدتك
       </p>
     </header>
 
-    <div class="intro-section" dir="rtl">
+    <div class="intro-section">
       <h2>تواصل معنا</h2>
       <p>
         هل لديك أسئلة حول العثور على صيدلية حراسة؟ 
@@ -157,6 +157,14 @@ import Layout from '@/layouts/Base.astro';
   }
 
   [dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .social-link {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .update-info {
     flex-direction: row-reverse;
   }
 </style> 

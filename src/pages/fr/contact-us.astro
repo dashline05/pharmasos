@@ -3,41 +3,66 @@ import Layout from '@/layouts/Base.astro';
 ---
 
 <Layout title="Contactez-Nous" lang="fr">
-  <div class="page-container">
-    <header class="header">
+  <div class="contact-container">
+    <div class="contact-header">
       <h1>Contactez-Nous</h1>
-      <p class="update-info">
-        <span class="live-dot"></span>
-        Nous Sommes Là Pour Vous Aider
-      </p>
-    </header>
+      <p class="subtitle">Nous sommes là pour vous aider 24h/24, 7j/7</p>
+    </div>
 
-    <div class="intro-section">
-      <h2>Prenez Contact</h2>
-      <p>
-        Vous avez des questions sur la recherche d'une pharmacie de garde ? 
-        Besoin d'aide avec notre service ? Nous sommes là pour vous assister 24h/24.
-      </p>
-
-      <div class="contact-methods">
-        <div class="contact-card">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
           <h3>Email</h3>
           <p>contact@pharmasos.com</p>
         </div>
 
-        <div class="contact-card">
+        <div class="info-card">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
           <h3>Téléphone</h3>
           <p>+212 XXX-XXXXXX</p>
         </div>
+      </div>
 
-        <div class="contact-card">
-          <h3>Réseaux Sociaux</h3>
-          <p>Suivez-nous sur les réseaux sociaux pour les mises à jour</p>
-          <div class="social-links">
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Instagram</a>
-          </div>
+      <div class="social-section">
+        <h2>Suivez-nous</h2>
+        <div class="social-grid">
+          <a href="https://x.com/pharmasosGO" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">𝕏</span>
+            <span class="social-name">X</span>
+          </a>
+          
+          <a href="https://www.facebook.com/pharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+              </svg>
+            </span>
+            <span class="social-name">Facebook</span>
+          </a>
+
+          <a href="https://www.instagram.com/pharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">📸</span>
+            <span class="social-name">Instagram</span>
+          </a>
+
+          <a href="https://www.youtube.com/@PharmasosGo" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">▶️</span>
+            <span class="social-name">YouTube</span>
+          </a>
+
+          <a href="https://www.pinterest.com/pharmasos/" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span class="social-icon">📌</span>
+            <span class="social-name">Pinterest</span>
+          </a>
         </div>
       </div>
     </div>
@@ -45,106 +70,147 @@ import Layout from '@/layouts/Base.astro';
 </Layout>
 
 <style>
-  .page-container {
-    max-width: 1000px;
+  .contact-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem;
-    background: #000000;
+    padding: 4rem 2rem;
   }
 
-  .header {
+  .contact-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-  }
-
-  .update-info {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    font-size: 0.875rem;
-  }
-
-  .live-dot {
-    width: 5px;
-    height: 5px;
-    background: #22c55e;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .intro-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .intro-section h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
   }
 
-  .intro-section p {
-    color: #e5e7eb;
-    line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+  .subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
   }
 
-  .contact-methods {
+  .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 4rem;
   }
 
-  .contact-card {
-    background: #111111;
-    border: 1px solid #222222;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 
-  .contact-card:hover {
+  .info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-5px);
     border-color: #22c55e;
-    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.2);
   }
 
-  .contact-card h3 {
-    color: #ffffff;
+  .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+  }
+
+  .icon-wrapper svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .info-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  .contact-card p {
-    color: #e5e7eb;
-    margin-bottom: 1rem;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .social-link {
-    color: #22c55e;
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
-  }
-
-  .social-link:hover {
+    margin-bottom: 0.5rem;
     color: #ffffff;
+  }
+
+  .info-card p {
+    color: #94a3b8;
+  }
+
+  .social-section {
+    text-align: center;
+  }
+
+  .social-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .social-card:hover {
+    background: #22c55e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.3);
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .social-name {
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .social-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
   }
 </style> 
