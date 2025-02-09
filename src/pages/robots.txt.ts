@@ -4,7 +4,8 @@ const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
+Sitemap: ${sitemapURL.href}sitemap.xml
 Sitemap: ${sitemapURL.href}sitemap-index.xml
 
 # Crawl-delay
