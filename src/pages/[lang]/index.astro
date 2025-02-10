@@ -188,7 +188,7 @@ const pageDescription = translations.description[locale];
   .header h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #111827;
+    color: #ffffff;
     position: relative;
     display: inline-block;
     padding: 0 1rem;
@@ -219,14 +219,14 @@ const pageDescription = translations.description[locale];
   .header-description h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #374151;
+    color: #ffffff;
     margin-bottom: 1rem;
   }
 
   .header-description p {
     font-size: 1.125rem;
     line-height: 1.75;
-    color: #6b7280;
+    color: #ffffff;
   }
 
   .cities-grid {
@@ -421,7 +421,7 @@ const pageDescription = translations.description[locale];
     }
 
     .city-card:hover .stat {
-      background: #243042;
+      background: #f0f9f0;
     }
 
     .stat-label {
@@ -442,6 +442,14 @@ const pageDescription = translations.description[locale];
 
     .header-description p {
       color: #9ca3af;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    .header h1,
+    .header-description h2,
+    .header-description p {
+      color: #ffffff;
     }
   }
 </style>
