@@ -10,10 +10,25 @@ export const prerender = false;
 const { lang, city } = Astro.params;
 const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
 
-// Get pharmacies for the current city
-const pharmacies = pharmacyData.pharmacies.filter(p => 
-  getCitySlug(p.city, 'fr') === city
-);
+// Get pharmacies from both sources
+const lematinPharmacies = pharmacyData?.sources?.lematin?.pharmacies || [];
+const guidePharmacies = pharmacyData?.sources?.guide?.pharmacies || [];
+const allPharmacies = [...lematinPharmacies, ...guidePharmacies];
+
+// Normalize the city parameter
+const normalizedCity = city?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+// Get pharmacies for the current city with case-insensitive comparison
+const pharmacies = allPharmacies.filter(p => {
+  const pharmacyCity = getCitySlug(p.city, 'fr')?.toLowerCase();
+  return pharmacyCity === normalizedCity;
+});
+
+// For debugging
+console.log('Available cities:', allPharmacies.map(p => p.city.fr));
+console.log('Current city param:', city);
+console.log('Normalized city:', normalizedCity);
+console.log('Found pharmacies:', pharmacies.length);
 
 // Get city name in current language
 const cityName = pharmacies[0]?.city[currentLang] || city;

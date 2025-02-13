@@ -63,13 +63,15 @@ const translations = {
 
 const t = useTranslations(currentLang as Lang);
 
-// Add null checks and default values
-const allPharmacies = pharmacyData?.sources?.lematin?.pharmacies || [];
-const cities = allPharmacies 
-  ? [...new Set(allPharmacies.map(pharmacy => pharmacy.city.fr))]
-  : [];
+// Get pharmacies from both sources
+const lematinPharmacies = pharmacyData?.sources?.lematin?.pharmacies || [];
+const guidePharmacies = pharmacyData?.sources?.guide?.pharmacies || [];
+const allPharmacies = [...lematinPharmacies, ...guidePharmacies];
 
-// Safe filtering with null checks
+// Get unique cities from all pharmacies
+const cities = [...new Set(allPharmacies.map(pharmacy => pharmacy.city.fr))];
+
+// Create pharmacies by city with combined data
 const pharmaciesByCity = cities.map(city => ({
   city,
   pharmacies: allPharmacies.filter(pharmacy => pharmacy?.city?.fr === city) || []
@@ -83,7 +85,7 @@ const cityList = pharmaciesByCity.map(({ city, pharmacies }) => ({
   },
   count: pharmacies.length,
   open24h: pharmacies.filter(pharmacy => String(pharmacy.hours || '').includes('24h')).length
-}));
+})).sort((a, b) => a.name[currentLang].localeCompare(b.name[currentLang]));
 
 const lastUpdated = new Date(pharmacyData.date).toLocaleDateString(currentLang === 'ar' ? 'ar-MA' : currentLang === 'fr' ? 'fr-FR' : 'en-US');
 
