@@ -1,0 +1,66 @@
+name: Update Pharmacy Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at 00:00 AM UTC every day
+  workflow_dispatch:  # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Run pharmacy data scripts
+        run: |
+          python data2.py
+          python data3.py
+          
+      - name: Move generated files
+        run: |
+          mv pharmacies.json src/data/pharmacyData.json
+          
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+      - name: Commit and push changes
+        run: |
+          # Fetch all history and updates
+          git fetch origin
+          
+          # Reset to match remote main branch
+          git reset --hard origin/main
+          
+          # Move the file again after reset
+          mv pharmacies.json src/data/pharmacyData.json
+          
+          # Stage and commit changes
+          git add src/data/pharmacyData.json
+          
+          # Only commit and push if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update pharmacy data [skip ci]"
+            git push origin main
+          fi 
