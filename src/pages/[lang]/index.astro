@@ -63,31 +63,27 @@ const translations = {
 
 const t = useTranslations(currentLang as Lang);
 
-const cities: Record<string, CityInfo> = pharmacyData.pharmacies
-  .filter(pharmacy => pharmacy?.city?.[currentLang])
-  .reduce((acc: Record<string, CityInfo>, pharmacy) => {
-    const cityName = pharmacy.city[currentLang];
-    if (!cityName) return acc;
+// Add null checks and default values
+const allPharmacies = pharmacyData?.sources?.lematin?.pharmacies || [];
+const cities = allPharmacies 
+  ? [...new Set(allPharmacies.map(pharmacy => pharmacy.city.fr))]
+  : [];
 
-    if (!acc[cityName]) {
-      acc[cityName] = {
-        name: pharmacy.city,
-        count: 1,
-        open24h: String(pharmacy.hours || '').includes('24h') ? 1 : 0
-      };
-    } else {
-      acc[cityName].count++;
-      if (String(pharmacy.hours || '').includes('24h')) {
-        acc[cityName].open24h++;
-      }
-    }
-    return acc;
-  }, {});
+// Safe filtering with null checks
+const pharmaciesByCity = cities.map(city => ({
+  city,
+  pharmacies: allPharmacies.filter(pharmacy => pharmacy?.city?.fr === city) || []
+}));
 
-const cityList = Object.values(cities)
-  .sort((a: CityInfo, b: CityInfo) => 
-    a.name[currentLang].localeCompare(b.name[currentLang])
-  );
+const cityList = pharmaciesByCity.map(({ city, pharmacies }) => ({
+  name: {
+    fr: city,
+    en: city,
+    ar: city
+  },
+  count: pharmacies.length,
+  open24h: pharmacies.filter(pharmacy => String(pharmacy.hours || '').includes('24h')).length
+}));
 
 const lastUpdated = new Date(pharmacyData.date).toLocaleDateString(currentLang === 'ar' ? 'ar-MA' : currentLang === 'fr' ? 'fr-FR' : 'en-US');
 
