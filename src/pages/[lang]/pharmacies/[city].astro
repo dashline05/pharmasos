@@ -75,7 +75,7 @@ const pageDescription = translations.subtitle[currentLang];
       {pharmacies.map((pharmacy) => (
         <article class="pharmacy-card">
           <div class="card-header">
-            <h2>{pharmacy.name[currentLang]}</h2>
+            <h2>{pharmacy.name[currentLang] || pharmacy.name.fr}</h2>
             <span class="hours-badge">
               {typeof pharmacy.hours === 'object' 
                 ? pharmacy.hours[currentLang] || pharmacy.hours.fr
