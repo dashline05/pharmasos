@@ -111,7 +111,7 @@ const cityTranslations = {
   }
 };
 
-// Update the cityList creation to ensure translations are used
+// Update the cityList creation to properly detect 24h pharmacies
 const cityList = pharmaciesByCity
   .map(({ city, pharmacies }) => {
     // Make sure we have translations for this city
@@ -121,12 +121,25 @@ const cityList = pharmaciesByCity
       ar: city
     };
 
+    // Improved 24h detection
+    const open24h = pharmacies.filter(pharmacy => {
+      const hours = pharmacy.hours;
+      if (typeof hours === 'object') {
+        return Object.values(hours).some(h => 
+          h?.toLowerCase().includes('24h') || 
+          h?.toLowerCase().includes('24/24') ||
+          h?.toLowerCase().includes('00h-24h')
+        );
+      }
+      return String(hours || '').toLowerCase().includes('24h') || 
+             String(hours || '').toLowerCase().includes('24/24') ||
+             String(hours || '').toLowerCase().includes('00h-24h');
+    }).length;
+
     return {
       name: translation,
       count: pharmacies.length,
-      open24h: pharmacies.filter(pharmacy => 
-        String(pharmacy.hours || '').includes('24h')
-      ).length
+      open24h
     };
   })
   .sort((a, b) => {
@@ -207,6 +220,11 @@ const pageDescription = translations.description[locale];
               <div class="stat">
                 <span class="stat-number">{city.count}</span>
                 <span class="stat-label">{translations.pharmacies[currentLang]}</span>
+                {city.open24h > 0 && (
+                  <span class="stat-24h">
+                    {city.open24h} {translations.open24h[currentLang]}
+                  </span>
+                )}
               </div>
             </div>
             <div class="card-overlay"></div>
@@ -400,6 +418,22 @@ const pageDescription = translations.description[locale];
     text-align: center;
     font-weight: 500;
     letter-spacing: 0.025em;
+  }
+
+  .stat-24h {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #4CAF48;
+    text-align: center;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(76, 175, 72, 0.1);
+    white-space: nowrap;
+  }
+
+  .city-card:hover .stat-24h {
+    background: rgba(76, 175, 72, 0.2);
   }
 
   .footer {
