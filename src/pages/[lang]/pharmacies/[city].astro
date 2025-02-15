@@ -76,7 +76,11 @@ const pageDescription = translations.subtitle[currentLang];
         <article class="pharmacy-card">
           <div class="card-header">
             <h2>{pharmacy.name[currentLang]}</h2>
-            <span class="hours-badge">{pharmacy.hours}</span>
+            <span class="hours-badge">
+              {typeof pharmacy.hours === 'object' 
+                ? pharmacy.hours[currentLang] || pharmacy.hours.fr
+                : pharmacy.hours}
+            </span>
           </div>
 
           <div class="card-content">
