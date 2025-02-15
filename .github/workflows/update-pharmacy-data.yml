@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time)
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
@@ -24,16 +24,28 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4
 
-    - name: List directory contents
+    - name: Create directories if they don't exist
+      run: |
+        mkdir -p src/data
+        mkdir -p src/scripts
+
+    - name: List directory contents for debugging
       run: |
         pwd
         ls -la
         ls -la src/
+        ls -la src/scripts/
 
     - name: Run pharmacy data update script
       run: |
-        ls -la
-        python src/scripts/datahi.py
+        cd src/scripts
+        python datahi.py
+        mv pharmacies_*.json ../data/pharmacyData.json
+
+    - name: Check if data was updated
+      run: |
+        ls -la src/data/
+        cat src/data/pharmacyData.json
     
     - name: Commit and push if changed
       run: |
