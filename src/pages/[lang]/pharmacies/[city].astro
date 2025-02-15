@@ -58,6 +58,40 @@ const translations = {
 
 const pageTitle = translations.title[currentLang];
 const pageDescription = translations.subtitle[currentLang];
+
+// Add filter translations
+const filterTranslations = {
+  all: {
+    fr: "Toutes les pharmacies",
+    en: "All pharmacies",
+    ar: "جميع الصيدليات"
+  },
+  regular: {
+    fr: "Ouvertes 9h-00h",
+    en: "Open 9h-00h",
+    ar: "مفتوحة 9-00"
+  },
+  open24h: {
+    fr: "Ouvertes 24h/24",
+    en: "Open 24h/24",
+    ar: "مفتوحة 24/24"
+  }
+} as const;
+
+// Add filter function
+function is24hPharmacy(pharmacy) {
+  const hours = pharmacy.hours;
+  if (typeof hours === 'object') {
+    return Object.values(hours).some(h => 
+      h?.toLowerCase().includes('24h') || 
+      h?.toLowerCase().includes('24/24') ||
+      h?.toLowerCase().includes('00h-24h')
+    );
+  }
+  return String(hours || '').toLowerCase().includes('24h') || 
+         String(hours || '').toLowerCase().includes('24/24') ||
+         String(hours || '').toLowerCase().includes('00h-24h');
+}
 ---
 
 <Layout 
@@ -71,9 +105,34 @@ const pageDescription = translations.subtitle[currentLang];
     <p class="subtitle">{pageDescription}</p>
     <p class="important-notice">{translations.important[currentLang]}</p>
 
+    <!-- Add filter buttons -->
+    <div class="filter-buttons">
+      <button
+        class="filter-btn active"
+        data-filter="all"
+      >
+        {filterTranslations.all[currentLang]}
+      </button>
+      <button
+        class="filter-btn"
+        data-filter="regular"
+      >
+        {filterTranslations.regular[currentLang]}
+      </button>
+      <button
+        class="filter-btn"
+        data-filter="24h"
+      >
+        {filterTranslations.open24h[currentLang]}
+      </button>
+    </div>
+
     <div class="pharmacy-list">
       {pharmacies.map((pharmacy) => (
-        <article class="pharmacy-card">
+        <article 
+          class="pharmacy-card"
+          data-hours={is24hPharmacy(pharmacy) ? '24h' : 'regular'}
+        >
           <div class="card-header">
             <h2>{pharmacy.name[currentLang] || pharmacy.name.fr}</h2>
             <span class="hours-badge">
@@ -290,4 +349,71 @@ const pageDescription = translations.subtitle[currentLang];
     margin-right: 0;
     margin-left: 0.75rem;
   }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+
+  .filter-btn {
+    background: #1F2937;
+    border: 1px solid #374151;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .filter-btn:hover {
+    background: #374151;
+    border-color: #4B5563;
+  }
+
+  .filter-btn.active {
+    background: #4CAF48;
+    border-color: #45a049;
+  }
+
+  @media (max-width: 640px) {
+    .filter-buttons {
+      flex-direction: column;
+      padding: 0 2rem;
+    }
+
+    .filter-btn {
+      width: 100%;
+    }
+  }
 </style>
+
+<script>
+  // Add filtering functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const pharmacyCards = document.querySelectorAll('.pharmacy-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filter pharmacies
+      const filter = button.dataset.filter;
+      pharmacyCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else if (filter === '24h') {
+          card.style.display = card.dataset.hours === '24h' ? 'block' : 'none';
+        } else {
+          card.style.display = card.dataset.hours === 'regular' ? 'block' : 'none';
+        }
+      });
+    });
+  });
+</script>
