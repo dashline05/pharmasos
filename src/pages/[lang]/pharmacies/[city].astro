@@ -78,19 +78,23 @@ const filterTranslations = {
   }
 } as const;
 
-// Add filter function
-function is24hPharmacy(pharmacy) {
+// Add filter function with proper type checking
+function is24hPharmacy(pharmacy: any) {
   const hours = pharmacy.hours;
-  if (typeof hours === 'object') {
+  if (typeof hours === 'object' && hours !== null) {
     return Object.values(hours).some(h => 
-      h?.toLowerCase().includes('24h') || 
-      h?.toLowerCase().includes('24/24') ||
-      h?.toLowerCase().includes('00h-24h')
+      typeof h === 'string' && (
+        h.toLowerCase().includes('24h') || 
+        h.toLowerCase().includes('24/24') ||
+        h.toLowerCase().includes('00h-24h')
+      )
     );
   }
-  return String(hours || '').toLowerCase().includes('24h') || 
-         String(hours || '').toLowerCase().includes('24/24') ||
-         String(hours || '').toLowerCase().includes('00h-24h');
+  return typeof hours === 'string' && (
+    hours.toLowerCase().includes('24h') || 
+    hours.toLowerCase().includes('24/24') ||
+    hours.toLowerCase().includes('00h-24h')
+  );
 }
 ---
 
@@ -393,9 +397,9 @@ function is24hPharmacy(pharmacy) {
 </style>
 
 <script>
-  // Add filtering functionality
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const pharmacyCards = document.querySelectorAll('.pharmacy-card');
+  // Add proper type assertions for DOM elements
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const pharmacyCards = document.querySelectorAll<HTMLElement>('.pharmacy-card');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -404,14 +408,14 @@ function is24hPharmacy(pharmacy) {
       button.classList.add('active');
 
       // Filter pharmacies
-      const filter = button.dataset.filter;
+      const filter = button.getAttribute('data-filter');
       pharmacyCards.forEach(card => {
         if (filter === 'all') {
           card.style.display = 'block';
         } else if (filter === '24h') {
-          card.style.display = card.dataset.hours === '24h' ? 'block' : 'none';
+          card.style.display = card.getAttribute('data-hours') === '24h' ? 'block' : 'none';
         } else {
-          card.style.display = card.dataset.hours === 'regular' ? 'block' : 'none';
+          card.style.display = card.getAttribute('data-hours') === 'regular' ? 'block' : 'none';
         }
       });
     });
