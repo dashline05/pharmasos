@@ -8,11 +8,11 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -25,11 +25,13 @@ jobs:
         pip install requests beautifulsoup4
 
     - name: Run pharmacy data update script
-      run: python datahi.py
+      run: |
+        cd src/scripts
+        python datahi.py
     
     - name: Commit and push if changed
       run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add src/data/pharmacyData.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update pharmacy data for $(date +'%Y-%m-%d')" && git push) 
