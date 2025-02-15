@@ -77,15 +77,65 @@ const pharmaciesByCity = cities.map(city => ({
   pharmacies: allPharmacies.filter(pharmacy => pharmacy?.city?.fr === city) || []
 }));
 
-const cityList = pharmaciesByCity.map(({ city, pharmacies }) => ({
-  name: {
-    fr: city,
-    en: city,
-    ar: city
+// Update city translations with proper Arabic names
+const cityTranslations = {
+  'Casablanca': {
+    fr: 'Casablanca',
+    en: 'Casablanca',
+    ar: 'الدار البيضاء'
   },
-  count: pharmacies.length,
-  open24h: pharmacies.filter(pharmacy => String(pharmacy.hours || '').includes('24h')).length
-})).sort((a, b) => a.name[currentLang].localeCompare(b.name[currentLang]));
+  'Rabat': {
+    fr: 'Rabat',
+    en: 'Rabat',
+    ar: 'الرباط'
+  },
+  'Sale': {
+    fr: 'Salé',
+    en: 'Sale',
+    ar: 'سلا'
+  },
+  'Temara': {
+    fr: 'Témara',
+    en: 'Temara',
+    ar: 'تمارة'
+  },
+  'Marrakech': {
+    fr: 'Marrakech',
+    en: 'Marrakech',
+    ar: 'مراكش'
+  },
+  'Ain-aouda': {
+    fr: 'Aïn Aouda',
+    en: 'Ain Aouda',
+    ar: 'عين عودة'
+  }
+};
+
+// Update the cityList creation to ensure translations are used
+const cityList = pharmaciesByCity
+  .map(({ city, pharmacies }) => {
+    // Make sure we have translations for this city
+    const translation = cityTranslations[city] || {
+      fr: city,
+      en: city,
+      ar: city
+    };
+
+    return {
+      name: translation,
+      count: pharmacies.length,
+      open24h: pharmacies.filter(pharmacy => 
+        String(pharmacy.hours || '').includes('24h')
+      ).length
+    };
+  })
+  .sort((a, b) => {
+    // Use proper locale-aware sorting
+    if (currentLang === 'ar') {
+      return a.name.ar.localeCompare(b.name.ar, 'ar-MA');
+    }
+    return a.name[currentLang].localeCompare(b.name[currentLang], currentLang === 'fr' ? 'fr-FR' : 'en-US');
+  });
 
 const lastUpdated = new Date(pharmacyData.date).toLocaleDateString(currentLang === 'ar' ? 'ar-MA' : currentLang === 'fr' ? 'fr-FR' : 'en-US');
 
