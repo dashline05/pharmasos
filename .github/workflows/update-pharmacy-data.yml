@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Fetch all history for proper comparison
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -31,26 +31,11 @@ jobs:
         mkdir -p src/data
         mkdir -p src/scripts
 
-    - name: Backup current data for comparison
-      run: |
-        if [ -f src/data/pharmacyData.json ]; then
-          cp src/data/pharmacyData.json src/data/pharmacyData.json.bak
-        fi
-
     - name: Run pharmacy data update script
       run: |
         cd src/scripts
         python datahi.py
         mv pharmacies_*.json ../data/pharmacyData.json
-
-    - name: Compare data changes
-      run: |
-        if [ -f src/data/pharmacyData.json.bak ]; then
-          echo "Comparing old and new data:"
-          diff src/data/pharmacyData.json.bak src/data/pharmacyData.json || true
-        else
-          echo "No previous data found for comparison"
-        fi
 
     - name: Debug data content
       run: |
@@ -59,19 +44,12 @@ jobs:
         echo "File size and timestamp:"
         ls -la src/data/pharmacyData.json
     
-    - name: Commit and push if changed
+    - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # Force add the file even if it looks the same
+        # Always commit and push changes
         git add -f src/data/pharmacyData.json
-        
-        # Check if there are changes and commit
-        if git diff --staged --quiet; then
-          echo "No changes detected in pharmacyData.json"
-        else
-          echo "Changes detected, committing..."
-          git commit -m "Update pharmacy data for $(date +'%Y-%m-%d')"
-          git push
-        fi 
+        git commit -m "Update pharmacy data for $(date +'%Y-%m-%d')" || echo "No changes to commit"
+        git push origin main || echo "No changes to push" 
