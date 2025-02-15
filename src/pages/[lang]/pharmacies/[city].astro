@@ -102,9 +102,8 @@ function is24hPharmacy(pharmacy: any) {
   title={pageTitle}
   description={pageDescription}
   lang={currentLang}
-  dir={currentLang === 'ar' ? 'rtl' : 'ltr'}
 >
-  <div class="pharmacy-page">
+  <div class="pharmacy-page" dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
     <h1>{pageTitle}</h1>
     <p class="subtitle">{pageDescription}</p>
     <p class="important-notice">{translations.important[currentLang]}</p>
