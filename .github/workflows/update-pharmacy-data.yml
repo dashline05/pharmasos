@@ -24,10 +24,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4
 
+    - name: List directory contents
+      run: |
+        pwd
+        ls -la
+        ls -la src/
+
     - name: Run pharmacy data update script
       run: |
-        cd src/scripts
-        python datahi.py
+        ls -la
+        python src/scripts/datahi.py
     
     - name: Commit and push if changed
       run: |
