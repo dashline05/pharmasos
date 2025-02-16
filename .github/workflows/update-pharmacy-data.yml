@@ -53,7 +53,10 @@ jobs:
         # Pull latest changes first
         git pull origin main --rebase
         
+        # Get current date in Morocco timezone
+        CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
+        
         # Add and commit changes
         git add -f src/data/pharmacyData.json
-        git commit -m "Update pharmacy data for $(date +'%Y-%m-%d')" --allow-empty
+        git commit -m "Update pharmacy data for ${CURRENT_DATE}" --allow-empty
         git push origin main 
