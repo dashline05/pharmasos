@@ -32,11 +32,18 @@ jobs:
         mkdir -p src/data
         mkdir -p src/scripts
 
+    - name: List files in src/scripts (before script)
+      run: ls -l src/scripts
+
     - name: Run pharmacy data update script
       run: |
         cd src/scripts
         python datahi.py || exit 1
         mv pharmacies_*.json ../data/pharmacyData.json || exit 1
+      working-directory: src/scripts
+
+    - name: List files in src/scripts (after script)
+      run: ls -l src/scripts
 
     - name: Debug generated JSON
       run: |
@@ -47,9 +54,6 @@ jobs:
       run: |
         echo "New data content:"
         cat src/data/pharmacyData.json
-
-    - name: Check Git status
-      run: git status
 
     - name: Configure Git and commit changes
       run: |
