@@ -6,58 +6,32 @@ on:
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
-  update-data:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests beautifulsoup4
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "./dist"
 
-    - name: Create directories if they don't exist
-      run: |
-        mkdir -p src/data
-        mkdir -p src/scripts
-
-    - name: Run pharmacy data update script
-      run: |
-        # The script should already be in src/scripts after checkout
-        python src/scripts/datahi.py
-        mv src/scripts/pharmacies_*.json src/data/pharmacyData.json
-
-    - name: Debug data content
-      run: |
-        echo "New data content:"
-        cat src/data/pharmacyData.json
-    
-    - name: Configure Git and commit changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # Reset any unstaged changes
-        git reset --hard
-        
-        # Pull latest changes first
-        git pull origin main --rebase
-        
-        # Get current date in Morocco timezone
-        CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
-        
-        # Add and commit changes
-        git add -f src/data/pharmacyData.json
-        git commit -m "Update pharmacy data for ${CURRENT_DATE}" --allow-empty
-        git push origin main
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1 
