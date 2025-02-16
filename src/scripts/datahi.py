@@ -107,6 +107,7 @@ pharmacy_translations = {
     'Pharmacie CENTRALE': {'fr': 'Pharmacie CENTRALE', 'en': 'CENTRAL PHARMACY', 'ar': 'الصيدلية المركزية'},
     'Pharmacie BOUCHRA AL OUM': {'fr': 'Pharmacie BOUCHRA AL OUM', 'en': 'BOUCHRA AL OUM PHARMACY', 'ar': 'صيدلية بشرى الأم'},
     'Pharmacie DERB TALIANE': {'fr': 'Pharmacie DERB TALIANE', 'en': 'DERB TALIANE PHARMACY', 'ar': 'صيدلية درب طاليان'},
+    'Pharmacie  DERB TALIANE': {'fr': 'Pharmacie DERB TALIANE', 'en': 'DERB TALIANE PHARMACY', 'ar': 'صيدلية درب طاليان'},
     'Pharmacie DAR TOUNSI': {'fr': 'Pharmacie DAR TOUNSI', 'en': 'DAR TOUNSI PHARMACY', 'ar': 'صيدلية دار التونسي'},
     'Pharmacie AIN ITTI': {'fr': 'Pharmacie AIN ITTI', 'en': 'AIN ITTI PHARMACY', 'ar': 'صيدلية عين إيتي'},
     'Pharmacie AL AKHAWAYNE': {'fr': 'Pharmacie AL AKHAWAYNE', 'en': 'AL AKHAWAYNE PHARMACY', 'ar': 'صيدلية الأخوين'},
