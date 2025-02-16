@@ -27,37 +27,56 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 python-dateutil
 
-    - name: Create directories if they don't exist
+    - name: List directory structure before
       run: |
-        mkdir -p src/data
-        mkdir -p src/scripts
+        echo "Current directory structure:"
+        ls -R
 
     - name: Run pharmacy data update script
       run: |
         cd src/scripts
-        python datahi.py
-        mv pharmacies_*.json ../data/pharmacyData.json
+        python -u datahi.py  # Added -u flag for unbuffered output
+        echo "Script execution completed"
+        echo "Listing current directory:"
+        ls -la
+        echo "Moving file to data directory..."
+        if [ -f pharmacies_*.json ]; then
+          mv pharmacies_*.json ../data/pharmacyData.json
+          echo "File moved successfully"
+        else
+          echo "No pharmacy data file generated!"
+          exit 1
+        fi
 
-    - name: Debug data content
+    - name: Verify data file
       run: |
-        echo "New data content:"
-        cat src/data/pharmacyData.json
+        echo "Checking data directory contents:"
+        ls -la src/data/
+        if [ -f src/data/pharmacyData.json ]; then
+          echo "pharmacyData.json exists and contains:"
+          cat src/data/pharmacyData.json
+        else
+          echo "pharmacyData.json not found!"
+          exit 1
+        fi
     
     - name: Configure Git and commit changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # Reset any unstaged changes
-        git reset --hard
-        
-        # Pull latest changes first
-        git pull origin main --rebase
+        echo "Checking git status:"
+        git status
         
         # Get current date in Morocco timezone
         CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
         
-        # Add and commit changes
-        git add -f src/data/pharmacyData.json
-        git commit -m "Update pharmacy data for ${CURRENT_DATE}" --allow-empty
-        git push origin main 
+        # Check if there are changes to commit
+        if git diff --exit-code src/data/pharmacyData.json; then
+          echo "No changes to pharmacyData.json"
+        else
+          echo "Changes detected in pharmacyData.json"
+          git add src/data/pharmacyData.json
+          git commit -m "Update pharmacy data for ${CURRENT_DATE}"
+          git push origin main
+        fi 
