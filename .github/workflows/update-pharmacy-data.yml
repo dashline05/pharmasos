@@ -1,3 +1,10 @@
+name: Update Pharmacy Data
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time)
+  workflow_dispatch:      # Allows manual trigger
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
