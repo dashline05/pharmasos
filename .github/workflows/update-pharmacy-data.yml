@@ -32,13 +32,9 @@ jobs:
         mkdir -p src/data
         mkdir -p src/scripts
 
-    - name: Copy script to src/scripts
-      run: |
-        cp datahi.py src/scripts/
-        chmod +x src/scripts/datahi.py
-
     - name: Run pharmacy data update script
       run: |
+        # The script should already be in src/scripts after checkout
         python src/scripts/datahi.py
         mv src/scripts/pharmacies_*.json src/data/pharmacyData.json
 
