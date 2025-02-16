@@ -43,7 +43,7 @@ jobs:
         echo "New data content:"
         cat src/data/pharmacyData.json
     
-    - name: Commit and push changes
+    - name: Configure Git and commit changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
