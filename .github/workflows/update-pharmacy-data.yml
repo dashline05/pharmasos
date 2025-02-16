@@ -42,13 +42,14 @@ jobs:
       run: |
         echo "New data content:"
         cat src/data/pharmacyData.json
-        echo "File size and timestamp:"
-        ls -la src/data/pharmacyData.json
     
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # Reset any unstaged changes
+        git reset --hard
         
         # Pull latest changes first
         git pull origin main --rebase
@@ -59,4 +60,4 @@ jobs:
         # Add and commit changes
         git add -f src/data/pharmacyData.json
         git commit -m "Update pharmacy data for ${CURRENT_DATE}" --allow-empty
-        git push origin main 
+        git push origin main
