@@ -12,6 +12,12 @@ jobs:
       contents: write
     
     steps:
+    - name: Display runtime information
+      run: |
+        echo "Job started at: $(TZ=Africa/Casablanca date)"
+        echo "Current UTC time: $(date -u)"
+        echo "Current Casablanca time: $(TZ=Africa/Casablanca date)"
+    
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
@@ -25,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 python-dateutil
+        pip install requests beautifulsoup4 python-dateutil pytz
 
     - name: List directory structure before
       run: |
@@ -35,8 +41,10 @@ jobs:
     - name: Run pharmacy data update script
       run: |
         cd src/scripts
+        # Add timestamp to log
+        echo "Starting script at: $(TZ=Africa/Casablanca date)"
         python -u datahi.py  # Added -u flag for unbuffered output
-        echo "Script execution completed"
+        echo "Script execution completed at: $(TZ=Africa/Casablanca date)"
         echo "Listing current directory:"
         ls -la
         echo "Moving file to data directory..."
@@ -50,7 +58,7 @@ jobs:
 
     - name: Verify data file
       run: |
-        echo "Checking data directory contents:"
+        echo "Checking data directory contents at: $(TZ=Africa/Casablanca date)"
         ls -la src/data/
         if [ -f src/data/pharmacyData.json ]; then
           echo "pharmacyData.json exists and contains:"
@@ -65,7 +73,7 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        echo "Checking git status:"
+        echo "Checking git status at: $(TZ=Africa/Casablanca date)"
         git status
         
         # Get current date in Morocco timezone
