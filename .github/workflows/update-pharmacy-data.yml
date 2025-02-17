@@ -2,12 +2,15 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '40 19 * * *'  # Runs at 20:40 Casablanca time (GMT+1)
+    - cron: '0 23 * * *'  # Runs at 00:00 AM Casablanca time (GMT+1)
   push:
     paths:
       - '.github/workflows/update-pharmacy-data.yml'
       - 'src/scripts/datahi.py'
   workflow_dispatch:      # Allows manual trigger
+
+env:
+  TZ: 'Africa/Casablanca'  # Set timezone for all steps
 
 jobs:
   update-data:
