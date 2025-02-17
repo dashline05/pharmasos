@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '0 23 * * *'  # Runs at 00:00 AM Casablanca time (GMT+1)
+    - cron: '0 0 * * *'  # Runs at 00:00 AM Casablanca time (GMT+1)
   push:
     paths:
       - '.github/workflows/update-pharmacy-data.yml'
