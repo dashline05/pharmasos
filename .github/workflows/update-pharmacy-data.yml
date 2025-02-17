@@ -2,7 +2,11 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '25 19 * * *'  # Runs at 20:25 Casablanca time (GMT+1)
+    - cron: '40 19 * * *'  # Runs at 20:40 Casablanca time (GMT+1)
+  push:
+    paths:
+      - '.github/workflows/update-pharmacy-data.yml'
+      - 'src/scripts/datahi.py'
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
