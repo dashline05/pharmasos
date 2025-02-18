@@ -1,193 +1,81 @@
 name: Update Pharmacy Data
 
-
-
 on:
-
   schedule:
-
-    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time GMT+1)
-
-    - cron: '1 23 * * *'  # Backup run 1 minute later
-
-    - cron: '5 23 * * *'  # Additional backup run
-
+    - cron: '18 23 * * *'  # Runs at 23:18 UTC (00:18 Casablanca time GMT+1)
   push:
-
     paths:
-
       - '.github/workflows/update-pharmacy-data.yml'
-
       - 'src/scripts/datahi.py'
-
   workflow_dispatch:      # Allows manual trigger
 
-
-
 jobs:
-
   update-data:
-
     runs-on: ubuntu-latest
-
     permissions:
-
       contents: write
-
     
-
     steps:
-
-    - name: Display runtime information
-
+    - name: Debug Timing Info
       run: |
-
-        echo "Job started at: $(TZ=Africa/Casablanca date)"
-
-        echo "Current UTC time: $(date -u)"
-
-        echo "Current Casablanca time: $(TZ=Africa/Casablanca date)"
-
+        echo "============= Debug Timing ============="
+        echo "UTC time: $(date -u)"
+        echo "UTC timestamp: $(date -u +%s)"
+        echo "Workflow run time: ${{ github.event.schedule }}"
+        echo "Event name: ${{ github.event_name }}"
+        echo "======================================="
     
-
     - uses: actions/checkout@v3
-
       with:
-
         fetch-depth: 0
-
         token: ${{ secrets.GITHUB_TOKEN }}
-
     
-
     - name: Set up Python
-
       uses: actions/setup-python@v4
-
       with:
-
         python-version: '3.x'
-
     
-
     - name: Install dependencies
-
       run: |
-
         python -m pip install --upgrade pip
-
         pip install requests beautifulsoup4 python-dateutil pytz
 
-
-
-    - name: List directory structure before
-
-      run: |
-
-        echo "Current directory structure:"
-
-        ls -R
-
-
-
     - name: Run pharmacy data update script
-
       run: |
-
         cd src/scripts
-
-        # Add timestamp to log
-
-        echo "Starting script at: $(TZ=Africa/Casablanca date)"
-
-        python -u datahi.py  # Added -u flag for unbuffered output
-
-        echo "Script execution completed at: $(TZ=Africa/Casablanca date)"
-
-        echo "Listing current directory:"
-
-        ls -la
-
-        echo "Moving file to data directory..."
-
+        echo "Starting script at UTC: $(date -u)"
+        python -u datahi.py
+        echo "Script completed at UTC: $(date -u)"
         if [ -f pharmacies_*.json ]; then
-
           mv pharmacies_*.json ../data/pharmacyData.json
-
           echo "File moved successfully"
-
         else
-
           echo "No pharmacy data file generated!"
-
           exit 1
-
         fi
-
-
 
     - name: Verify data file
-
       run: |
-
-        echo "Checking data directory contents at: $(TZ=Africa/Casablanca date)"
-
-        ls -la src/data/
-
         if [ -f src/data/pharmacyData.json ]; then
-
-          echo "pharmacyData.json exists and contains:"
-
-          cat src/data/pharmacyData.json
-
+          echo "pharmacyData.json exists"
+          ls -l src/data/pharmacyData.json
         else
-
           echo "pharmacyData.json not found!"
-
           exit 1
-
         fi
-
     
-
     - name: Configure Git and commit changes
-
       run: |
-
         git config --global user.name 'github-actions[bot]'
-
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
         
-
-        echo "Checking git status at: $(TZ=Africa/Casablanca date)"
-
-        git status
-
-        
-
-        # Get current date in Morocco timezone
-
-        CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
-
-        
-
-        # Check if there are changes to commit
-
         if git diff --exit-code src/data/pharmacyData.json; then
-
           echo "No changes to pharmacyData.json"
-
         else
-
           echo "Changes detected in pharmacyData.json"
-
           git add src/data/pharmacyData.json
-
-          git commit -m "Update pharmacy data for ${CURRENT_DATE}"
-
+          git commit -m "Update pharmacy data for $(date -u +'%Y-%m-%d')"
           git push origin main
-
         fi 
 
 
