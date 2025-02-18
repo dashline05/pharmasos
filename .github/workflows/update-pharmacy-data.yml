@@ -2,15 +2,12 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 AM Casablanca time (GMT+1)
+    - cron: '35 23 * * *'  # Runs at 23:35 UTC (00:35 AM Casablanca time GMT+1)
   push:
     paths:
       - '.github/workflows/update-pharmacy-data.yml'
       - 'src/scripts/datahi.py'
   workflow_dispatch:      # Allows manual trigger
-
-env:
-  TZ: 'Africa/Casablanca'  # Set timezone for all steps
 
 jobs:
   update-data:
@@ -21,9 +18,8 @@ jobs:
     steps:
     - name: Display runtime information
       run: |
-        echo "Job started at: $(TZ=Africa/Casablanca date)"
+        echo "Job started at: $(date)"
         echo "Current UTC time: $(date -u)"
-        echo "Current Casablanca time: $(TZ=Africa/Casablanca date)"
     
     - uses: actions/checkout@v3
       with:
@@ -49,9 +45,9 @@ jobs:
       run: |
         cd src/scripts
         # Add timestamp to log
-        echo "Starting script at: $(TZ=Africa/Casablanca date)"
+        echo "Starting script at: $(date)"
         python -u datahi.py  # Added -u flag for unbuffered output
-        echo "Script execution completed at: $(TZ=Africa/Casablanca date)"
+        echo "Script execution completed at: $(date)"
         echo "Listing current directory:"
         ls -la
         echo "Moving file to data directory..."
@@ -65,7 +61,7 @@ jobs:
 
     - name: Verify data file
       run: |
-        echo "Checking data directory contents at: $(TZ=Africa/Casablanca date)"
+        echo "Checking data directory contents at: $(date)"
         ls -la src/data/
         if [ -f src/data/pharmacyData.json ]; then
           echo "pharmacyData.json exists and contains:"
@@ -80,11 +76,11 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        echo "Checking git status at: $(TZ=Africa/Casablanca date)"
+        echo "Checking git status at: $(date)"
         git status
         
         # Get current date in Morocco timezone
-        CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
+        CURRENT_DATE=$(date +'%Y-%m-%d')
         
         # Check if there are changes to commit
         if git diff --exit-code src/data/pharmacyData.json; then
