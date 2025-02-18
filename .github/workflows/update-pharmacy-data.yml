@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # Runs at 23:30 UTC (00:30 Casablanca time GMT+1)
+    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time GMT+1)
   push:
     paths:
       - '.github/workflows/update-pharmacy-data.yml'
@@ -48,7 +48,6 @@ jobs:
       run: |
         cd src/scripts
         echo "Starting script at Casablanca time: $(TZ=Africa/Casablanca date)"
-        echo "Starting script at UTC: $(date -u)"
         python -u datahi.py
         echo "Script completed at Casablanca time: $(TZ=Africa/Casablanca date)"
         if [ -f pharmacies_*.json ]; then
@@ -73,7 +72,10 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # Make sure we're on main and up to date
         git checkout main
+        git pull origin main --rebase
         
         if git diff --exit-code src/data/pharmacyData.json; then
           echo "No changes to pharmacyData.json"
@@ -82,7 +84,17 @@ jobs:
           git add src/data/pharmacyData.json
           CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
           git commit -m "Update pharmacy data for ${CURRENT_DATE} (Casablanca time)"
-          git push origin main
+          
+          # Retry push up to 3 times
+          for i in 1 2 3; do
+            if git push origin main; then
+              echo "Push successful"
+              break
+            else
+              echo "Push attempt $i failed, retrying..."
+              git pull --rebase origin main
+            fi
+          done
         fi 
 
 
