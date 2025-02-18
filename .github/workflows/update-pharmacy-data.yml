@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '18 23 * * *'  # Runs at 23:18 UTC (00:18 Casablanca time GMT+1)
+    - cron: '30 23 * * *'  # Runs at 23:30 UTC (00:30 Casablanca time GMT+1)
   push:
     paths:
       - '.github/workflows/update-pharmacy-data.yml'
@@ -14,19 +14,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      TZ: 'Africa/Casablanca'
     
     steps:
-    - name: Debug Timing Info
+    - name: Display runtime information
       run: |
         echo "============= Debug Timing ============="
+        echo "Job started at: $(TZ=Africa/Casablanca date)"
         echo "UTC time: $(date -u)"
         echo "UTC timestamp: $(date -u +%s)"
-        echo "Workflow run time: ${{ github.event.schedule }}"
+        echo "Casablanca time: $(TZ=Africa/Casablanca date)"
         echo "Event name: ${{ github.event_name }}"
         echo "======================================="
     
     - uses: actions/checkout@v3
       with:
+        ref: main
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
     
@@ -43,9 +47,10 @@ jobs:
     - name: Run pharmacy data update script
       run: |
         cd src/scripts
+        echo "Starting script at Casablanca time: $(TZ=Africa/Casablanca date)"
         echo "Starting script at UTC: $(date -u)"
         python -u datahi.py
-        echo "Script completed at UTC: $(date -u)"
+        echo "Script completed at Casablanca time: $(TZ=Africa/Casablanca date)"
         if [ -f pharmacies_*.json ]; then
           mv pharmacies_*.json ../data/pharmacyData.json
           echo "File moved successfully"
@@ -68,13 +73,15 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout main
         
         if git diff --exit-code src/data/pharmacyData.json; then
           echo "No changes to pharmacyData.json"
         else
           echo "Changes detected in pharmacyData.json"
           git add src/data/pharmacyData.json
-          git commit -m "Update pharmacy data for $(date -u +'%Y-%m-%d')"
+          CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
+          git commit -m "Update pharmacy data for ${CURRENT_DATE} (Casablanca time)"
           git push origin main
         fi 
 
