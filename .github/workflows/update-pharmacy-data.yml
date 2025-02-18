@@ -6,7 +6,11 @@ on:
 
   schedule:
 
-    - cron: '50 22 * * *'  # Runs at 20:40 Casablanca time (GMT+1)
+    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time GMT+1)
+
+    - cron: '1 23 * * *'  # Backup run 1 minute later
+
+    - cron: '5 23 * * *'  # Additional backup run
 
   push:
 
