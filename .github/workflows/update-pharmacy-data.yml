@@ -6,7 +6,7 @@ on:
 
   schedule:
 
-    - cron: '42 22 * * *'  # Runs at 23:42 Casablanca time (GMT+1)
+    - cron: '50 22 * * *'  # Runs at 20:40 Casablanca time (GMT+1)
 
   push:
 
