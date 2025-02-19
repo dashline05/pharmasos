@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '20 20 * * *'  # Runs at 20:20 UTC (21:20 Casablanca time GMT+1)
+    - cron: '25 20 * * *'  # Runs at 21:25 Casablanca time (20:25 UTC)
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
@@ -11,19 +11,24 @@ jobs:
     permissions:
       contents: write
     env:
-      TZ: 'Africa/Casablanca'  # Set timezone for all steps
+      TZ: 'Africa/Casablanca'
     
     steps:
     - name: Display runtime information
       run: |
         echo "============= Debug Timing ============="
-        echo "Casablanca time: $(TZ=Africa/Casablanca date)"
+        date
+        echo "Current time in various formats:"
+        echo "System time: $(date)"
         echo "UTC time: $(date -u)"
-        echo "Event name: ${{ github.event_name }}"
+        echo "Casablanca time: $(TZ=Africa/Casablanca date)"
+        echo "Event trigger: ${{ github.event_name }}"
         echo "======================================="
     
     - uses: actions/checkout@v3
       with:
+        ref: main
+        fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
@@ -42,7 +47,7 @@ jobs:
       run: |
         cd src/scripts
         # Create a small wrapper to ensure correct timezone
-        echo 'import os; os.environ["TZ"] = "Africa/Casablanca"; import time; time.tzset(); import datahi; datahi.main()' > run_script.py
+        echo 'import os, sys; os.environ["TZ"] = "Africa/Casablanca"; import time; time.tzset(); import datahi; print("Python timezone:", time.tzname); sys.stdout.flush(); datahi.main()' > run_script.py
         python -u run_script.py
         if [ -f pharmacies_*.json ]; then
           mv pharmacies_*.json ../data/pharmacyData.json
@@ -60,10 +65,9 @@ jobs:
         if [[ -n "$(git status --porcelain src/data/pharmacyData.json)" ]]; then
           echo "Changes detected in pharmacyData.json"
           git add src/data/pharmacyData.json
-          # Use Casablanca timezone for commit message date
           CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
           git commit -m "Update pharmacy data for ${CURRENT_DATE} (Casablanca time)"
-          git push
+          git push origin main
         else
           echo "No changes to pharmacyData.json"
         fi
