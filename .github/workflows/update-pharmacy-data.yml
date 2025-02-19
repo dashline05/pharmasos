@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '25 20 * * *'  # Runs at 21:25 Casablanca time (20:25 UTC)
+    - cron: '55 20 * * *'  # Runs at 20:55 UTC (21:55 Casablanca time GMT+1)
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
@@ -62,12 +62,21 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
+        # Pull latest changes first
+        git pull origin main --rebase
+        
         if [[ -n "$(git status --porcelain src/data/pharmacyData.json)" ]]; then
           echo "Changes detected in pharmacyData.json"
           git add src/data/pharmacyData.json
           CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
           git commit -m "Update pharmacy data for ${CURRENT_DATE} (Casablanca time)"
-          git push origin main
+          
+          # Try to push, if fails pull and try again
+          if ! git push origin main; then
+            echo "Push failed, trying to pull and push again..."
+            git pull origin main --rebase
+            git push origin main
+          fi
         else
           echo "No changes to pharmacyData.json"
         fi
