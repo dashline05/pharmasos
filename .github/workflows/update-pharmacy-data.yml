@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '52 19 * * *'  # Runs at 19:52 UTC (20:52 Casablanca time GMT+1)
+    - cron: '20 20 * * *'  # Runs at 20:20 UTC (21:20 Casablanca time GMT+1)
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
