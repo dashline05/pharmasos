@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '0 23 * * *'  # Runs at 23:00 UTC (00:00 Casablanca time GMT+1)
+    - cron: '30 19 * * *'  # Runs at 19:30 UTC (20:30 Casablanca time GMT+1)
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
@@ -37,11 +37,13 @@ jobs:
         pip install requests beautifulsoup4 python-dateutil pytz
 
     - name: Run pharmacy data update script
+      env:
+        TZ: 'Africa/Casablanca'
       run: |
         cd src/scripts
-        # Export TZ to ensure Python script uses correct timezone
-        export TZ=Africa/Casablanca
-        python -u datahi.py
+        # Create a small wrapper to ensure correct timezone
+        echo 'import os; os.environ["TZ"] = "Africa/Casablanca"; import time; time.tzset(); import datahi; datahi.main()' > run_script.py
+        python -u run_script.py
         if [ -f pharmacies_*.json ]; then
           mv pharmacies_*.json ../data/pharmacyData.json
           echo "File moved successfully"
