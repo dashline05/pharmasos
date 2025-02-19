@@ -2,7 +2,9 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '28 22 * * *'  # 22:30 Casablanca time
+    - cron: '43 22 * * *'  # 23:40 Casablanca time
+    - cron: '44 22 * * *'  # 23:41 Casablanca time
+    - cron: '45 22 * * *'  # 23:42 Casablanca time
   workflow_dispatch:
 
 jobs:
@@ -12,9 +14,20 @@ jobs:
       contents: write
     
     steps:
+    - name: Debug Time
+      run: |
+        echo "Current time info:"
+        echo "=================="
+        date
+        echo "UTC: $(date -u)"
+        echo "Casablanca: $(TZ=Africa/Casablanca date)"
+        echo "Event: ${{ github.event_name }}"
+        echo "=================="
+
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
+        ref: main
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -29,8 +42,11 @@ jobs:
         pip install requests beautifulsoup4 python-dateutil pytz
 
     - name: Run pharmacy data update script
+      env:
+        TZ: Africa/Casablanca
       run: |
         cd src/scripts
+        echo "Starting script at: $(date)"
         cat > run_script.py << 'EOL'
         import os
         import time
@@ -38,9 +54,13 @@ jobs:
         from datetime import datetime
 
         # Set timezone to Casablanca
+        os.environ['TZ'] = 'Africa/Casablanca'
+        time.tzset()
+        
         casablanca_tz = pytz.timezone('Africa/Casablanca')
         current_time = datetime.now(casablanca_tz)
         print(f"Current Casablanca time: {current_time}")
+        print(f"Current timezone: {time.tzname}")
 
         # Import and run main script
         import datahi
@@ -51,7 +71,7 @@ jobs:
         
         if [ -f pharmacies_*.json ]; then
           mv pharmacies_*.json ../data/pharmacyData.json
-          echo "File moved successfully"
+          echo "File moved successfully at: $(date)"
         else
           echo "No pharmacy data file generated!"
           exit 1
@@ -64,6 +84,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        echo "Starting git operations at: $(date)"
+        
         # Get current date in Casablanca timezone
         CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
         
@@ -81,7 +103,7 @@ jobs:
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             if git pull --rebase origin main && git push origin main; then
-              echo "Successfully pushed changes"
+              echo "Successfully pushed changes at: $(date)"
               break
             else
               RETRY_COUNT=$((RETRY_COUNT + 1))
