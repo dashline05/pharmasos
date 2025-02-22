@@ -1920,7 +1920,9 @@ pharmacy_translations = {
     'PHARMACIE DIOR ATLAS': {'fr': 'PHARMACIE DIOR ATLAS', 'en': 'DIOR ATLAS PHARMACY', 'ar': 'صيدلية ديور أطلس'},
     'PHARMACIE WAHAT SIDI YOUSSEF': {'fr': 'PHARMACIE WAHAT SIDI YOUSSEF', 'en': 'WAHAT SIDI YOUSSEF PHARMACY', 'ar': 'صيدلية واحة سيدي يوسف'},
     'PHARMACIE SIDI M’BAREK': {'fr': 'PHARMACIE SIDI M’BAREK', 'en': 'SIDI M’BAREK PHARMACY', 'ar': 'صيدلية سيدي مبارك'},
-    'PHARMACIE ATLAS TARGA': {'fr': 'PHARMACIE ATLAS TARGA', 'en': 'ATLAS TARGA PHARMACY', 'ar': 'صيدلية أطلس تارغا'}
+    'PHARMACIE ATLAS TARGA': {'fr': 'PHARMACIE ATLAS TARGA', 'en': 'ATLAS TARGA PHARMACY', 'ar': 'صيدلية أطلس تارغا'},
+    'PHARMACIE L’HÔPITAL MILITAIRE': {'fr': 'PHARMACIE L’HÔPITAL MILITAIRE', 'en': 'MILITARY HOSPITAL PHARMACY', 'ar': 'صيدلية المستشفى العسكري'}
+
 
 
 
