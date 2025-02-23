@@ -1936,7 +1936,7 @@ pharmacy_translations = {
     'PHARMACIE ER-RYANE': {'fr': 'PHARMACIE ER-RYANE', 'en': 'ER-RYANE PHARMACY', 'ar': 'صيدلية الريان'},
     'PHARMACIE RIAD AL HADIKA': {'fr': 'PHARMACIE RIAD AL HADIKA', 'en': 'RIAD AL HADIKA PHARMACY', 'ar': 'صيدلية رياض الحديقة'},
     'PHARMACIE MOKHTAR SOUSSI': {'fr': 'PHARMACIE MOKHTAR SOUSSI', 'en': 'MOKHTAR SOUSSI PHARMACY', 'ar': 'صيدلية المختار السوسي'},
-    'PHARMACIE L’HÔPITAL MILITAIRE': {'fr': 'PHARMACIE L’HÔPITAL MILITAIRE', 'en': 'MILITARY HOSPITAL PHARMACY', 'ar': 'صيدلية المستشفى العسكري'}
+    'PHARMACIE L\'HÔPITAL MILITAIRE': {'fr': 'PHARMACIE L\'HÔPITAL MILITAIRE', 'en': 'MILITARY HOSPITAL PHARMACY', 'ar': 'صيدلية المستشفى العسكري'}
 
 
 
