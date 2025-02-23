@@ -1921,7 +1921,23 @@ pharmacy_translations = {
     'PHARMACIE WAHAT SIDI YOUSSEF': {'fr': 'PHARMACIE WAHAT SIDI YOUSSEF', 'en': 'WAHAT SIDI YOUSSEF PHARMACY', 'ar': 'صيدلية واحة سيدي يوسف'},
     'PHARMACIE SIDI M’BAREK': {'fr': 'PHARMACIE SIDI M’BAREK', 'en': 'SIDI M’BAREK PHARMACY', 'ar': 'صيدلية سيدي مبارك'},
     'PHARMACIE ATLAS TARGA': {'fr': 'PHARMACIE ATLAS TARGA', 'en': 'ATLAS TARGA PHARMACY', 'ar': 'صيدلية أطلس تارغا'},
+    'PHARMACIE SEFROU': {'fr': 'PHARMACIE SEFROU', 'en': 'SEFROU PHARMACY', 'ar': 'صيدلية صفرو'},
+    'PHARMACIE ABDESSALAM SMCPN': {'fr': 'PHARMACIE ABDESSALAM SMCPN', 'en': 'ABDESSALAM SMCPN PHARMACY', 'ar': 'صيدلية عبد السلام SMCPN'},
+    'PHARMACIE RAKIL': {'fr': 'PHARMACIE RAKIL', 'en': 'RAKIL PHARMACY', 'ar': 'صيدلية راكيل'},
+    'PHARMACIE DU ZOO': {'fr': 'PHARMACIE DU ZOO', 'en': 'ZOO PHARMACY', 'ar': 'صيدلية الحديقة الحيوانية'},
+    'PHARMACIE EL HAMZAOUI': {'fr': 'PHARMACIE EL HAMZAOUI', 'en': 'EL HAMZAOUI PHARMACY', 'ar': 'صيدلية الحمزاوي'},
+    'PHARMACIE NADIR': {'fr': 'PHARMACIE NADIR', 'en': 'NADIR PHARMACY', 'ar': 'صيدلية نادر'},
+    'PHARMACIE SALMA': {'fr': 'PHARMACIE SALMA', 'en': 'SALMA PHARMACY', 'ar': 'صيدلية سلمى'},
+    'PHARMACIE SYRIE': {'fr': 'PHARMACIE SYRIE', 'en': 'SYRIA PHARMACY', 'ar': 'صيدلية سوريا'},
+    'PHARMACIE LA VALLEE': {'fr': 'PHARMACIE LA VALLEE', 'en': 'THE VALLEY PHARMACY', 'ar': 'صيدلية الوادي'},
+    'PHARMACIE BAB AL AZHAR': {'fr': 'PHARMACIE BAB AL AZHAR', 'en': 'BAB AL AZHAR PHARMACY', 'ar': 'صيدلية باب الأزهر'},
+    'PHARMACIE LES ARENES': {'fr': 'PHARMACIE LES ARENES', 'en': 'THE ARENAS PHARMACY', 'ar': 'صيدلية الساحات'},
+    'PHARMACIE ALBADR': {'fr': 'PHARMACIE ALBADR', 'en': 'ALBADR PHARMACY', 'ar': 'صيدلية البدر'},
+    'PHARMACIE ER-RYANE': {'fr': 'PHARMACIE ER-RYANE', 'en': 'ER-RYANE PHARMACY', 'ar': 'صيدلية الريان'},
+    'PHARMACIE RIAD AL HADIKA': {'fr': 'PHARMACIE RIAD AL HADIKA', 'en': 'RIAD AL HADIKA PHARMACY', 'ar': 'صيدلية رياض الحديقة'},
+    'PHARMACIE MOKHTAR SOUSSI': {'fr': 'PHARMACIE MOKHTAR SOUSSI', 'en': 'MOKHTAR SOUSSI PHARMACY', 'ar': 'صيدلية المختار السوسي'},
     'PHARMACIE L’HÔPITAL MILITAIRE': {'fr': 'PHARMACIE L’HÔPITAL MILITAIRE', 'en': 'MILITARY HOSPITAL PHARMACY', 'ar': 'صيدلية المستشفى العسكري'}
+
 
 
 
