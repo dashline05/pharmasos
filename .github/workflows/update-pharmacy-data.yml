@@ -2,10 +2,14 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '00 00 * * *'  # 00:01 Casablanca time
-    - cron: '01 01 * * *'  # 00:02 Casablanca time
-    - cron: '02 03 * * *'  # 00:03 Casablanca time
-  workflow_dispatch:
+    - cron: '0 23 * * *'  # Runs at 00:00 Casablanca time (23:00 UTC)
+    - cron: '0 1 * * *'   # Runs at 02:00 Casablanca time (01:00 UTC)
+    - cron: '0 5 * * *'   # Runs at 06:00 Casablanca time (05:00 UTC)
+  push:
+    paths:
+      - '.github/workflows/update-pharmacy-data.yml'
+      - 'src/scripts/datahi.py'
+  workflow_dispatch:      # Allows manual trigger
 
 jobs:
   update-data:
@@ -14,108 +18,79 @@ jobs:
       contents: write
     
     steps:
-    - name: Debug Time
+    - name: Display runtime information
       run: |
-        echo "Current time info:"
-        echo "=================="
-        date
-        echo "UTC: $(date -u)"
-        echo "Casablanca: $(TZ=Africa/Casablanca date)"
-        echo "Event: ${{ github.event_name }}"
-        echo "=================="
-
-    - name: Checkout repository
-      uses: actions/checkout@v3
+        echo "Job started at: $(TZ=Africa/Casablanca date)"
+        echo "Current UTC time: $(date -u)"
+        echo "Current Casablanca time: $(TZ=Africa/Casablanca date)"
+    
+    - uses: actions/checkout@v3
       with:
-        ref: main
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
-
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
-
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 python-dateutil pytz
 
+    - name: List directory structure before
+      run: |
+        echo "Current directory structure:"
+        ls -R
+
     - name: Run pharmacy data update script
-      env:
-        TZ: Africa/Casablanca
       run: |
         cd src/scripts
+        # Add timestamp to log
         echo "Starting script at: $(date)"
-        cat > run_script.py << 'EOL'
-        import os
-        import time
-        import pytz
-        from datetime import datetime
-
-        # Set timezone to Casablanca
-        os.environ['TZ'] = 'Africa/Casablanca'
-        time.tzset()
-        
-        casablanca_tz = pytz.timezone('Africa/Casablanca')
-        current_time = datetime.now(casablanca_tz)
-        print(f"Current Casablanca time: {current_time}")
-        print(f"Current timezone: {time.tzname}")
-
-        # Import and run main script
-        import datahi
-        datahi.main()
-        EOL
-        
-        python -u run_script.py
-        
+        python -u datahi.py  # Added -u flag for unbuffered output
+        echo "Script execution completed at: $(date)"
+        echo "Listing current directory:"
+        ls -la
+        echo "Moving file to data directory..."
         if [ -f pharmacies_*.json ]; then
           mv pharmacies_*.json ../data/pharmacyData.json
-          echo "File moved successfully at: $(date)"
+          echo "File moved successfully"
         else
           echo "No pharmacy data file generated!"
           exit 1
         fi
 
-    - name: Configure Git
+    - name: Verify data file
+      run: |
+        echo "Checking data directory contents at: $(date)"
+        ls -la src/data/
+        if [ -f src/data/pharmacyData.json ]; then
+          echo "pharmacyData.json exists and contains:"
+          cat src/data/pharmacyData.json
+        else
+          echo "pharmacyData.json not found!"
+          exit 1
+        fi
+    
+    - name: Configure Git and commit changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-    - name: Commit and push changes
-      run: |
-        echo "Starting git operations at: $(date)"
         
-        # Get current date in Casablanca timezone
-        CURRENT_DATE=$(TZ=Africa/Casablanca date +'%Y-%m-%d')
+        echo "Checking git status at: $(date)"
+        git status
         
-        # Check for changes
-        if [[ -n "$(git status --porcelain src/data/pharmacyData.json)" ]]; then
-          echo "Changes detected in pharmacyData.json"
-          
-          # Stage and commit changes
-          git add src/data/pharmacyData.json
-          git commit -m "Update pharmacy data for ${CURRENT_DATE} (Casablanca time)"
-          
-          # Push changes with retry logic
-          MAX_RETRIES=3
-          RETRY_COUNT=0
-          
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            if git pull --rebase origin main && git push origin main; then
-              echo "Successfully pushed changes at: $(date)"
-              break
-            else
-              RETRY_COUNT=$((RETRY_COUNT + 1))
-              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                echo "Push failed, retrying... (Attempt $RETRY_COUNT of $MAX_RETRIES)"
-                sleep 5
-              else
-                echo "Failed to push after $MAX_RETRIES attempts"
-                exit 1
-              fi
-            fi
-          done
-        else
+        # Get current date in Morocco timezone
+        CURRENT_DATE=$(date +'%Y-%m-%d')
+        
+        # Check if there are changes to commit
+        if git diff --exit-code src/data/pharmacyData.json; then
           echo "No changes to pharmacyData.json"
-        fi
+        else
+          echo "Changes detected in pharmacyData.json"
+          git add src/data/pharmacyData.json
+          git commit -m "Update pharmacy data for ${CURRENT_DATE}"
+          git push origin main
+        fi 
