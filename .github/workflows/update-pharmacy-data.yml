@@ -1,10 +1,10 @@
 name: Update Pharmacy Data
 on:
-  schedule:
-    # These times are in UTC/GMT
-    - cron: '0 0 * * *'  # Midnight (00:00) GMT
-    - cron: '0 2 * * *'  # 02:00 AM GMT
-    - cron: '0 6 * * *'  # 06:00 AM GMT
+schedule:
+  - cron: '0 22 * * *'  
+  - cron: '0 21 * * *'  # Aiming for midnight GMT (schedule 3 hours earlier)
+  - cron: '0 0 * * *'   # Aiming for 2 AM GMT (schedule 2 hours earlier)
+  - cron: '0 5 * * *'   # Aiming for 6 AM GMT (schedule 1 hour earlier)
   workflow_dispatch:
 jobs:
   update-data:
