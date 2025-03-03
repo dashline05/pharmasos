@@ -1,9 +1,9 @@
 name: Update Pharmacy Data
 on:
   schedule:
-    - cron: '35 23 * * *'  
-    - cron: '55 23 * * *'   
-    - cron: '05 0 * * *'   
+    - cron: '58 23 * * *'  
+    - cron: '59 23 * * *'   
+    - cron: '0 0 * * *'   
   workflow_dispatch:
 jobs:
   update-data:
