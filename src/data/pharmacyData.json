@@ -2850,6 +2850,46 @@
             "ar": "مراكش"
           },
           "name": {
+            "fr": "Pharmacie AL KASBAH",
+            "en": "AL KASBAH Pharmacy",
+            "ar": "صيدلية القصبة"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0524-37-67-78",
+          "hours": {
+            "fr": "09h00 - 00h00",
+            "en": "09h00 - 00h00",
+            "ar": "09h00 - 00h00"
+          },
+          "address": {
+            "fr": "Ksibt Nhass, 33-34 Trik Sahrij Gnawa Kasbah",
+            "en": "Ksibt Nhass, 33-34 Trik Sahrij Gnawa Kasbah",
+            "ar": "Ksibt Nhass, 33-34 Trik Sahrij Gnawa Kasbah"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20KASBAH%20Marrakech",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20KASBAH%20Marrakech&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20KASBAH%20Marrakech"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Marrakech",
+            "en": "Marrakech",
+            "ar": "مراكش"
+          },
+          "name": {
             "fr": "Pharmacie HADJI",
             "en": "HADJI Pharmacy",
             "ar": "صيدلية الحاج"
@@ -4030,5 +4070,5 @@
       ]
     }
   },
-  "total_pharmacies": 102
+  "total_pharmacies": 103
 }
