@@ -3,24 +3,11 @@ import Layout from "@/layouts/Base.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { validLanguages, type ValidLanguage, defaultLanguage } from '@/constants/languages';
+import { cleanSlug } from '@/utils/slugs';
 
 type BlogEntry = CollectionEntry<'blog'>;
 
 export const prerender = true;
-
-// Function to clean the slug
-function cleanSlug(id: string): string {
-  const slug = id.split('/').pop()
-    ?.replace(/\.mdx$/, '')
-    ?.toLowerCase()
-    ?.normalize('NFD')
-    ?.replace(/[\u0300-\u036f]/g, '') // Remove diacritics
-    ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
-    ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
-    || '';
-  console.log('Cleaned slug for', id, ':', slug); // Debug log
-  return slug;
-}
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
