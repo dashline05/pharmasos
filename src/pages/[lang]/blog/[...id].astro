@@ -39,10 +39,10 @@ const { lang } = Astro.params;
 const currentLang = validLanguages.includes(lang as ValidLanguage) ? lang as ValidLanguage : defaultLanguage;
 
 const translations = {
-  title: {
-    fr: "Article",
-    en: "Post",
-    ar: "مقال"
+  siteName: {
+    fr: "Pharmasos",
+    en: "Pharmasos",
+    ar: "Pharmasos"
   },
   publishedOn: {
     fr: "Publié le",
@@ -59,7 +59,7 @@ const translations = {
 const { Content } = await entry.render();
 ---
 
-<Layout title={`${entry.data.title} - ${translations.title[currentLang]}`}>
+<Layout title={`${entry.data.title} - ${translations.siteName[currentLang]}`}>
   <article class="blog-post">
     <a href={`/${currentLang}/blog`} class="back-link">
       {translations.backToBlog[currentLang]}
