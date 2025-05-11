@@ -34,6 +34,11 @@ const translations = {
 
 // Filter posts for current language
 const languagePosts = posts.filter(post => post.id.startsWith(currentLang + '/'));
+
+// Function to clean the slug
+const cleanSlug = (id: string) => {
+  return id.split('/').pop()?.replace(/\.mdx$/, '') || '';
+};
 ---
 
 <Layout title={translations.title[currentLang]}>
@@ -42,7 +47,7 @@ const languagePosts = posts.filter(post => post.id.startsWith(currentLang + '/')
     <div class="blog-grid">
       {languagePosts.map((post) => (
         <article class="blog-card">
-          <a href={`/${currentLang}/blog/${post.id.split('/').pop()}`}>
+          <a href={`/${currentLang}/blog/${cleanSlug(post.id)}`}>
             {post.data.cover && (
               <div class="cover-image">
                 <img 
