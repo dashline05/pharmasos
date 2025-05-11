@@ -151,12 +151,47 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"en/first-post.mdx": {
-	id: "en/first-post.mdx";
-  slug: "en/first-post";
+"ar/Bulletins de renseignement.mdx": {
+	id: "ar/Bulletins de renseignement.mdx";
+  slug: "ar/bulletins-de-renseignement";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".mdx"] };
+"ar/Feuilles de soins CMIM.mdx": {
+	id: "ar/Feuilles de soins CMIM.mdx";
+  slug: "ar/feuilles-de-soins-cmim";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"en/Bulletins de renseignement.mdx": {
+	id: "en/Bulletins de renseignement.mdx";
+  slug: "en/bulletins-de-renseignement";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"en/Feuilles de soins CMIM.mdx": {
+	id: "en/Feuilles de soins CMIM.mdx";
+  slug: "en/feuilles-de-soins-cmim";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"fr/Bulletins de renseignement.mdx": {
+	id: "fr/Bulletins de renseignement.mdx";
+  slug: "fr/bulletins-de-renseignement";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"fr/Feuilles de soins CMIM.mdx": {
+	id: "fr/Feuilles de soins CMIM.mdx";
+  slug: "fr/feuilles-de-soins-cmim";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".mdx"] };
 };
 
@@ -168,5 +203,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../../src/content/config.js");
+	export type ContentConfig = never;
 }

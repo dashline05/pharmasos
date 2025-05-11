@@ -42,6 +42,20 @@ const isActive = (path: string) =>
       </li>
       <li>
         <a
+          href={getRelativeLocaleUrl(locale, "/blog")}
+          class={isActive("/blog") ? "active" : null}
+        >
+          {
+            t({
+              fr: "Blog",
+              en: "Blog",
+              ar: "المدونة",
+            })
+          }
+        </a>
+      </li>
+      <li>
+        <a
           href={getRelativeLocaleUrl(locale, "/contact-us")}
           class={isActive("/contact-us") ? "active" : null}
         >
@@ -176,6 +190,17 @@ const isActive = (path: string) =>
   @media (max-width: 640px) {
     .logo {
       max-width: 200px;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    a {
+      padding: 0.3em 0.6em;
+      font-size: 1rem !important;
     }
   }
 </style>
