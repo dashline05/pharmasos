@@ -8,6 +8,20 @@ type BlogEntry = CollectionEntry<'blog'>;
 
 export const prerender = true;
 
+// Function to clean the slug
+function cleanSlug(id: string): string {
+  const slug = id.split('/').pop()
+    ?.replace(/\.mdx$/, '')
+    ?.toLowerCase()
+    ?.normalize('NFD')
+    ?.replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+    ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
+    ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+    || '';
+  console.log('Cleaned slug for', id, ':', slug); // Debug log
+  return slug;
+}
+
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
   console.log('All posts:', allPosts); // Debug log
@@ -37,20 +51,6 @@ const translations = {
 const languagePosts = posts.filter(post => post.id.startsWith(currentLang + '/'));
 console.log('Current language:', currentLang); // Debug log
 console.log('Language posts:', languagePosts); // Debug log
-
-// Function to clean the slug
-const cleanSlug = (id: string) => {
-  const slug = id.split('/').pop()
-    ?.replace(/\.mdx$/, '')
-    ?.toLowerCase()
-    ?.normalize('NFD')
-    ?.replace(/[\u0300-\u036f]/g, '') // Remove diacritics
-    ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
-    ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
-    || '';
-  console.log('Cleaned slug for', id, ':', slug); // Debug log
-  return slug;
-};
 ---
 
 <Layout title={translations.title[currentLang]}>

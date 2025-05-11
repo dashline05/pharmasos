@@ -9,7 +9,7 @@ type BlogEntry = CollectionEntry<'blog'>;
 export const prerender = true;
 
 // Function to clean the slug - must match the one in index.astro
-const cleanSlug = (id: string) => {
+function cleanSlug(id: string): string {
   return id.split('/').pop()
     ?.replace(/\.mdx$/, '')
     ?.toLowerCase()
@@ -18,7 +18,7 @@ const cleanSlug = (id: string) => {
     ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
     ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
     || '';
-};
+}
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
