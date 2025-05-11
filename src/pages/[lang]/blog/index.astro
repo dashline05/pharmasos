@@ -10,6 +10,7 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
+  console.log('All posts:', allPosts); // Debug log
   return validLanguages.map(lang => ({
     params: { lang },
     props: { posts: allPosts }
@@ -34,44 +35,67 @@ const translations = {
 
 // Filter posts for current language
 const languagePosts = posts.filter(post => post.id.startsWith(currentLang + '/'));
+console.log('Current language:', currentLang); // Debug log
+console.log('Language posts:', languagePosts); // Debug log
 
 // Function to clean the slug
 const cleanSlug = (id: string) => {
-  return id.split('/').pop()?.replace(/\.mdx$/, '') || '';
+  const slug = id.split('/').pop()
+    ?.replace(/\.mdx$/, '')
+    ?.toLowerCase()
+    ?.normalize('NFD')
+    ?.replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+    ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
+    ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+    || '';
+  console.log('Cleaned slug for', id, ':', slug); // Debug log
+  return slug;
 };
 ---
 
 <Layout title={translations.title[currentLang]}>
   <div class="blog-page">
     <h1>{translations.title[currentLang]}</h1>
+    <!-- Debug info -->
+    <div style="display: none">
+      <p>Total posts: {posts.length}</p>
+      <p>Language posts: {languagePosts.length}</p>
+      <p>Current language: {currentLang}</p>
+    </div>
     <div class="blog-grid">
-      {languagePosts.map((post) => (
-        <article class="blog-card">
-          <a href={`/${currentLang}/blog/${cleanSlug(post.id)}`}>
-            {post.data.cover && (
-              <div class="cover-image">
-                <img 
-                  src={post.data.cover.src} 
-                  alt={post.data.title}
-                  width={post.data.cover.width}
-                  height={post.data.cover.height}
-                  loading="lazy"
-                />
-                <div class="overlay">
-                  <span class="category">Blog</span>
+      {languagePosts.length === 0 ? (
+        <div class="no-posts">
+          <p>No blog posts found for {currentLang}</p>
+        </div>
+      ) : (
+        languagePosts.map((post) => (
+          <article class="blog-card">
+            <a href={`/${currentLang}/blog/${cleanSlug(post.id)}`}>
+              {post.data.cover && (
+                <div class="cover-image">
+                  <img 
+                    src={post.data.cover.src} 
+                    alt={post.data.title}
+                    width={post.data.cover.width}
+                    height={post.data.cover.height}
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <span class="category">Blog</span>
+                  </div>
                 </div>
+              )}
+              <div class="content">
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <time datetime={post.data.date.toISOString()}>
+                  {new Intl.DateTimeFormat(currentLang, { dateStyle: 'long' }).format(post.data.date)}
+                </time>
               </div>
-            )}
-            <div class="content">
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <time datetime={post.data.date.toISOString()}>
-                {new Intl.DateTimeFormat(currentLang, { dateStyle: 'long' }).format(post.data.date)}
-              </time>
-            </div>
-          </a>
-        </article>
-      ))}
+            </a>
+          </article>
+        ))
+      )}
     </div>
   </div>
 </Layout>
@@ -274,5 +298,14 @@ const cleanSlug = (id: string) => {
     h2 {
       font-size: 1.1rem;
     }
+  }
+
+  .no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a1a;
+    border-radius: 0.5rem;
+    color: #666;
   }
 </style>

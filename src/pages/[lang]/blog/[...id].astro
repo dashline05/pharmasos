@@ -8,19 +8,36 @@ type BlogEntry = CollectionEntry<'blog'>;
 
 export const prerender = true;
 
+// Function to clean the slug - must match the one in index.astro
+const cleanSlug = (id: string) => {
+  return id.split('/').pop()
+    ?.replace(/\.mdx$/, '')
+    ?.toLowerCase()
+    ?.normalize('NFD')
+    ?.replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+    ?.replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
+    ?.replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+    || '';
+};
+
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
+  console.log('Building paths for posts:', posts.map(p => p.id)); // Debug log
   
   return validLanguages.flatMap(lang => 
     posts
       .filter(post => post.id.startsWith(lang + '/'))
-      .map(post => ({
-        params: { 
-          lang,
-          id: post.id.split('/').slice(1).join('/').replace(/\.mdx$/, '')
-        },
-        props: { entry: post }
-      }))
+      .map(post => {
+        const slug = cleanSlug(post.id);
+        console.log(`Generated path for ${post.id}: /${lang}/blog/${slug}`); // Debug log
+        return {
+          params: { 
+            lang,
+            id: slug
+          },
+          props: { entry: post }
+        };
+      })
   );
 }
 
