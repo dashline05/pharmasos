@@ -76,10 +76,10 @@ LEMATIN_URLS = [
 ]
 
 GUIDE_CITIES = [
-    "/pharmacies-de-garde/rabat.html?date=2025-05-26",
-    "/pharmacies-de-garde/sale.html?date=2025-05-26",
-    "/pharmacies-de-garde/temara.html?date=2025-05-26",
-    "/pharmacies-de-garde/ain-aouda.html?date=2025-05-26"
+    "/pharmacies-de-garde/rabat.html?date=2025-06-02",
+    "/pharmacies-de-garde/sale.html?date=2025-06-02",
+    "/pharmacies-de-garde/temara.html?date=2025-06-02",
+    "/pharmacies-de-garde/ain-aouda.html?date=2025-06-02"
 ]
 
 # Translation dictionaries
