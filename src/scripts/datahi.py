@@ -1,80 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 from urllib.parse import urljoin, urlparse, quote
 import re
 import json
 import time
 import pytz
-import schedule
-import threading
 
 # Base URLs
 LEMATIN_BASE_URL = "https://lematin.ma"
 GUIDE_BASE_URL = "https://www.guidepharmacies.ma"
-
-# Function to get the next Monday's date in Morocco timezone
-def get_next_monday_date():
-    """Get the next Monday's date in Morocco timezone (GMT+1)"""
-    morocco_tz = pytz.timezone('Africa/Casablanca')
-    now = datetime.now(morocco_tz)
-    
-    # Calculate days until next Monday (0 = Monday, 1 = Tuesday, ..., 6 = Sunday)
-    days_until_monday = (7 - now.weekday()) % 7
-    if days_until_monday == 0:  # If today is Monday, get next Monday
-        days_until_monday = 7
-    
-    next_monday = now + timedelta(days=days_until_monday)
-    return next_monday.strftime('%Y-%m-%d')
-
-# Function to generate GUIDE_CITIES with dynamic dates
-def generate_guide_cities():
-    """Generate GUIDE_CITIES list with the next Monday's date"""
-    next_monday_date = get_next_monday_date()
-    
-    return [
-        f"/pharmacies-de-garde/rabat.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/sale.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/temara.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/ain-aouda.html?date={next_monday_date}"
-    ]
-
-# Function to update GUIDE_CITIES dates
-def update_guide_cities_dates():
-    """Update the dates in GUIDE_CITIES to the next Monday"""
-    global GUIDE_CITIES
-    new_date = get_next_monday_date()
-    
-    # Update each URL with the new date
-    updated_cities = []
-    for url in GUIDE_CITIES:
-        # Extract the base URL and update the date parameter
-        base_url = url.split('?')[0]
-        updated_url = f"{base_url}?date={new_date}"
-        updated_cities.append(updated_url)
-    
-    GUIDE_CITIES = updated_cities
-    print(f"Updated GUIDE_CITIES dates to {new_date}")
-    print(f"New URLs: {GUIDE_CITIES}")
-
-# Function to schedule the date updates
-def schedule_date_updates():
-    """Schedule the date updates to run every Monday at 00:00 AM Morocco time"""
-    # Schedule the update for every Monday at 00:00
-    schedule.every().monday.at("00:00").do(update_guide_cities_dates)
-    
-    print("Scheduled date updates for every Monday at 00:00 AM Morocco time")
-    
-    # Run the scheduler in a separate thread
-    def run_scheduler():
-        while True:
-            schedule.run_pending()
-            time.sleep(60)  # Check every minute
-    
-    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
-    scheduler_thread.start()
-    
-    return scheduler_thread
 
 # URLs for both sources
 LEMATIN_URLS = [
@@ -140,8 +75,12 @@ LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde/marrakech/nuit/targa"
 ]
 
-# Initialize GUIDE_CITIES with dynamic dates
-GUIDE_CITIES = generate_guide_cities()
+GUIDE_CITIES = [
+    "/pharmacies-de-garde/rabat.html?date=2025-07-28",
+    "/pharmacies-de-garde/sale.html?date=2025-07-28",
+    "/pharmacies-de-garde/temara.html?date=2025-07-28",
+    "/pharmacies-de-garde/ain-aouda.html?date=2025-07-28"
+]
 
 # Translation dictionaries
 month_mapping = {
@@ -2528,9 +2467,6 @@ def main():
     print(f"Total pharmacies found: {all_pharmacies['total_pharmacies']}")
     print(f"- LeMatin: {len(all_pharmacies['sources']['lematin']['pharmacies'])}")
     print(f"- GuidePharmacie: {len(all_pharmacies['sources']['guide']['pharmacies'])}")
-
-# Start the scheduler when the script is imported
-scheduler_thread = schedule_date_updates()
 
 if __name__ == "__main__":
     main()
