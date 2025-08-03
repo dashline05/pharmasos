@@ -26,35 +26,63 @@ def get_next_monday_date():
     next_monday = now + timedelta(days=days_until_monday)
     return next_monday.strftime('%Y-%m-%d')
 
-# Function to generate GUIDE_CITIES with next Monday's date
+# Function to generate GUIDE_CITIES with or without date parameter
 def generate_guide_cities():
-    """Generate GUIDE_CITIES list with the next Monday's date"""
-    next_monday = get_next_monday_date()
+    """Generate GUIDE_CITIES list with or without date parameter based on day of week"""
+    morocco_tz = pytz.timezone('Africa/Casablanca')
+    now = datetime.now(morocco_tz)
     
-    return [
-        f"/pharmacies-de-garde/rabat.html?date={next_monday}",
-        f"/pharmacies-de-garde/sale.html?date={next_monday}",
-        f"/pharmacies-de-garde/temara.html?date={next_monday}",
-        f"/pharmacies-de-garde/ain-aouda.html?date={next_monday}"
-    ]
+    # Check if today is Monday
+    if now.weekday() == 0:
+        # It's Monday, use next Monday's date
+        next_monday = get_next_monday_date()
+        return [
+            f"/pharmacies-de-garde/rabat.html?date={next_monday}",
+            f"/pharmacies-de-garde/sale.html?date={next_monday}",
+            f"/pharmacies-de-garde/temara.html?date={next_monday}",
+            f"/pharmacies-de-garde/ain-aouda.html?date={next_monday}"
+        ]
+    else:
+        # It's not Monday, use URLs without date parameter (current data)
+        return [
+            "/pharmacies-de-garde/rabat.html",
+            "/pharmacies-de-garde/sale.html",
+            "/pharmacies-de-garde/temara.html",
+            "/pharmacies-de-garde/ain-aouda.html"
+        ]
 
 # Function to update GUIDE_CITIES dates
 def update_guide_cities_dates():
-    """Update the dates in GUIDE_CITIES to the next Monday's date"""
+    """Update the GUIDE_CITIES based on current day of week"""
     global GUIDE_CITIES
-    next_monday = get_next_monday_date()
+    morocco_tz = pytz.timezone('Africa/Casablanca')
+    now = datetime.now(morocco_tz)
     
-    # Update each URL with the next Monday's date
-    updated_cities = []
-    for url in GUIDE_CITIES:
-        # Extract the base URL and update the date parameter
-        base_url = url.split('?')[0]
-        updated_url = f"{base_url}?date={next_monday}"
-        updated_cities.append(updated_url)
-    
-    GUIDE_CITIES = updated_cities
-    print(f"Updated GUIDE_CITIES dates to next Monday: {next_monday}")
-    print(f"New URLs: {GUIDE_CITIES}")
+    # Check if today is Monday
+    if now.weekday() == 0:
+        # It's Monday, use next Monday's date
+        next_monday = get_next_monday_date()
+        updated_cities = []
+        for url in GUIDE_CITIES:
+            # Extract the base URL and add the date parameter
+            base_url = url.split('?')[0]
+            updated_url = f"{base_url}?date={next_monday}"
+            updated_cities.append(updated_url)
+        
+        GUIDE_CITIES = updated_cities
+        print(f"Updated GUIDE_CITIES to use next Monday's date: {next_monday}")
+        print(f"New URLs: {GUIDE_CITIES}")
+    else:
+        # It's not Monday, remove date parameters (use current data)
+        updated_cities = []
+        for url in GUIDE_CITIES:
+            # Extract the base URL without date parameter
+            base_url = url.split('?')[0]
+            updated_cities.append(base_url)
+        
+        GUIDE_CITIES = updated_cities
+        print(f"Updated GUIDE_CITIES to use current data (no date parameter)")
+        print(f"New URLs: {GUIDE_CITIES}")
 
 # Function to manually set GUIDE_CITIES to a specific date
 def set_guide_cities_date(manual_date):
@@ -75,17 +103,18 @@ def set_guide_cities_date(manual_date):
 
 # Function to check if it's Monday and update dates if needed
 def check_and_update_monday_dates():
-    """Check if today is Monday and update dates if it is"""
+    """Check current day and update GUIDE_CITIES accordingly"""
     morocco_tz = pytz.timezone('Africa/Casablanca')
     now = datetime.now(morocco_tz)
     
     # Check if today is Monday (weekday() returns 0 for Monday)
     if now.weekday() == 0:
-        print(f"Today is Monday ({now.strftime('%Y-%m-%d')}). Updating dates to next Monday...")
+        print(f"Today is Monday ({now.strftime('%Y-%m-%d')}). Updating to use next Monday's date...")
         update_guide_cities_dates()
         return True
     else:
-        print(f"Today is not Monday ({now.strftime('%Y-%m-%d')}). No date update needed.")
+        print(f"Today is not Monday ({now.strftime('%Y-%m-%d')}). Updating to use current data (no date parameter)...")
+        update_guide_cities_dates()
         return False
 
 # Function to schedule the date updates (without schedule library)
