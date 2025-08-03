@@ -26,50 +26,74 @@ def get_next_monday_date():
     next_monday = now + timedelta(days=days_until_monday)
     return next_monday.strftime('%Y-%m-%d')
 
-# Function to generate GUIDE_CITIES with dynamic dates
+# Function to generate GUIDE_CITIES with today's date
 def generate_guide_cities():
-    """Generate GUIDE_CITIES list with the next Monday's date"""
-    next_monday_date = get_next_monday_date()
+    """Generate GUIDE_CITIES list with today's date"""
+    morocco_tz = pytz.timezone('Africa/Casablanca')
+    today = datetime.now(morocco_tz).strftime('%Y-%m-%d')
     
     return [
-        f"/pharmacies-de-garde/rabat.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/sale.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/temara.html?date={next_monday_date}",
-        f"/pharmacies-de-garde/ain-aouda.html?date={next_monday_date}"
+        f"/pharmacies-de-garde/rabat.html?date={today}",
+        f"/pharmacies-de-garde/sale.html?date={today}",
+        f"/pharmacies-de-garde/temara.html?date={today}",
+        f"/pharmacies-de-garde/ain-aouda.html?date={today}"
     ]
 
 # Function to update GUIDE_CITIES dates
 def update_guide_cities_dates():
-    """Update the dates in GUIDE_CITIES to the next Monday"""
+    """Update the dates in GUIDE_CITIES to today's date"""
     global GUIDE_CITIES
-    new_date = get_next_monday_date()
+    morocco_tz = pytz.timezone('Africa/Casablanca')
+    today = datetime.now(morocco_tz).strftime('%Y-%m-%d')
     
-    # Update each URL with the new date
+    # Update each URL with today's date
     updated_cities = []
     for url in GUIDE_CITIES:
         # Extract the base URL and update the date parameter
         base_url = url.split('?')[0]
-        updated_url = f"{base_url}?date={new_date}"
+        updated_url = f"{base_url}?date={today}"
         updated_cities.append(updated_url)
     
     GUIDE_CITIES = updated_cities
-    print(f"Updated GUIDE_CITIES dates to {new_date}")
+    print(f"Updated GUIDE_CITIES dates to today: {today}")
+    print(f"New URLs: {GUIDE_CITIES}")
+
+# Function to manually set GUIDE_CITIES to a specific date
+def set_guide_cities_date(manual_date):
+    """Manually set GUIDE_CITIES to a specific date"""
+    global GUIDE_CITIES
+    
+    # Update each URL with the manual date
+    updated_cities = []
+    for url in GUIDE_CITIES:
+        # Extract the base URL and update the date parameter
+        base_url = url.split('?')[0]
+        updated_url = f"{base_url}?date={manual_date}"
+        updated_cities.append(updated_url)
+    
+    GUIDE_CITIES = updated_cities
+    print(f"Manually set GUIDE_CITIES dates to {manual_date}")
     print(f"New URLs: {GUIDE_CITIES}")
 
 # Function to schedule the date updates (without schedule library)
 def schedule_date_updates():
-    """Schedule the date updates to run every Monday at 00:00 AM Morocco time"""
-    print("Date updates will be checked manually. Use update_guide_cities_dates() to update dates.")
+    """Schedule the date updates to run daily at 00:00 AM Morocco time"""
+    print("Date updates will be checked daily. Use update_guide_cities_dates() to update dates.")
     
     # Run a simple checker in a separate thread
     def run_scheduler():
         morocco_tz = pytz.timezone('Africa/Casablanca')
+        last_update_date = None
         while True:
             try:
                 now = datetime.now(morocco_tz)
-                # Check if it's Monday and between 00:00 and 00:01
-                if now.weekday() == 0 and now.hour == 0 and now.minute == 0:
+                today = now.strftime('%Y-%m-%d')
+                
+                # Check if it's a new day and between 00:00 and 00:01
+                if now.hour == 0 and now.minute == 0 and last_update_date != today:
+                    print(f"Updating dates for new day: {today}")
                     update_guide_cities_dates()
+                    last_update_date = today
                 time.sleep(60)  # Check every minute
             except Exception as e:
                 print(f"Scheduler error: {e}")
