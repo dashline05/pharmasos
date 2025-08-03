@@ -26,36 +26,34 @@ def get_next_monday_date():
     next_monday = now + timedelta(days=days_until_monday)
     return next_monday.strftime('%Y-%m-%d')
 
-# Function to generate GUIDE_CITIES with today's date
+# Function to generate GUIDE_CITIES with next Monday's date
 def generate_guide_cities():
-    """Generate GUIDE_CITIES list with today's date"""
-    morocco_tz = pytz.timezone('Africa/Casablanca')
-    today = datetime.now(morocco_tz).strftime('%Y-%m-%d')
+    """Generate GUIDE_CITIES list with the next Monday's date"""
+    next_monday = get_next_monday_date()
     
     return [
-        f"/pharmacies-de-garde/rabat.html?date={today}",
-        f"/pharmacies-de-garde/sale.html?date={today}",
-        f"/pharmacies-de-garde/temara.html?date={today}",
-        f"/pharmacies-de-garde/ain-aouda.html?date={today}"
+        f"/pharmacies-de-garde/rabat.html?date={next_monday}",
+        f"/pharmacies-de-garde/sale.html?date={next_monday}",
+        f"/pharmacies-de-garde/temara.html?date={next_monday}",
+        f"/pharmacies-de-garde/ain-aouda.html?date={next_monday}"
     ]
 
 # Function to update GUIDE_CITIES dates
 def update_guide_cities_dates():
-    """Update the dates in GUIDE_CITIES to today's date"""
+    """Update the dates in GUIDE_CITIES to the next Monday's date"""
     global GUIDE_CITIES
-    morocco_tz = pytz.timezone('Africa/Casablanca')
-    today = datetime.now(morocco_tz).strftime('%Y-%m-%d')
+    next_monday = get_next_monday_date()
     
-    # Update each URL with today's date
+    # Update each URL with the next Monday's date
     updated_cities = []
     for url in GUIDE_CITIES:
         # Extract the base URL and update the date parameter
         base_url = url.split('?')[0]
-        updated_url = f"{base_url}?date={today}"
+        updated_url = f"{base_url}?date={next_monday}"
         updated_cities.append(updated_url)
     
     GUIDE_CITIES = updated_cities
-    print(f"Updated GUIDE_CITIES dates to today: {today}")
+    print(f"Updated GUIDE_CITIES dates to next Monday: {next_monday}")
     print(f"New URLs: {GUIDE_CITIES}")
 
 # Function to manually set GUIDE_CITIES to a specific date
@@ -75,25 +73,40 @@ def set_guide_cities_date(manual_date):
     print(f"Manually set GUIDE_CITIES dates to {manual_date}")
     print(f"New URLs: {GUIDE_CITIES}")
 
+# Function to check if it's Monday and update dates if needed
+def check_and_update_monday_dates():
+    """Check if today is Monday and update dates if it is"""
+    morocco_tz = pytz.timezone('Africa/Casablanca')
+    now = datetime.now(morocco_tz)
+    
+    # Check if today is Monday (weekday() returns 0 for Monday)
+    if now.weekday() == 0:
+        print(f"Today is Monday ({now.strftime('%Y-%m-%d')}). Updating dates to next Monday...")
+        update_guide_cities_dates()
+        return True
+    else:
+        print(f"Today is not Monday ({now.strftime('%Y-%m-%d')}). No date update needed.")
+        return False
+
 # Function to schedule the date updates (without schedule library)
 def schedule_date_updates():
-    """Schedule the date updates to run daily at 00:00 AM Morocco time"""
-    print("Date updates will be checked daily. Use update_guide_cities_dates() to update dates.")
+    """Schedule the date updates to run every Monday at 00:00 AM Morocco time"""
+    print("Date updates will be checked on Mondays. Use check_and_update_monday_dates() to check and update.")
     
     # Run a simple checker in a separate thread
     def run_scheduler():
         morocco_tz = pytz.timezone('Africa/Casablanca')
-        last_update_date = None
+        last_monday_check = None
         while True:
             try:
                 now = datetime.now(morocco_tz)
                 today = now.strftime('%Y-%m-%d')
                 
-                # Check if it's a new day and between 00:00 and 00:01
-                if now.hour == 0 and now.minute == 0 and last_update_date != today:
-                    print(f"Updating dates for new day: {today}")
+                # Check if it's Monday and we haven't checked today yet
+                if now.weekday() == 0 and now.hour == 0 and now.minute == 0 and last_monday_check != today:
+                    print(f"Monday detected: {today}. Updating dates...")
                     update_guide_cities_dates()
-                    last_update_date = today
+                    last_monday_check = today
                 time.sleep(60)  # Check every minute
             except Exception as e:
                 print(f"Scheduler error: {e}")
@@ -2529,6 +2542,11 @@ def scrape_guide():
 
 def main():
     """Main function to scrape both sources and combine results"""
+    # Check if it's Monday and update dates if needed
+    print("Checking if today is Monday for date updates...")
+    check_and_update_monday_dates()
+    print()
+    
     all_pharmacies = {
          "date": datetime.now(pytz.timezone('Africa/Casablanca')).date().isoformat(),
         "sources": {
