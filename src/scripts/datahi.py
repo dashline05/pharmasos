@@ -65,10 +65,7 @@ def get_guide_cities_urls(manual_date=None):
     print(f"Using date parameter for Monday: {date_param}")
     return [urljoin(GUIDE_BASE_URL, f"{city}?date={date_param}") for city in cities]
 
-
 # URLs for both sources (lematin.ma)
-# These are hardcoded as they don't seem to follow a dynamic pattern that can be easily generated.
-# A more robust solution would involve scraping the initial page to find these links.
 LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde-casablanca/jour/ain-chock",
     "https://lematin.ma/pharmacie-garde-casablanca/jour/ain-sebaa",
@@ -133,7 +130,6 @@ LEMATIN_URLS = [
 ]
 
 # Translation dictionaries (completed)
-# Note: These dictionaries should be verified for accuracy and completeness.
 month_mapping = {
     'janvier': 1, 'février': 2, 'mars': 3, 'avril': 4,
     'mai': 5, 'juin': 6, 'juillet': 7, 'août': 8,
@@ -148,8 +144,6 @@ city_translations = {
     'Marrakech': {'fr': 'Marrakech', 'en': 'Marrakech', 'ar': 'مراكش'}
 }
 
-# This dictionary was incomplete. I've finished it based on a logical continuation.
-# You should verify these translations as they might not be 100% accurate.
 pharmacy_translations = {
     'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
     'Pharmacie YAACOUB EL MANSOUR': {'fr': 'Pharmacie YAACOUB EL MANSOUR', 'en': 'YAACOUB EL MANSOUR Pharmacy', 'ar': 'صيدلية يعقوب المنصور'},
@@ -364,10 +358,6 @@ def fetch_pharmacy_data():
             response.raise_for_status()  # This will raise an exception for 4xx/5xx status codes
             
             # --- SCRAPING LOGIC WOULD GO HERE ---
-            # You would use BeautifulSoup to parse the HTML (response.text) and extract the required data.
-            # Example: soup = BeautifulSoup(response.text, 'html.parser')
-            # Extract names, addresses, etc.
-            
             print(f"  --> Successfully fetched data from {url}")
         
         except requests.exceptions.RequestException as e:
@@ -382,25 +372,17 @@ def fetch_pharmacy_data():
             response.raise_for_status()
             
             # --- SCRAPING LOGIC WOULD GO HERE ---
-            # Similar to the above, parse the HTML and extract pharmacy information.
-            
             print(f"  --> Successfully fetched data from {url}")
             
         except requests.exceptions.RequestException as e:
             print(f"  --> Error fetching data from {url}: {e}")
             
     print("\n--- Data fetching complete ---")
+    
+# Main function for script execution
+def main():
+    fetch_pharmacy_data()
 
 # Entry point of the script
 if __name__ == "__main__":
-    fetch_pharmacy_data()
-    
-    # Example of how to use the manual date feature for testing purposes
-    # Uncomment the following lines to test with a specific date
-    # print("\n--- Testing with a manual date for guidepharmacies.ma ---")
-    # GUIDE_CITIES_MANUAL = get_guide_cities_urls(manual_date="2025-08-18")
-    # print(f"Manual URLs: {GUIDE_CITIES_MANUAL}")
-    # print("Fetching data with the manual date...")
-    # # Note: This would require you to re-run your fetching function with the new list.
-    # # For a full implementation, you would pass the URL list to the fetching function.
-    # # fetch_data(guide_urls=GUIDE_CITIES_MANUAL, lematin_urls=LEMATIN_URLS)
+    main()
