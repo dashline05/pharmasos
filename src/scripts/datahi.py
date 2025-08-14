@@ -324,6 +324,10 @@ pharmacy_translations = {
     'Pharmacie MERCURE': {'fr': 'Pharmacie MERCURE', 'en': 'MERCURY PHARMACY', 'ar': 'صيدلية ميركور'}
 }
 
+# IMPORTANT FIX: Initialize GUIDE_CITIES in the global scope so it's accessible everywhere.
+GUIDE_CITIES = get_guide_cities_urls()
+
+
 # The main scraping and saving function
 def scrape_and_save_data(file_path='pharmacy_data.json'):
     """
@@ -396,8 +400,6 @@ def scrape_and_save_data(file_path='pharmacy_data.json'):
 
 # Main function for script execution
 def main():
-    # Initialize GUIDE_CITIES list at the beginning
-    GUIDE_CITIES = get_guide_cities_urls()
     scrape_and_save_data()
 
 # Entry point of the script
