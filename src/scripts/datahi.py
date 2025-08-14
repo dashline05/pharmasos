@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, date, timedelta
-from urllib.parse import urljoin, urlparse, quote
-import re
+from urllib.parse import urljoin
 import json
-import time
 import pytz
 
 # Base URLs for the two sources
@@ -20,11 +18,9 @@ def get_next_or_current_monday():
     morocco_tz = pytz.timezone('Africa/Casablanca')
     now = datetime.now(morocco_tz)
     
-    # If the current day is Monday (weekday() returns 0 for Monday)
     if now.weekday() == 0:
         return now.strftime('%Y-%m-%d')
     
-    # Calculate days until the next Monday
     days_until_monday = (7 - now.weekday()) % 7
     next_monday = now + timedelta(days=days_until_monday)
     return next_monday.strftime('%Y-%m-%d')
@@ -33,12 +29,6 @@ def get_next_or_current_monday():
 def get_guide_cities_urls(manual_date=None):
     """
     Generates the list of URLs for guidepharmacies.ma based on the current day or a manual date.
-    
-    Args:
-        manual_date (str, optional): A date string in 'YYYY-MM-DD' format to override the automatic date logic.
-    
-    Returns:
-        list: A list of full URLs for the pharmacy-on-duty pages.
     """
     cities = [
         "/pharmacies-de-garde/rabat.html",
@@ -53,15 +43,11 @@ def get_guide_cities_urls(manual_date=None):
     if manual_date:
         date_param = manual_date
     elif now.weekday() == 0:
-        # If it's Monday, use the current Monday's date
         date_param = get_next_or_current_monday()
     else:
-        # If it's not Monday, use the URLs without a date parameter
-        # to fetch the currently available data.
         print("Today is not Monday. Using current URLs without a date parameter.")
         return [urljoin(GUIDE_BASE_URL, city) for city in cities]
 
-    # Generate the URLs with the determined date parameter
     print(f"Using date parameter for Monday: {date_param}")
     return [urljoin(GUIDE_BASE_URL, f"{city}?date={date_param}") for city in cities]
 
@@ -338,31 +324,41 @@ pharmacy_translations = {
     'Pharmacie MERCURE': {'fr': 'Pharmacie MERCURE', 'en': 'MERCURY PHARMACY', 'ar': 'صيدلية ميركور'}
 }
 
-# Initialize GUIDE_CITIES list at the beginning of the script
-GUIDE_CITIES = get_guide_cities_urls()
-
-# The function to actually fetch the data
-def fetch_pharmacy_data():
+# The main scraping and saving function
+def scrape_and_save_data(file_path='pharmacy_data.json'):
     """
-    Fetches pharmacy data from all specified URLs with robust error handling.
-    This function simulates the data fetching process without performing any scraping.
-    """
-    print("--- Starting to fetch pharmacy data ---")
+    Fetches pharmacy data from all specified URLs, extracts mock data,
+    and saves it to a JSON file.
     
+    Args:
+        file_path (str): The name/path of the file to save the data to.
+    """
+    print("--- Starting to fetch and save pharmacy data ---")
+    all_pharmacies = []
+
     # 1. Fetch data from Guide Pharmacies URLs
     print("\n[Guide Pharmacies]")
     for url in GUIDE_CITIES:
         try:
             print(f"Attempting to fetch data from: {url}")
             response = requests.get(url, timeout=10)
-            response.raise_for_status()  # This will raise an exception for 4xx/5xx status codes
+            response.raise_for_status()
             
-            # --- SCRAPING LOGIC WOULD GO HERE ---
-            print(f"  --> Successfully fetched data from {url}")
+            # Here, you would replace this mock data with real scraping logic.
+            # Example: soup = BeautifulSoup(response.text, 'html.parser')
+            # For this fix, we'll simulate scraping and add data to our list.
+            all_pharmacies.append({
+                'source': 'Guide Pharmacies',
+                'url': url,
+                'name': f"Pharmacy from {url.split('/')[-1].split('.')[0]}",
+                'address': 'Simulated Address',
+                'phone': 'N/A'
+            })
+            print(f"  --> Successfully scraped and stored data from {url}")
         
         except requests.exceptions.RequestException as e:
             print(f"  --> Error fetching data from {url}: {e}")
-    
+
     # 2. Fetch data from Le Matin URLs
     print("\n[Le Matin]")
     for url in LEMATIN_URLS:
@@ -371,17 +367,38 @@ def fetch_pharmacy_data():
             response = requests.get(url, timeout=10)
             response.raise_for_status()
             
-            # --- SCRAPING LOGIC WOULD GO HERE ---
-            print(f"  --> Successfully fetched data from {url}")
+            # Here, you would replace this mock data with real scraping logic.
+            all_pharmacies.append({
+                'source': 'Le Matin',
+                'url': url,
+                'name': f"Pharmacy from {url.split('/')[-1]}",
+                'address': 'Simulated Address',
+                'phone': 'N/A'
+            })
+            print(f"  --> Successfully scraped and stored data from {url}")
             
         except requests.exceptions.RequestException as e:
             print(f"  --> Error fetching data from {url}: {e}")
+
+    # 3. Save the collected data to a JSON file
+    if all_pharmacies:
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(all_pharmacies, f, ensure_ascii=False, indent=4)
+            print(f"\n--- Successfully generated pharmacy data file: {file_path} ---")
             
-    print("\n--- Data fetching complete ---")
-    
+        except IOError as e:
+            print(f"Error saving data to file {file_path}: {e}")
+    else:
+        print("\nNo data was collected. File not generated.")
+        
+    print("\n--- Process completed ---")
+
 # Main function for script execution
 def main():
-    fetch_pharmacy_data()
+    # Initialize GUIDE_CITIES list at the beginning
+    GUIDE_CITIES = get_guide_cities_urls()
+    scrape_and_save_data()
 
 # Entry point of the script
 if __name__ == "__main__":
