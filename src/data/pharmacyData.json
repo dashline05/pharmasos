@@ -1,5 +1,5 @@
 {
-  "date": "2025-08-23",
+  "date": "2025-08-24",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -440,6 +440,46 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MOUTRANE%20%28EX%20LA%20FOIRE%29%20Casablanca",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20MOUTRANE%20%28EX%20LA%20FOIRE%29%20Casablanca&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MOUTRANE%20%28EX%20LA%20FOIRE%29%20Casablanca"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Casablanca",
+            "en": "Casablanca",
+            "ar": "الدار البيضاء"
+          },
+          "name": {
+            "fr": "PHARMACIE FAHD",
+            "en": "FAHD PHARMACY",
+            "ar": "صيدلية فهد"
+          },
+          "location": {
+            "fr": "Hay Hassani",
+            "en": "Hay Hassani",
+            "ar": "حي الحسني"
+          },
+          "phone": "0522.90.75.20",
+          "hours": {
+            "fr": "09h00 - 00h00",
+            "en": "09h00 - 00h00",
+            "ar": "09h00 - 00h00"
+          },
+          "address": {
+            "fr": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI",
+            "en": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI",
+            "ar": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20FAHD%20Casablanca",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20FAHD%20Casablanca&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20FAHD%20Casablanca"
             }
           }
         },
@@ -1650,6 +1690,46 @@
             "ar": "الدار البيضاء"
           },
           "name": {
+            "fr": "PHARMACIE FAHD",
+            "en": "FAHD PHARMACY",
+            "ar": "صيدلية فهد"
+          },
+          "location": {
+            "fr": "Hay Hassani",
+            "en": "Hay Hassani",
+            "ar": "حي الحسني"
+          },
+          "phone": "0522.90.75.20",
+          "hours": {
+            "fr": "24h/24h",
+            "en": "24h/24h",
+            "ar": "24h/24h"
+          },
+          "address": {
+            "fr": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI",
+            "en": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI",
+            "ar": "AV. AVICENNES-SOUK OULD MINA DAR EL HAMRA - HAY HASSANI"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20FAHD%20Casablanca",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20FAHD%20Casablanca&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20FAHD%20Casablanca"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Casablanca",
+            "en": "Casablanca",
+            "ar": "الدار البيضاء"
+          },
+          "name": {
             "fr": "PHARMACIE CHIFA",
             "en": "CHIFA PHARMACY",
             "ar": "صيدلية الشفاء"
@@ -2136,7 +2216,7 @@
             "ar": "Centre Ville"
           },
           "phone": "0537 20 61 19",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "4 Avenue Moulay Youssef | (Entre Gare Rabat Ville &Bab Rouah | et En Face De L'hôtel Belere) | ",
             "en": "4 Avenue Moulay Youssef | (Entre Gare Rabat Ville &Bab Rouah | et En Face De L'hôtel Belere) | ",
@@ -2280,7 +2360,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 79 96 96",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Bloc D5 N°9 Av Al Ijtihad | Kouas - C.Y.M | ",
             "en": "Bloc D5 N°9 Av Al Ijtihad | Kouas - C.Y.M | ",
@@ -2316,7 +2396,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 29 36 47",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "443 Bis Amal 5 Massira - Hay El Fath | Lotissement Grini C.Y.M | ",
             "en": "443 Bis Amal 5 Massira - Hay El Fath | Lotissement Grini C.Y.M | ",
@@ -2522,42 +2602,6 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie TAIBA",
-            "en": "TAIBA Pharmacy",
-            "ar": "صيدلية طيبة"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
-          "phone": "0537 81 73 68",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | ",
-            "en": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | ",
-            "ar": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20TAIBA%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20TAIBA%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20TAIBA%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
             "fr": "Pharmacie SEBATI MEDICAL",
             "en": "Pharmacie SEBATI MEDICAL",
             "ar": "Pharmacie SEBATI MEDICAL"
@@ -2568,7 +2612,7 @@
             "ar": "Sala El Jadida"
           },
           "phone": "0537 53 48 62",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Avenue Outa Hssain Résidence Al Osra 3 | ",
             "en": "Avenue Outa Hssain Résidence Al Osra 3 | ",
@@ -2584,6 +2628,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20SEBATI%20MEDICAL%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20SEBATI%20MEDICAL%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20SEBATI%20MEDICAL%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie TAIBA",
+            "en": "TAIBA Pharmacy",
+            "ar": "صيدلية طيبة"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 81 73 68",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | ",
+            "en": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | ",
+            "ar": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20TAIBA%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20TAIBA%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20TAIBA%20Sale"
             }
           }
         },
@@ -2712,7 +2792,7 @@
             "ar": "El Massira"
           },
           "phone": "0537 60 72 80",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "172, Rue Jbel Oulim Hay Atlas Massira 1 | ",
             "en": "172, Rue Jbel Oulim Hay Atlas Massira 1 | ",
@@ -2964,7 +3044,7 @@
             "ar": "El Massira"
           },
           "phone": "0537 60 72 80",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "172, Rue Jbel Oulim Hay Atlas Massira 1 | ",
             "en": "172, Rue Jbel Oulim Hay Atlas Massira 1 | ",
@@ -3094,5 +3174,5 @@
       ]
     }
   },
-  "total_pharmacies": 80
+  "total_pharmacies": 82
 }
