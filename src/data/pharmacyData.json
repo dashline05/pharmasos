@@ -890,46 +890,6 @@
             "ar": "الدار البيضاء"
           },
           "name": {
-            "fr": "Pharmacie NASSIM ISLANE",
-            "en": "Pharmacie NASSIM ISLANE",
-            "ar": "Pharmacie NASSIM ISLANE"
-          },
-          "location": {
-            "fr": "Lissasfa",
-            "en": "Lissasfa",
-            "ar": "ليساسفا"
-          },
-          "phone": "0522.93.85.98",
-          "hours": {
-            "fr": "09h00 - 00h00",
-            "en": "09h00 - 00h00",
-            "ar": "09h00 - 00h00"
-          },
-          "address": {
-            "fr": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA",
-            "en": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA",
-            "ar": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20NASSIM%20ISLANE%20Casablanca",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20NASSIM%20ISLANE%20Casablanca&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20NASSIM%20ISLANE%20Casablanca"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Casablanca",
-            "en": "Casablanca",
-            "ar": "الدار البيضاء"
-          },
-          "name": {
             "fr": "PHARMACIE HABIBA",
             "en": "HABIBA PHARMACY",
             "ar": "صيدلية حبيبة"
@@ -1960,46 +1920,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20HOUAR%20Casablanca",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20HOUAR%20Casablanca&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20HOUAR%20Casablanca"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Casablanca",
-            "en": "Casablanca",
-            "ar": "الدار البيضاء"
-          },
-          "name": {
-            "fr": "Pharmacie NASSIM ISLANE",
-            "en": "Pharmacie NASSIM ISLANE",
-            "ar": "Pharmacie NASSIM ISLANE"
-          },
-          "location": {
-            "fr": "Lissasfa",
-            "en": "Lissasfa",
-            "ar": "ليساسفا"
-          },
-          "phone": "0522.93.85.98",
-          "hours": {
-            "fr": "24h/24h",
-            "en": "24h/24h",
-            "ar": "24h/24h"
-          },
-          "address": {
-            "fr": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA",
-            "en": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA",
-            "ar": "318, LOTISSEMENT NASSIM ISLANE - LISSASFA"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20NASSIM%20ISLANE%20Casablanca",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20NASSIM%20ISLANE%20Casablanca&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20NASSIM%20ISLANE%20Casablanca"
             }
           }
         },
@@ -3566,8 +3486,801 @@
       ]
     },
     "guide": {
-      "pharmacies": []
+      "pharmacies": [
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE BAYT AL MAARIFA",
+            "en": "BAYT AL MAARIFA PHARMACY",
+            "ar": "صيدلية بيت المعرفة"
+          },
+          "location": {
+            "fr": "Agdal",
+            "en": "Agdal",
+            "ar": "Agdal"
+          },
+          "phone": "0537 77 07 38",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Madinat Al Irfane Résidence pour les etudiants Bayt Al Maârifa Local N°1 | En face de la cité Souissi II | 0537 77 98 94 | ",
+            "en": "Madinat Al Irfane Résidence pour les etudiants Bayt Al Maârifa Local N°1 | En face de la cité Souissi II | 0537 77 98 94 | ",
+            "ar": "Madinat Al Irfane Résidence pour les etudiants Bayt Al Maârifa Local N°1 | En face de la cité Souissi II | 0537 77 98 94 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BAYT%20AL%20MAARIFA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20BAYT%20AL%20MAARIFA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BAYT%20AL%20MAARIFA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie KARIOUN",
+            "en": "KARIOUN Pharmacy",
+            "ar": "صيدلية قاريون"
+          },
+          "location": {
+            "fr": "Akkari-Ocean-Orangers",
+            "en": "Akkari-Ocean-Orangers",
+            "ar": "Akkari-Ocean-Orangers"
+          },
+          "phone": "0537 23 13 83",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "163, Rue Karioun, Akkari | ",
+            "en": "163, Rue Karioun, Akkari | ",
+            "ar": "163, Rue Karioun, Akkari | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20KARIOUN%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20KARIOUN%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20KARIOUN%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE RENAISSANCE",
+            "en": "RENAISSANCE PHARMACY",
+            "ar": "صيدلية النهضة"
+          },
+          "location": {
+            "fr": "Centre Ville",
+            "en": "Centre Ville",
+            "ar": "Centre Ville"
+          },
+          "phone": "0537 72 24 22",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "356 Bd Mohamed V | ",
+            "en": "356 Bd Mohamed V | ",
+            "ar": "356 Bd Mohamed V | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20RENAISSANCE%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20RENAISSANCE%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20RENAISSANCE%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie RYAD",
+            "en": "Pharmacie RYAD",
+            "ar": "Pharmacie RYAD"
+          },
+          "location": {
+            "fr": "Hay Riad",
+            "en": "Hay Riad",
+            "ar": "Hay Riad"
+          },
+          "phone": "0537 71 06 81",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "8 Av Annakhil Centre Commercial Ryad 1 | (Carrefour Market Ex: Label vie) | ",
+            "en": "8 Av Annakhil Centre Commercial Ryad 1 | (Carrefour Market Ex: Label vie) | ",
+            "ar": "8 Av Annakhil Centre Commercial Ryad 1 | (Carrefour Market Ex: Label vie) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20RYAD%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20RYAD%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20RYAD%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie JNANE ENNAHDA",
+            "en": "Pharmacie JNANE ENNAHDA",
+            "ar": "Pharmacie JNANE ENNAHDA"
+          },
+          "location": {
+            "fr": "Takadoum & Souissi",
+            "en": "Takadoum & Souissi",
+            "ar": "Takadoum & Souissi"
+          },
+          "phone": "0537 75 61 01",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Imm, 8 N°6 Lot, G1 Résidence Jnane Ennahda | ",
+            "en": "Imm, 8 N°6 Lot, G1 Résidence Jnane Ennahda | ",
+            "ar": "Imm, 8 N°6 Lot, G1 Résidence Jnane Ennahda | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20JNANE%20ENNAHDA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20JNANE%20ENNAHDA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20JNANE%20ENNAHDA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE AL BAHJA",
+            "en": "AL BAHJA PHARMACY",
+            "ar": "صيدلية البهجة"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 79 71 37",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Rés Al Bahja Avenue Al Majd | Imm I Mag 5-6 C.Y.M | ",
+            "en": "Rés Al Bahja Avenue Al Majd | Imm I Mag 5-6 C.Y.M | ",
+            "ar": "Rés Al Bahja Avenue Al Majd | Imm I Mag 5-6 C.Y.M | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20BAHJA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20BAHJA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20BAHJA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE IBN BAYTAR",
+            "en": "IBN BAYTAR PHARMACY",
+            "ar": "صيدلية ابن بيطار"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 79 43 64",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "40 Cité AMAL 0 Avenue EL Massira C.Y.M | ",
+            "en": "40 Cité AMAL 0 Avenue EL Massira C.Y.M | ",
+            "ar": "40 Cité AMAL 0 Avenue EL Massira C.Y.M | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20IBN%20BAYTAR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20IBN%20BAYTAR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20IBN%20BAYTAR%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "PHARMACIE DE L'AUBE",
+            "en": "AUBE PHARMACY",
+            "ar": "صيدلية أوبي"
+          },
+          "location": {
+            "fr": "Tabriquet",
+            "en": "Tabriquet",
+            "ar": "Tabriquet"
+          },
+          "phone": "0537 85 56 00",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "47 Av Abdelkhalik Torres(En face pointage Taxi) | Sahb al kayad | ",
+            "en": "47 Av Abdelkhalik Torres(En face pointage Taxi) | Sahb al kayad | ",
+            "ar": "47 Av Abdelkhalik Torres(En face pointage Taxi) | Sahb al kayad | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DE%20L%27AUBE%20Sale",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DE%20L%27AUBE%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DE%20L%27AUBE%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie AL OMRANE",
+            "en": "AL OMRANE Pharmacy",
+            "ar": "صيدلية العمران"
+          },
+          "location": {
+            "fr": "Bettana",
+            "en": "Bettana",
+            "ar": "Bettana"
+          },
+          "phone": "0537 78 07 77",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "52, Ain Mediouna(Près de l'hôpital aktidal) | ",
+            "en": "52, Ain Mediouna(Près de l'hôpital aktidal) | ",
+            "ar": "52, Ain Mediouna(Près de l'hôpital aktidal) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20OMRANE%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20OMRANE%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20OMRANE%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "PHARMACIE IKRAM",
+            "en": "IKRAM PHARMACY",
+            "ar": "صيدلية اكرام"
+          },
+          "location": {
+            "fr": "Hay Essalam",
+            "en": "Hay Essalam",
+            "ar": "Hay Essalam"
+          },
+          "phone": "0537 81 13 63",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Bloc 12, N°91 Secteur 11 | (Prés Redal Hay Es-salam) | 0622 33 12 32 | ",
+            "en": "Bloc 12, N°91 Secteur 11 | (Prés Redal Hay Es-salam) | 0622 33 12 32 | ",
+            "ar": "Bloc 12, N°91 Secteur 11 | (Prés Redal Hay Es-salam) | 0622 33 12 32 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20IKRAM%20Sale",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20IKRAM%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20IKRAM%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie L'HOPITAL DE SALE",
+            "en": "Pharmacie L'HOPITAL DE SALE",
+            "ar": "Pharmacie L'HOPITAL DE SALE"
+          },
+          "location": {
+            "fr": "Hay Arrahma",
+            "en": "Hay Arrahma",
+            "ar": "Hay Arrahma"
+          },
+          "phone": "0537 87 11 46",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Secteur D numéro 777 hay errahma | ",
+            "en": "Secteur D numéro 777 hay errahma | ",
+            "ar": "Secteur D numéro 777 hay errahma | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27HOPITAL%20DE%20SALE%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27HOPITAL%20DE%20SALE%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27HOPITAL%20DE%20SALE%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie GUISSI",
+            "en": "GUISSI PHARMACY",
+            "ar": "صيدلية غيسي"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 53 03 45",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Av Bouregreg Imm,11 Zone C | ",
+            "en": "Av Bouregreg Imm,11 Zone C | ",
+            "ar": "Av Bouregreg Imm,11 Zone C | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20GUISSI%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20GUISSI%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20GUISSI%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie AL AQSA",
+            "en": "AL AQSA PHARMACY",
+            "ar": "صيدلية الأقصى"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 83 07 04",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Mag 20, Imm 14, Résidence Maamora 2 | Sala Al Jadida | ",
+            "en": "Mag 20, Imm 14, Résidence Maamora 2 | Sala Al Jadida | ",
+            "ar": "Mag 20, Imm 14, Résidence Maamora 2 | Sala Al Jadida | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20AQSA%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20AQSA%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20AQSA%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie AMZAR",
+            "en": "AMZAR PHARMACY",
+            "ar": "صيدلية أمزار"
+          },
+          "location": {
+            "fr": "Al Mohit Abouab Sala",
+            "en": "Al Mohit Abouab Sala",
+            "ar": "Al Mohit Abouab Sala"
+          },
+          "phone": "0537 82 25 42",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "الجزارة،حي بوشوك رقم1 طريق القنيطرة سلا | قرب مدرسة الشرطة و مدرسة المعارف | ",
+            "en": "الجزارة،حي بوشوك رقم1 طريق القنيطرة سلا | قرب مدرسة الشرطة و مدرسة المعارف | ",
+            "ar": "الجزارة،حي بوشوك رقم1 طريق القنيطرة سلا | قرب مدرسة الشرطة و مدرسة المعارف | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AMZAR%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AMZAR%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AMZAR%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "PHARMACIE ANDALOUSSI",
+            "en": "ANDALUSI PHARMACY",
+            "ar": "صيدلية الأندلس"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 27 12",
+          "hours": "",
+          "address": {
+            "fr": "62 Avenue Mohamed V | ",
+            "en": "62 Avenue Mohamed V | ",
+            "ar": "62 Avenue Mohamed V | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ANDALOUSSI%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ANDALOUSSI%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ANDALOUSSI%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie MOULAY IDRISS",
+            "en": "Pharmacie MOULAY IDRISS",
+            "ar": "Pharmacie MOULAY IDRISS"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 22 70",
+          "hours": "",
+          "address": {
+            "fr": "Secteur 1 Lot 103 Massira 1 | ",
+            "en": "Secteur 1 Lot 103 Massira 1 | ",
+            "ar": "Secteur 1 Lot 103 Massira 1 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MOULAY%20IDRISS%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20MOULAY%20IDRISS%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MOULAY%20IDRISS%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie ANNASSIHA",
+            "en": "Pharmacie ANNASSIHA",
+            "ar": "Pharmacie ANNASSIHA"
+          },
+          "location": {
+            "fr": "Oulad Mtaâ",
+            "en": "Oulad Mtaâ",
+            "ar": "Oulad Mtaâ"
+          },
+          "phone": "0537 56 08 66",
+          "hours": "9h00 à 00h00",
+          "address": {
+            "fr": "603 S1 lot B Riad Ouled MtaâTémara | ",
+            "en": "603 S1 lot B Riad Ouled MtaâTémara | ",
+            "ar": "603 S1 lot B Riad Ouled MtaâTémara | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ANNASSIHA%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ANNASSIHA%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ANNASSIHA%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie AL MAMOUNE",
+            "en": "AL MAMOUNE PHARMACY",
+            "ar": "صيدلية المأمون"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "El Guich Oudaya"
+          },
+          "phone": "0537 56 03 15",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Rue Al Anisse, Guich Loudaya | ",
+            "en": "Rue Al Anisse, Guich Loudaya | ",
+            "ar": "Rue Al Anisse, Guich Loudaya | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20MAMOUNE%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20MAMOUNE%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20MAMOUNE%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "PHARMACIE ANDALOUSSI",
+            "en": "ANDALUSI PHARMACY",
+            "ar": "صيدلية الأندلس"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 27 12",
+          "hours": "",
+          "address": {
+            "fr": "62 Avenue Mohamed V | ",
+            "en": "62 Avenue Mohamed V | ",
+            "ar": "62 Avenue Mohamed V | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ANDALOUSSI%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ANDALOUSSI%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ANDALOUSSI%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "Pharmacie MOULAY IDRISS",
+            "en": "Pharmacie MOULAY IDRISS",
+            "ar": "Pharmacie MOULAY IDRISS"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 22 70",
+          "hours": "",
+          "address": {
+            "fr": "Secteur 1 Lot 103 Massira 1 | ",
+            "en": "Secteur 1 Lot 103 Massira 1 | ",
+            "ar": "Secteur 1 Lot 103 Massira 1 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MOULAY%20IDRISS%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20MOULAY%20IDRISS%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MOULAY%20IDRISS%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "Pharmacie ANNASSIHA",
+            "en": "Pharmacie ANNASSIHA",
+            "ar": "Pharmacie ANNASSIHA"
+          },
+          "location": {
+            "fr": "Oulad Mtaâ",
+            "en": "Oulad Mtaâ",
+            "ar": "Oulad Mtaâ"
+          },
+          "phone": "0537 56 08 66",
+          "hours": "9h00 à 00h00",
+          "address": {
+            "fr": "603 S1 lot B Riad Ouled MtaâTémara | ",
+            "en": "603 S1 lot B Riad Ouled MtaâTémara | ",
+            "ar": "603 S1 lot B Riad Ouled MtaâTémara | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ANNASSIHA%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ANNASSIHA%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ANNASSIHA%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "Pharmacie AL MAMOUNE",
+            "en": "AL MAMOUNE PHARMACY",
+            "ar": "صيدلية المأمون"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "El Guich Oudaya"
+          },
+          "phone": "0537 56 03 15",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Rue Al Anisse, Guich Loudaya | ",
+            "en": "Rue Al Anisse, Guich Loudaya | ",
+            "ar": "Rue Al Anisse, Guich Loudaya | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20MAMOUNE%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20MAMOUNE%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20MAMOUNE%20Ain-aouda"
+            }
+          }
+        }
+      ]
     }
   },
-  "total_pharmacies": 89
+  "total_pharmacies": 109
 }
