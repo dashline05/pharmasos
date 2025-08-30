@@ -1,5 +1,5 @@
 {
-  "date": "2025-08-30",
+  "date": "2025-08-31",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2010,6 +2010,46 @@
             "ar": "الدار البيضاء"
           },
           "name": {
+            "fr": "PHARMACIE NADIA",
+            "en": "NADIA PHARMACY",
+            "ar": "صيدلية نادية"
+          },
+          "location": {
+            "fr": "Lissasfa",
+            "en": "Lissasfa",
+            "ar": "ليساسفا"
+          },
+          "phone": "0522.65.06.65",
+          "hours": {
+            "fr": "24h/24h",
+            "en": "24h/24h",
+            "ar": "24h/24h"
+          },
+          "address": {
+            "fr": "LISSASFA 2 LOT 347 BLOC - A - ROUTE D'EL JADIDA",
+            "en": "LISSASFA 2 LOT 347 BLOC - A - ROUTE D'EL JADIDA",
+            "ar": "LISSASFA 2 LOT 347 BLOC - A - ROUTE D'EL JADIDA"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20NADIA%20Casablanca",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20NADIA%20Casablanca&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20NADIA%20Casablanca"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Casablanca",
+            "en": "Casablanca",
+            "ar": "الدار البيضاء"
+          },
+          "name": {
             "fr": "PHARMACIE HABIBA",
             "en": "HABIBA PHARMACY",
             "ar": "صيدلية حبيبة"
@@ -2460,7 +2500,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 20 16 50",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "35 Rue Karatchi Ocean(Sania Gharbia)Prés de la joutia | des(Motos)et de la cimetiére Achouhada | ",
             "en": "35 Rue Karatchi Ocean(Sania Gharbia)Prés de la joutia | des(Motos)et de la cimetiére Achouhada | ",
@@ -2532,7 +2572,7 @@
             "ar": "Centre Ville"
           },
           "phone": "0537 72 47 23",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Place Melilia, Hassan | (en face de l'hôtel Malak) | ",
             "en": "Place Melilia, Hassan | (en face de l'hôtel Malak) | ",
@@ -2702,42 +2742,6 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE AL AZHAR",
-            "en": "AL AZHAR PHARMACY",
-            "ar": "صيدلية الازهر"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 79 91 07",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | ",
-            "en": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | ",
-            "ar": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20AZHAR%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20AZHAR%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20AZHAR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
             "fr": "PHARMACIE GHARNATA",
             "en": "GHARNATA PHARMACY",
             "ar": "صيدلية غرناطة"
@@ -2748,7 +2752,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 28 12 07",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "812 amal 1 idafi - C.Y.M | Fax: 0537 28 03 84 | ",
             "en": "812 amal 1 idafi - C.Y.M | Fax: 0537 28 03 84 | ",
@@ -2764,6 +2768,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20GHARNATA%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20GHARNATA%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20GHARNATA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE AL AZHAR",
+            "en": "AL AZHAR PHARMACY",
+            "ar": "صيدلية الازهر"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 79 91 07",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | ",
+            "en": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | ",
+            "ar": "89, Av Al Mouhit Al Hadi EL MENZEH | (en face Résidence garde Royale) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20AZHAR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20AZHAR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20AZHAR%20Rabat"
             }
           }
         },
@@ -3598,5 +3638,5 @@
       ]
     }
   },
-  "total_pharmacies": 93
+  "total_pharmacies": 94
 }
