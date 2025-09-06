@@ -1,5 +1,5 @@
 {
-  "date": "2025-09-06",
+  "date": "2025-09-07",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -1780,7 +1780,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 69 10 86",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "57, rue Sidi Ahmed Akkari | ",
             "en": "57, rue Sidi Ahmed Akkari | ",
@@ -1816,7 +1816,7 @@
             "ar": "Centre Ville"
           },
           "phone": "0537 76 42 57",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "42 Rue Patrice Lumumba | (A coté du lycée Lalla Aicha) | ",
             "en": "42 Rue Patrice Lumumba | (A coté du lycée Lalla Aicha) | ",
@@ -1950,42 +1950,6 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE MAZHAR",
-            "en": "MAZHAR PHARMACY",
-            "ar": "صيدلية مظهر"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 79 46 66",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "127 Avenue Al Majd Amal 3 C.Y.M | ",
-            "en": "127 Avenue Al Majd Amal 3 C.Y.M | ",
-            "ar": "127 Avenue Al Majd Amal 3 C.Y.M | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20MAZHAR%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20MAZHAR%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20MAZHAR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
             "fr": "Pharmacie LE CARROUSEL",
             "en": "Pharmacie LE CARROUSEL",
             "ar": "Pharmacie LE CARROUSEL"
@@ -1996,7 +1960,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 79 93 64",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Promenade du carrousel, Av Mustapha Essayeh | 0661 97 69 27 | ",
             "en": "Promenade du carrousel, Av Mustapha Essayeh | 0661 97 69 27 | ",
@@ -2012,6 +1976,78 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20LE%20CARROUSEL%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20LE%20CARROUSEL%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20LE%20CARROUSEL%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE IMAM MALIK",
+            "en": "IMAM MALIK PHARMACY",
+            "ar": "صيدلية الامام مالك"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 29 54 28",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Bloc AI Douar Haj Kacem C.Y.M | 0670 05 84 29 | ",
+            "en": "Bloc AI Douar Haj Kacem C.Y.M | 0670 05 84 29 | ",
+            "ar": "Bloc AI Douar Haj Kacem C.Y.M | 0670 05 84 29 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20IMAM%20MALIK%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20IMAM%20MALIK%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20IMAM%20MALIK%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE MAZHAR",
+            "en": "MAZHAR PHARMACY",
+            "ar": "صيدلية مظهر"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 79 46 66",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "127 Avenue Al Majd Amal 3 C.Y.M | ",
+            "en": "127 Avenue Al Majd Amal 3 C.Y.M | ",
+            "ar": "127 Avenue Al Majd Amal 3 C.Y.M | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20MAZHAR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20MAZHAR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20MAZHAR%20Rabat"
             }
           }
         },
@@ -2212,7 +2248,7 @@
             "ar": "Sala El Jadida"
           },
           "phone": "0537 53 06 91",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Angle de l'avenue Med ben al Hassan et de | l'avenue Hassan IIImm 44A.C4 | ",
             "en": "Angle de l'avenue Med ben al Hassan et de | l'avenue Hassan IIImm 44A.C4 | ",
@@ -2418,6 +2454,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "Pharmacie ZAHRAT AL AMAL",
+            "en": "ZAHRAT AL AMAL PHARMACY",
+            "ar": "صيدلية زهرة الأمل"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 24 23",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
+            "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
+            "ar": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "PHARMACIE KENZY",
             "en": "KENZY PHARMACY",
             "ar": "صيدلية كنزي"
@@ -2444,42 +2516,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20KENZY%20Temara",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20KENZY%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20KENZY%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
-            "fr": "Pharmacie ZAHRAT AL AMAL",
-            "en": "ZAHRAT AL AMAL PHARMACY",
-            "ar": "صيدلية زهرة الأمل"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 24 23",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
-            "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
-            "ar": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Temara"
             }
           }
         },
@@ -2526,42 +2562,6 @@
             "ar": "تمارة"
           },
           "name": {
-            "fr": "Pharmacie L'ESPOIR",
-            "en": "Pharmacie L'ESPOIR",
-            "ar": "Pharmacie L'ESPOIR"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "El Massira"
-          },
-          "phone": "0537 60 08 33",
-          "hours": "",
-          "address": {
-            "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
-            "en": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
-            "ar": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27ESPOIR%20Temara",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27ESPOIR%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27ESPOIR%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
             "fr": "Pharmacie AL YOUSR",
             "en": "Pharmacie AL YOUSR",
             "ar": "Pharmacie AL YOUSR"
@@ -2588,6 +2588,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20YOUSR%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20YOUSR%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20YOUSR%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie L'ESPOIR",
+            "en": "Pharmacie L'ESPOIR",
+            "ar": "Pharmacie L'ESPOIR"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 08 33",
+          "hours": "",
+          "address": {
+            "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
+            "en": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
+            "ar": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27ESPOIR%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27ESPOIR%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27ESPOIR%20Temara"
             }
           }
         },
@@ -2706,6 +2742,42 @@
             "ar": "Ain-aouda"
           },
           "name": {
+            "fr": "Pharmacie ZAHRAT AL AMAL",
+            "en": "ZAHRAT AL AMAL PHARMACY",
+            "ar": "صيدلية زهرة الأمل"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 24 23",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
+            "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
+            "ar": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
             "fr": "PHARMACIE KENZY",
             "en": "KENZY PHARMACY",
             "ar": "صيدلية كنزي"
@@ -2732,42 +2804,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20KENZY%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20KENZY%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20KENZY%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
-            "fr": "Pharmacie ZAHRAT AL AMAL",
-            "en": "ZAHRAT AL AMAL PHARMACY",
-            "ar": "صيدلية زهرة الأمل"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 24 23",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
-            "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | ",
-            "ar": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf) | Tél : 0537 64 24 23 | 0673 03 07 10 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ZAHRAT%20AL%20AMAL%20Ain-aouda"
             }
           }
         },
@@ -2814,42 +2850,6 @@
             "ar": "Ain-aouda"
           },
           "name": {
-            "fr": "Pharmacie L'ESPOIR",
-            "en": "Pharmacie L'ESPOIR",
-            "ar": "Pharmacie L'ESPOIR"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "El Massira"
-          },
-          "phone": "0537 60 08 33",
-          "hours": "",
-          "address": {
-            "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
-            "en": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
-            "ar": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27ESPOIR%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27ESPOIR%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27ESPOIR%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
             "fr": "Pharmacie AL YOUSR",
             "en": "Pharmacie AL YOUSR",
             "ar": "Pharmacie AL YOUSR"
@@ -2876,6 +2876,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20YOUSR%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20YOUSR%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20YOUSR%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "Pharmacie L'ESPOIR",
+            "en": "Pharmacie L'ESPOIR",
+            "ar": "Pharmacie L'ESPOIR"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 08 33",
+          "hours": "",
+          "address": {
+            "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
+            "en": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | ",
+            "ar": "Hay Al Maghrib Al Arabi N°3465 Massira 2 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27ESPOIR%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27ESPOIR%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27ESPOIR%20Ain-aouda"
             }
           }
         },
@@ -2918,5 +2954,5 @@
       ]
     }
   },
-  "total_pharmacies": 76
+  "total_pharmacies": 77
 }
