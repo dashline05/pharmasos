@@ -2970,6 +2970,46 @@
             "ar": "مراكش"
           },
           "name": {
+            "fr": "Pharmacie HADJI",
+            "en": "HADJI Pharmacy",
+            "ar": "صيدلية الحاج"
+          },
+          "location": {
+            "fr": "Sidi Youssef Ben Ali",
+            "en": "Sidi Youssef Ben Ali",
+            "ar": "سيدي يوسف بن علي"
+          },
+          "phone": "0524-40-77-87",
+          "hours": {
+            "fr": "09h00 - 00h00",
+            "en": "09h00 - 00h00",
+            "ar": "09h00 - 00h00"
+          },
+          "address": {
+            "fr": "289, derrière collège Safae, route du Golf Diour Chouhada, Lot. Nakhil Bloc 30 SYBA",
+            "en": "289, derrière collège Safae, route du Golf Diour Chouhada, Lot. Nakhil Bloc 30 SYBA",
+            "ar": "289, derrière collège Safae, route du Golf Diour Chouhada, Lot. Nakhil Bloc 30 SYBA"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20HADJI%20Marrakech",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20HADJI%20Marrakech&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20HADJI%20Marrakech"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Marrakech",
+            "en": "Marrakech",
+            "ar": "مراكش"
+          },
+          "name": {
             "fr": "Pharmacie Hassania targa",
             "en": "Pharmacie Hassania targa",
             "ar": "Pharmacie Hassania targa"
@@ -3529,5 +3569,5 @@
       "pharmacies": []
     }
   },
-  "total_pharmacies": 88
+  "total_pharmacies": 89
 }
