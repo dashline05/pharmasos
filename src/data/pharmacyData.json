@@ -1,5 +1,5 @@
 {
-  "date": "2025-09-27",
+  "date": "2025-09-28",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -3194,6 +3194,42 @@
             "ar": "الرباط"
           },
           "name": {
+            "fr": "PHARMACIE EL OUMNIA",
+            "en": "EL OUMNIA PHARMACY",
+            "ar": "صيدلية الأمنية"
+          },
+          "location": {
+            "fr": "Takadoum & Souissi",
+            "en": "Takadoum & Souissi",
+            "ar": "Takadoum & Souissi"
+          },
+          "phone": "0645 71 55 50",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | ",
+            "en": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | ",
+            "ar": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20OUMNIA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20OUMNIA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20OUMNIA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
             "fr": "Pharmacie GUELZIM",
             "en": "GUELZIM PHARMACY",
             "ar": "صيدلية كليم"
@@ -3204,7 +3240,7 @@
             "ar": "Takadoum & Souissi"
           },
           "phone": "0537 75 46 30",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Avenue Targa 504 Groupe Al Aahd | (Prés 500 M de Marché Nahda 1) | ",
             "en": "Avenue Targa 504 Groupe Al Aahd | (Prés 500 M de Marché Nahda 1) | ",
@@ -3230,21 +3266,21 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE EL OUMNIA",
-            "en": "EL OUMNIA PHARMACY",
-            "ar": "صيدلية الأمنية"
+            "fr": "Pharmacie L'AVENIR",
+            "en": "Pharmacie L'AVENIR",
+            "ar": "Pharmacie L'AVENIR"
           },
           "location": {
-            "fr": "Takadoum & Souissi",
-            "en": "Takadoum & Souissi",
-            "ar": "Takadoum & Souissi"
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
           },
-          "phone": "0645 71 55 50",
-          "hours": "24h/24h",
+          "phone": "0537 79 88 71",
+          "hours": "9h à 00h",
           "address": {
-            "fr": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | ",
-            "en": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | ",
-            "ar": "81,Av Med VI(Entre Groupe Scolaire Ghosn | 0537 65 73 25 | "
+            "fr": "23, M3 Av El Majd Hay El Fath C.Y.M | ",
+            "en": "23, M3 Av El Majd Hay El Fath C.Y.M | ",
+            "ar": "23, M3 Av El Majd Hay El Fath C.Y.M | "
           },
           "maps": {
             "message": {
@@ -3253,9 +3289,9 @@
               "ar": "انقر للحصول على الاتجاهات على:"
             },
             "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20OUMNIA%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20OUMNIA%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20OUMNIA%20Rabat"
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27AVENIR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27AVENIR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27AVENIR%20Rabat"
             }
           }
         },
@@ -3312,7 +3348,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 79 40 99",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "732 J5 Boulevard Al Massira Al Khadra C.Y.M | ",
             "en": "732 J5 Boulevard Al Massira Al Khadra C.Y.M | ",
@@ -3328,42 +3364,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20EL%20KOUASS%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20EL%20KOUASS%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20EL%20KOUASS%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie L'AVENIR",
-            "en": "Pharmacie L'AVENIR",
-            "ar": "Pharmacie L'AVENIR"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 79 88 71",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "23, M3 Av El Majd Hay El Fath C.Y.M | ",
-            "en": "23, M3 Av El Majd Hay El Fath C.Y.M | ",
-            "ar": "23, M3 Av El Majd Hay El Fath C.Y.M | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27AVENIR%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27AVENIR%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27AVENIR%20Rabat"
             }
           }
         },
@@ -3662,42 +3662,6 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "PHARMACIE DU BOUREGREG",
-            "en": "BOUREGREG PHARMACY",
-            "ar": "صيدلية أبي رقراق"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
-          "phone": "0537 53 45 24",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | ",
-            "en": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | ",
-            "ar": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DU%20BOUREGREG%20Sale",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DU%20BOUREGREG%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DU%20BOUREGREG%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
             "fr": "Pharmacie BAYT ASSIHA",
             "en": "BAYT ASSIHA PHARMACY",
             "ar": "صيدلية بيت الصحة"
@@ -3708,7 +3672,7 @@
             "ar": "Sala El Jadida"
           },
           "phone": "0666 08 92 68",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Avenue Zarbia, lot Issam,immeuble 13 mag2 | ",
             "en": "Avenue Zarbia, lot Issam,immeuble 13 mag2 | ",
@@ -3724,6 +3688,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20BAYT%20ASSIHA%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20BAYT%20ASSIHA%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20BAYT%20ASSIHA%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "PHARMACIE DU BOUREGREG",
+            "en": "BOUREGREG PHARMACY",
+            "ar": "صيدلية أبي رقراق"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 53 45 24",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | ",
+            "en": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | ",
+            "ar": "Av Du Bouregreg Lot 1071 N°2 Zone Villa | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DU%20BOUREGREG%20Sale",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DU%20BOUREGREG%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DU%20BOUREGREG%20Sale"
             }
           }
         },
@@ -3878,6 +3878,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "PHARMACIE CAMELIA",
+            "en": "CAMELIA PHARMACY",
+            "ar": "صيدلية كاميليا"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 07 69",
+          "hours": "",
+          "address": {
+            "fr": "Rue Libye, lotissement Ibn Sina, N 76",
+            "en": "Rue Libye, lotissement Ibn Sina, N 76",
+            "ar": "Rue Libye, lotissement Ibn Sina, N 76"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20CAMELIA%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20CAMELIA%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20CAMELIA%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie ABI HORAIRA",
             "en": "Pharmacie ABI HORAIRA",
             "ar": "Pharmacie ABI HORAIRA"
@@ -3986,42 +4022,6 @@
             "ar": "تمارة"
           },
           "name": {
-            "fr": "PHARMACIE LA SOURCE",
-            "en": "THE SOURCE PHARMACY",
-            "ar": "صيدلية المصدر"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "El Massira"
-          },
-          "phone": "0537 60 47 78",
-          "hours": "",
-          "address": {
-            "fr": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
-            "en": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
-            "ar": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20LA%20SOURCE%20Temara",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20LA%20SOURCE%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20LA%20SOURCE%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
             "fr": "PHARMACIE AL MAARIF",
             "en": "AL MAARIF PHARMACY",
             "ar": "صيدلية المعارف"
@@ -4048,6 +4048,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20MAARIF%20Temara",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20MAARIF%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20MAARIF%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "PHARMACIE LA SOURCE",
+            "en": "THE SOURCE PHARMACY",
+            "ar": "صيدلية المصدر"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 47 78",
+          "hours": "",
+          "address": {
+            "fr": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
+            "en": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
+            "ar": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20LA%20SOURCE%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20LA%20SOURCE%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20LA%20SOURCE%20Temara"
             }
           }
         },
@@ -4202,6 +4238,42 @@
             "ar": "Ain-aouda"
           },
           "name": {
+            "fr": "PHARMACIE CAMELIA",
+            "en": "CAMELIA PHARMACY",
+            "ar": "صيدلية كاميليا"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 07 69",
+          "hours": "",
+          "address": {
+            "fr": "Rue Libye, lotissement Ibn Sina, N 76",
+            "en": "Rue Libye, lotissement Ibn Sina, N 76",
+            "ar": "Rue Libye, lotissement Ibn Sina, N 76"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20CAMELIA%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20CAMELIA%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20CAMELIA%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
             "fr": "Pharmacie ABI HORAIRA",
             "en": "Pharmacie ABI HORAIRA",
             "ar": "Pharmacie ABI HORAIRA"
@@ -4310,42 +4382,6 @@
             "ar": "Ain-aouda"
           },
           "name": {
-            "fr": "PHARMACIE LA SOURCE",
-            "en": "THE SOURCE PHARMACY",
-            "ar": "صيدلية المصدر"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "El Massira"
-          },
-          "phone": "0537 60 47 78",
-          "hours": "",
-          "address": {
-            "fr": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
-            "en": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
-            "ar": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20LA%20SOURCE%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20LA%20SOURCE%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20LA%20SOURCE%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
             "fr": "PHARMACIE AL MAARIF",
             "en": "AL MAARIF PHARMACY",
             "ar": "صيدلية المعارف"
@@ -4372,6 +4408,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20MAARIF%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20MAARIF%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20MAARIF%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "PHARMACIE LA SOURCE",
+            "en": "THE SOURCE PHARMACY",
+            "ar": "صيدلية المصدر"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "El Massira"
+          },
+          "phone": "0537 60 47 78",
+          "hours": "",
+          "address": {
+            "fr": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
+            "en": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | ",
+            "ar": "1 Lotissement sapeur pompier Masjid Elikhaa Massira 1 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20LA%20SOURCE%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20LA%20SOURCE%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20LA%20SOURCE%20Ain-aouda"
             }
           }
         },
@@ -4486,5 +4558,5 @@
       ]
     }
   },
-  "total_pharmacies": 116
+  "total_pharmacies": 118
 }
