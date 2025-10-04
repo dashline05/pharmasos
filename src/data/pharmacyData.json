@@ -1,5 +1,5 @@
 {
-  "date": "2025-10-04",
+  "date": "2025-10-05",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2100,7 +2100,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 76 16 95",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "16 Rue Omar El Jadidi, Akkari | ",
             "en": "16 Rue Omar El Jadidi, Akkari | ",
@@ -2208,7 +2208,7 @@
             "ar": "Ocean-Orangers"
           },
           "phone": "0537 20 19 63",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Angle Avenue Misr Et Rue Qobross | ",
             "en": "Angle Avenue Misr Et Rue Qobross | ",
@@ -2342,42 +2342,6 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE BOUITAT",
-            "en": "BOUITAT PHARMACY",
-            "ar": "صيدلية بويطات"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 29 08 67",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "J3 Complement N°1, Rue El Faouz C.Y.M | ",
-            "en": "J3 Complement N°1, Rue El Faouz C.Y.M | ",
-            "ar": "J3 Complement N°1, Rue El Faouz C.Y.M | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BOUITAT%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20BOUITAT%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BOUITAT%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
             "fr": "PHARMACIE DES RESIDENCES",
             "en": "RESIDENCE PHARMACY",
             "ar": "صيدلية الإقامة"
@@ -2388,7 +2352,7 @@
             "ar": "Yacoub El Mansour"
           },
           "phone": "0537 28 11 97",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "233. Hay El Menzeh C.Y.M | ",
             "en": "233. Hay El Menzeh C.Y.M | ",
@@ -2404,6 +2368,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DES%20RESIDENCES%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20DES%20RESIDENCES%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DES%20RESIDENCES%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE BOUITAT",
+            "en": "BOUITAT PHARMACY",
+            "ar": "صيدلية بويطات"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 29 08 67",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "J3 Complement N°1, Rue El Faouz C.Y.M | ",
+            "en": "J3 Complement N°1, Rue El Faouz C.Y.M | ",
+            "ar": "J3 Complement N°1, Rue El Faouz C.Y.M | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BOUITAT%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20BOUITAT%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BOUITAT%20Rabat"
             }
           }
         },
@@ -2476,6 +2476,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AR-RAZI%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20AR-RAZI%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AR-RAZI%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie EL AMRANI",
+            "en": "EL AMRANI PHARMACY",
+            "ar": "صيدلة العمراني"
+          },
+          "location": {
+            "fr": "El Mazza Sidi Abdellah",
+            "en": "El Mazza Sidi Abdellah",
+            "ar": "El Mazza Sidi Abdellah"
+          },
+          "phone": "0530 02 77 82",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "رقم 132 زنقة جمعة لمسيد سكتور القدس - لعيايدة | 0656 10 39 01 | ",
+            "en": "رقم 132 زنقة جمعة لمسيد سكتور القدس - لعيايدة | 0656 10 39 01 | ",
+            "ar": "رقم 132 زنقة جمعة لمسيد سكتور القدس - لعيايدة | 0656 10 39 01 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20EL%20AMRANI%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20EL%20AMRANI%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20EL%20AMRANI%20Sale"
             }
           }
         },
@@ -2604,7 +2640,7 @@
             "ar": "Sala El Jadida"
           },
           "phone": "0537 83 33 44",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "13 lot mektouba Sala al jadida | (Prés du nouvel l'hôpital Moulay Abdallah ) | ",
             "en": "13 lot mektouba Sala al jadida | (Prés du nouvel l'hôpital Moulay Abdallah ) | ",
@@ -2810,6 +2846,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "Pharmacie WARDAT LYASSMINE",
+            "en": "Pharmacie WARDAT LYASSMINE",
+            "ar": "Pharmacie WARDAT LYASSMINE"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0701 31 22 69",
+          "hours": "",
+          "address": {
+            "fr": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
+            "en": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
+            "ar": "Av Tarik Ibn Zyad, Qods 2 Imm. C | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20WARDAT%20LYASSMINE%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20WARDAT%20LYASSMINE%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20WARDAT%20LYASSMINE%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie MALAK (Carrefour)",
             "en": "Pharmacie MALAK (Carrefour)",
             "ar": "Pharmacie MALAK (Carrefour)"
@@ -2836,42 +2908,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MALAK%20%28Carrefour%29%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20MALAK%20%28Carrefour%29%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MALAK%20%28Carrefour%29%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
-            "fr": "Pharmacie WARDAT LYASSMINE",
-            "en": "Pharmacie WARDAT LYASSMINE",
-            "ar": "Pharmacie WARDAT LYASSMINE"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0701 31 22 69",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
-            "en": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
-            "ar": "Av Tarik Ibn Zyad, Qods 2 Imm. C | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20WARDAT%20LYASSMINE%20Temara",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20WARDAT%20LYASSMINE%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20WARDAT%20LYASSMINE%20Temara"
             }
           }
         },
@@ -3062,6 +3098,42 @@
             "ar": "Ain-aouda"
           },
           "name": {
+            "fr": "Pharmacie WARDAT LYASSMINE",
+            "en": "Pharmacie WARDAT LYASSMINE",
+            "ar": "Pharmacie WARDAT LYASSMINE"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0701 31 22 69",
+          "hours": "",
+          "address": {
+            "fr": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
+            "en": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
+            "ar": "Av Tarik Ibn Zyad, Qods 2 Imm. C | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
             "fr": "Pharmacie MALAK (Carrefour)",
             "en": "Pharmacie MALAK (Carrefour)",
             "ar": "Pharmacie MALAK (Carrefour)"
@@ -3088,42 +3160,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MALAK%20%28Carrefour%29%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20MALAK%20%28Carrefour%29%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MALAK%20%28Carrefour%29%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
-            "fr": "Pharmacie WARDAT LYASSMINE",
-            "en": "Pharmacie WARDAT LYASSMINE",
-            "ar": "Pharmacie WARDAT LYASSMINE"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0701 31 22 69",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
-            "en": "Av Tarik Ibn Zyad, Qods 2 Imm. C | ",
-            "ar": "Av Tarik Ibn Zyad, Qods 2 Imm. C | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20WARDAT%20LYASSMINE%20Ain-aouda"
             }
           }
         },
@@ -3238,5 +3274,5 @@
       ]
     }
   },
-  "total_pharmacies": 84
+  "total_pharmacies": 85
 }
