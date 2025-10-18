@@ -1,5 +1,5 @@
 {
-  "date": "2025-10-18",
+  "date": "2025-10-19",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2364,7 +2364,7 @@
             "ar": "Ocean-Orangers"
           },
           "phone": "0537 72 42 22",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "44 bis Av Pasteur(Angle Av Pasteur et Av la Victoire) | ",
             "en": "44 bis Av Pasteur(Angle Av Pasteur et Av la Victoire) | ",
@@ -2462,17 +2462,53 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE AL MOUNTAZAH",
-            "en": "AL MOUNTAZAH PHARMACY",
-            "ar": "صيدلية المنتزة"
+            "fr": "PHARMACIE BOUCHRA AL OUM",
+            "en": "BOUCHRA AL OUM PHARMACY",
+            "ar": "صيدلية بشرى الأم"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "Yacoub El Mansour ()"
           },
-          "phone": "0537 79 00 16",
+          "phone": "0537 29 12 45",
           "hours": "24h/24h",
+          "address": {
+            "fr": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | ",
+            "en": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | ",
+            "ar": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE AL MOUNTAZAH",
+            "en": "AL MOUNTAZAH PHARMACY",
+            "ar": "صيدلية المنتزة"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 79 00 16",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Avenue Al majd, Près de Aswak Assalam C.Y.M | 0639 34 43 43 | ",
             "en": "Avenue Al majd, Près de Aswak Assalam C.Y.M | 0639 34 43 43 | ",
@@ -2524,42 +2560,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20CENTRE%20DE%20TRANSFUSION%20SANGUINE%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20CENTRE%20DE%20TRANSFUSION%20SANGUINE%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20CENTRE%20DE%20TRANSFUSION%20SANGUINE%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "PHARMACIE BOUCHRA AL OUM",
-            "en": "BOUCHRA AL OUM PHARMACY",
-            "ar": "صيدلية بشرى الأم"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 29 12 45",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | ",
-            "en": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | ",
-            "ar": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat"
             }
           }
         },
@@ -2822,53 +2822,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "PHARMACIE DES FACULTES",
-            "en": "FACULTY PHARMACY",
-            "ar": "صيدلية الكلية"
+            "fr": "Pharmacie BAYTI",
+            "en": "BAYTI Pharmacy",
+            "ar": "صيدلية بيتي"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "Sala El Jadida ()"
           },
-          "phone": "0537 82 75 92",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | ",
-            "en": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | ",
-            "ar": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DES%20FACULTES%20Sale",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DES%20FACULTES%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DES%20FACULTES%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "Pharmacie BAYTI",
-            "en": "BAYTI Pharmacy",
-            "ar": "صيدلية بيتي"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
           "phone": "0537 53 33 59",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Av Mohamed V G28 Mag N°1.28 Bayti 2 | ",
             "en": "Av Mohamed V G28 Mag N°1.28 Bayti 2 | ",
@@ -2884,6 +2848,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20BAYTI%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20BAYTI%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20BAYTI%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "PHARMACIE DES FACULTES",
+            "en": "FACULTY PHARMACY",
+            "ar": "صيدلية الكلية"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 82 75 92",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | ",
+            "en": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | ",
+            "ar": "204 ET 205 Hsaine Lot Maamora Rés. Al Jamiaa, N°2 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DES%20FACULTES%20Sale",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DES%20FACULTES%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DES%20FACULTES%20Sale"
             }
           }
         },
@@ -2966,42 +2966,6 @@
             "ar": "تمارة"
           },
           "name": {
-            "fr": "PHARMACIE ROUDANI",
-            "en": "ROUDANI PHARMACY",
-            "ar": "صيدلية روداني"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 05 31",
-          "hours": "",
-          "address": {
-            "fr": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
-            "en": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
-            "ar": "34 Hay El Ghazali Rue Jamaa Al Azhar | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ROUDANI%20Temara",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ROUDANI%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ROUDANI%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
             "fr": "PHARMACIE L'AMITIE",
             "en": "L'AMITIE PHARMACY",
             "ar": "صيدلية لاميتي"
@@ -3064,6 +3028,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MOSQUEE%20ZAHRA%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20MOSQUEE%20ZAHRA%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MOSQUEE%20ZAHRA%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "PHARMACIE ROUDANI",
+            "en": "ROUDANI PHARMACY",
+            "ar": "صيدلية روداني"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 05 31",
+          "hours": "",
+          "address": {
+            "fr": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
+            "en": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
+            "ar": "34 Hay El Ghazali Rue Jamaa Al Azhar | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ROUDANI%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ROUDANI%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ROUDANI%20Temara"
             }
           }
         },
@@ -3182,6 +3182,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "Pharmacie SABLES D'OR",
+            "en": "SABLES D'OR Pharmacy",
+            "ar": "صيدلية سابل دور"
+          },
+          "location": {
+            "fr": "Harhoura",
+            "en": "Harhoura",
+            "ar": "Harhoura"
+          },
+          "phone": "0530 37 50 67",
+          "hours": "",
+          "address": {
+            "fr": "Complexe Commercial Sid El Abed N°4 Harhoura | ",
+            "en": "Complexe Commercial Sid El Abed N°4 Harhoura | ",
+            "ar": "Complexe Commercial Sid El Abed N°4 Harhoura | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20SABLES%20D%27OR%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20SABLES%20D%27OR%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20SABLES%20D%27OR%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie L`OLIVIER",
             "en": "OLIVE TREE PHARMACY",
             "ar": "صيدلية الزيتونة"
@@ -3208,42 +3244,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%60OLIVIER%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20L%60OLIVIER%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%60OLIVIER%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
-            "fr": "PHARMACIE ROUDANI",
-            "en": "ROUDANI PHARMACY",
-            "ar": "صيدلية روداني"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 05 31",
-          "hours": "",
-          "address": {
-            "fr": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
-            "en": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
-            "ar": "34 Hay El Ghazali Rue Jamaa Al Azhar | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ROUDANI%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ROUDANI%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ROUDANI%20Ain-aouda"
             }
           }
         },
@@ -3316,6 +3316,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MOSQUEE%20ZAHRA%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20MOSQUEE%20ZAHRA%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MOSQUEE%20ZAHRA%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "PHARMACIE ROUDANI",
+            "en": "ROUDANI PHARMACY",
+            "ar": "صيدلية روداني"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 05 31",
+          "hours": "",
+          "address": {
+            "fr": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
+            "en": "34 Hay El Ghazali Rue Jamaa Al Azhar | ",
+            "ar": "34 Hay El Ghazali Rue Jamaa Al Azhar | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ROUDANI%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20ROUDANI%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ROUDANI%20Ain-aouda"
             }
           }
         },
@@ -3434,6 +3470,42 @@
             "ar": "Ain-aouda"
           },
           "name": {
+            "fr": "Pharmacie SABLES D'OR",
+            "en": "SABLES D'OR Pharmacy",
+            "ar": "صيدلية سابل دور"
+          },
+          "location": {
+            "fr": "Harhoura",
+            "en": "Harhoura",
+            "ar": "Harhoura"
+          },
+          "phone": "0530 37 50 67",
+          "hours": "",
+          "address": {
+            "fr": "Complexe Commercial Sid El Abed N°4 Harhoura | ",
+            "en": "Complexe Commercial Sid El Abed N°4 Harhoura | ",
+            "ar": "Complexe Commercial Sid El Abed N°4 Harhoura | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20SABLES%20D%27OR%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20SABLES%20D%27OR%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20SABLES%20D%27OR%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
             "fr": "Pharmacie L`OLIVIER",
             "en": "OLIVE TREE PHARMACY",
             "ar": "صيدلية الزيتونة"
@@ -3466,5 +3538,5 @@
       ]
     }
   },
-  "total_pharmacies": 90
+  "total_pharmacies": 92
 }
