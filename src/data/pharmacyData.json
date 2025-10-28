@@ -1,5 +1,5 @@
 {
-  "date": "2025-10-28",
+  "date": "2025-10-29",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -1560,46 +1560,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20BACHIR%20Casablanca",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20BACHIR%20Casablanca&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20BACHIR%20Casablanca"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Casablanca",
-            "en": "Casablanca",
-            "ar": "الدار البيضاء"
-          },
-          "name": {
-            "fr": "Pharmacie BELVEDERE",
-            "en": "Pharmacie BELVEDERE",
-            "ar": "Pharmacie BELVEDERE"
-          },
-          "location": {
-            "fr": "Belvédère",
-            "en": "Belvédère",
-            "ar": "بيلفيدير"
-          },
-          "phone": "0522.24.26.43",
-          "hours": {
-            "fr": "24h/24h",
-            "en": "24h/24h",
-            "ar": "24h/24h"
-          },
-          "address": {
-            "fr": "13, RUE SIJELMASSA - BELVEDERE",
-            "en": "13, RUE SIJELMASSA - BELVEDERE",
-            "ar": "13, RUE SIJELMASSA - BELVEDERE"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20BELVEDERE%20Casablanca",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20BELVEDERE%20Casablanca&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20BELVEDERE%20Casablanca"
             }
           }
         },
@@ -3409,5 +3369,5 @@
       "pharmacies": []
     }
   },
-  "total_pharmacies": 85
+  "total_pharmacies": 84
 }
