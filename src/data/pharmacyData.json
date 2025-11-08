@@ -1,5 +1,5 @@
 {
-  "date": "2025-11-08",
+  "date": "2025-11-09",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -420,7 +420,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 20 38 81",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "272 Av. Abdelkrim Al Khattabi | (Prés Ancien Hôpital Marifie)",
             "en": "272 Av. Abdelkrim Al Khattabi | (Prés Ancien Hôpital Marifie)",
@@ -508,6 +508,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20L%27ORCHIDEE%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20L%27ORCHIDEE%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20L%27ORCHIDEE%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie CHERQI",
+            "en": "Pharmacie CHERQI",
+            "ar": "Pharmacie CHERQI"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0537 20 74 74",
+          "hours": "9h à 21h",
+          "address": {
+            "fr": "100-100 BIS avenue Laalou Medina | ",
+            "en": "100-100 BIS avenue Laalou Medina | ",
+            "ar": "100-100 BIS avenue Laalou Medina | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20CHERQI%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20CHERQI%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20CHERQI%20Rabat"
             }
           }
         },
@@ -626,53 +662,17 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie ATTAISSIR",
-            "en": "Pharmacie ATTAISSIR",
-            "ar": "Pharmacie ATTAISSIR"
+            "fr": "Pharmacie CHOUKROALLAH",
+            "en": "Pharmacie CHOUKROALLAH",
+            "ar": "Pharmacie CHOUKROALLAH"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "Yacoub El Mansour ()"
           },
-          "phone": "0537 28 02 96",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | ",
-            "en": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | ",
-            "ar": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ATTAISSIR%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ATTAISSIR%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ATTAISSIR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie CHOUKROALLAH",
-            "en": "Pharmacie CHOUKROALLAH",
-            "ar": "Pharmacie CHOUKROALLAH"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
           "phone": "0537 79 23 55",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "À côté Av Al Majd 9 bis bloc DG Kouass | (Ancien poste pointage taxi et Achoura)C.Y.M | ",
             "en": "À côté Av Al Majd 9 bis bloc DG Kouass | (Ancien poste pointage taxi et Achoura)C.Y.M | ",
@@ -688,6 +688,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20CHOUKROALLAH%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20CHOUKROALLAH%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20CHOUKROALLAH%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie ATTAISSIR",
+            "en": "Pharmacie ATTAISSIR",
+            "ar": "Pharmacie ATTAISSIR"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "Yacoub El Mansour"
+          },
+          "phone": "0537 28 02 96",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | ",
+            "en": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | ",
+            "ar": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia) | Fax: 0537 79 78 26 | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ATTAISSIR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ATTAISSIR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ATTAISSIR%20Rabat"
             }
           }
         },
@@ -878,53 +914,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie ARGANA",
-            "en": "Pharmacie ARGANA",
-            "ar": "Pharmacie ARGANA"
+            "fr": "Pharmacie DU MAGHREB ARABE",
+            "en": "Pharmacie DU MAGHREB ARABE",
+            "ar": "Pharmacie DU MAGHREB ARABE"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "Sala El Jadida ()"
           },
-          "phone": "0662 77 91 54",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lot Assaada ferdaous Imm 140 N°5 Hssain | ",
-            "en": "Lot Assaada ferdaous Imm 140 N°5 Hssain | ",
-            "ar": "Lot Assaada ferdaous Imm 140 N°5 Hssain | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ARGANA%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ARGANA%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ARGANA%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "Pharmacie DU MAGHREB ARABE",
-            "en": "Pharmacie DU MAGHREB ARABE",
-            "ar": "Pharmacie DU MAGHREB ARABE"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
           "phone": "0537 53 13 10",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Lot Villa 1223 N°4 | (Prés du lycée-Collège du Maghreb Arabe) | ",
             "en": "Lot Villa 1223 N°4 | (Prés du lycée-Collège du Maghreb Arabe) | ",
@@ -940,6 +940,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20DU%20MAGHREB%20ARABE%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20DU%20MAGHREB%20ARABE%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20DU%20MAGHREB%20ARABE%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie ARGANA",
+            "en": "Pharmacie ARGANA",
+            "ar": "Pharmacie ARGANA"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0662 77 91 54",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Lot Assaada ferdaous Imm 140 N°5 Hssain | ",
+            "en": "Lot Assaada ferdaous Imm 140 N°5 Hssain | ",
+            "ar": "Lot Assaada ferdaous Imm 140 N°5 Hssain | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ARGANA%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ARGANA%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ARGANA%20Sale"
             }
           }
         },
@@ -1063,12 +1099,12 @@
             "ar": "Pharmacie ERRACHAD"
           },
           "location": {
-            "fr": "Centre (Al Wifak)",
-            "en": "Centre (Al Wifak)",
-            "ar": "Centre (Al Wifak)"
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
           },
           "phone": "0537 61 79 29",
-          "hours": "24h/24h",
+          "hours": "Al Wifak",
           "address": {
             "fr": "N°2327,Rue errachad Hay El Wifaq | ",
             "en": "N°2327,Rue errachad Hay El Wifaq | ",
@@ -1084,6 +1120,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ERRACHAD%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20ERRACHAD%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ERRACHAD%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie RIM",
+            "en": "Pharmacie RIM",
+            "ar": "Pharmacie RIM"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "El Guich Oudaya"
+          },
+          "phone": "0537 56 18 13",
+          "hours": "9h à 23h",
+          "address": {
+            "fr": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | ",
+            "en": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | ",
+            "ar": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20RIM%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20RIM%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20RIM%20Temara"
             }
           }
         },
@@ -1315,12 +1387,12 @@
             "ar": "Pharmacie ERRACHAD"
           },
           "location": {
-            "fr": "Centre (Al Wifak)",
-            "en": "Centre (Al Wifak)",
-            "ar": "Centre (Al Wifak)"
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
           },
           "phone": "0537 61 79 29",
-          "hours": "24h/24h",
+          "hours": "Al Wifak",
           "address": {
             "fr": "N°2327,Rue errachad Hay El Wifaq | ",
             "en": "N°2327,Rue errachad Hay El Wifaq | ",
@@ -1336,6 +1408,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ERRACHAD%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20ERRACHAD%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ERRACHAD%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "Pharmacie RIM",
+            "en": "Pharmacie RIM",
+            "ar": "Pharmacie RIM"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "El Guich Oudaya"
+          },
+          "phone": "0537 56 18 13",
+          "hours": "9h à 23h",
+          "address": {
+            "fr": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | ",
+            "en": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | ",
+            "ar": "496 Guich Oudayas(En Face BIM et à 150M | de la mosquée belbachiret attijariwafa bank) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20RIM%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20RIM%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20RIM%20Ain-aouda"
             }
           }
         },
@@ -1486,5 +1594,5 @@
       ]
     }
   },
-  "total_pharmacies": 40
+  "total_pharmacies": 43
 }
