@@ -1,23 +1,25 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date, timedelta  # 1. MODIFICATION: timedelta ajouté
+from datetime import datetime, date, timedelta
 from urllib.parse import urljoin, urlparse, quote
 import re
 import json
 import time
 import pytz
 
-# --- DÉBUT DU BLOC AJOUTÉ ---
-# 2. Calcul dynamique de la date du lundi
-# Utiliser le fuseau horaire 'Africa/Casablanca' (comme dans la fonction main)
+# --- DÉBUT DU BLOC MODIFIÉ ---
+# Calcul dynamique des dates
 tz = pytz.timezone('Africa/Casablanca')
-today = datetime.now(tz).date()  # Obtenir la date actuelle dans le fuseau horaire
+today = datetime.now(tz).date()
 
-# today.weekday() renvoie 0 pour lundi, ..., 6 pour dimanche.
-# On soustrait le nombre de jours écoulés depuis lundi.
+# 1. Calculer la date du Lundi (Aujourd'hui - jours écoulés depuis Lundi)
 lundi_actuel = today - timedelta(days=today.weekday())
 date_lundi_str = lundi_actuel.strftime('%Y-%m-%d')
-# --- FIN DU BLOC AJOUTÉ ---
+
+# 2. Calculer la date du Samedi précédent (Lundi - 2 jours)
+samedi_precedent = lundi_actuel - timedelta(days=2)
+date_samedi_str = samedi_precedent.strftime('%Y-%m-%d')
+# --- FIN DU BLOC MODIFIÉ ---
 
 
 # Base URLs
@@ -88,13 +90,27 @@ LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde/marrakech/nuit/targa"
 ]
 
-# 3. MODIFICATION: Liste GUIDE_CITIES dynamique
-GUIDE_CITIES = [
-    f"/pharmacies-de-garde/rabat.html?date={date_lundi_str}",
-    f"/pharmacies-de-garde/sale.html?date={date_lundi_str}",
-    f"/pharmacies-de-garde/temara.html?date={date_lundi_str}",
-    f"/pharmacies-de-garde/ain-aouda.html?date={date_lundi_str}"
+# --- DÉBUT DU BLOC MODIFIÉ ---
+# Remplacement de GUIDE_CITIES par une configuration plus détaillée
+GUIDE_CITY_CONFIG = [
+    {
+        "path": f"/pharmacies-de-garde/rabat.html?date={date_samedi_str}",
+        "target_date_obj": samedi_precedent  # Rabat recherche la date du Samedi
+    },
+    {
+        "path": f"/pharmacies-de-garde/sale.html?date={date_lundi_str}",
+        "target_date_obj": lundi_actuel      # Salé recherche la date du Lundi
+    },
+    {
+        "path": f"/pharmacies-de-garde/temara.html?date={date_lundi_str}",
+        "target_date_obj": lundi_actuel      # Temara recherche la date du Lundi
+    },
+    {
+        "path": f"/pharmacies-de-garde/ain-aouda.html?date={date_lundi_str}",
+        "target_date_obj": lundi_actuel      # Ain Aouda recherche la date du Lundi
+    }
 ]
+# --- FIN DU BLOC MODIFIÉ ---
 
 
 # Translation dictionaries
@@ -2341,6 +2357,8 @@ def extract_guide_pharmacy_data(soup, city_name, target_date):
         date_text = date_section.get_text(strip=True)
         try:
             section_date = parse_french_date(date_text)
+            
+            # Vérifie si la date de la section correspond à la date cible
             if section_date == target_date:
                 current_row = date_section.find_parent('tr').find_next_sibling('tr')
                 
@@ -2370,8 +2388,9 @@ def extract_guide_pharmacy_data(soup, city_name, target_date):
                             })
                     
                     current_row = current_row.find_next_sibling('tr')
-                break
-        except (KeyError, ValueError):
+                break # Arrête de chercher une fois la bonne date trouvée
+        except (KeyError, ValueError, IndexError):
+            # Continue si la date n'est pas parsable (ex: 'Pharmacies de garde')
             continue
     
     return pharmacies
@@ -2425,24 +2444,29 @@ def scrape_lematin():
     
     return result
 
+# --- DÉBUT DE LA FONCTION MODIFIÉE ---
 def scrape_guide():
     """Scrape pharmacies from Guide Pharmacies"""
     result = []
-    # 4. MODIFICATION: Utilisation de la date du lundi calculée
-    target_date = lundi_actuel 
     
-    print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
+    print(f"\nFetching pharmacies from GuidePharmacie...")
     
-    for city_path in GUIDE_CITIES:
+    # Boucle sur la nouvelle configuration (qui contient URL et date cible)
+    for config in GUIDE_CITY_CONFIG:
+        city_path = config["path"]
+        target_date = config["target_date_obj"]  # Date cible spécifique (Lundi ou Samedi)
+        
         city_url = f"{GUIDE_BASE_URL}{city_path}"
         city_name = get_city_name(city_url)
-        print(f"Checking {city_name}...")
+        
+        print(f"Checking {city_name} (Date cible: {target_date.strftime('%Y-%m-%d')}) using URL: {city_url}")
         
         try:
             response = requests.get(city_url)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
+            # Passe la date cible correcte (Lundi ou Samedi) à l'extracteur
             pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
             result.extend(pharmacies)
             
@@ -2451,6 +2475,7 @@ def scrape_guide():
             continue
             
     return result
+# --- FIN DE LA FONCTION MODIFIÉE ---
 
 def main():
     """Main function to scrape both sources and combine results"""
