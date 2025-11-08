@@ -12,18 +12,27 @@ import pytz
 tz = pytz.timezone('Africa/Casablanca')
 today = datetime.now(tz).date()
 
-# 1. Calculer la date du Lundi (Aujourd'hui - jours écoulés depuis Lundi)
-lundi_actuel = today - timedelta(days=today.weekday())
-date_lundi_str = lundi_actuel.strftime('%Y-%m-%d')
+# 1. Calculer le Lundi CIBLE (aujourd'hui si Lundi, ou le Lundi à venir)
+# (0 - today.weekday() + 7) % 7 calcule les jours à ajouter pour atteindre le prochain Lundi
+days_until_monday = (0 - today.weekday() + 7) % 7
+if days_until_monday == 0 and today.weekday() == 0: # Si c'est Lundi, on garde aujourd'hui
+    lundi_cible = today
+else:
+    # Si on est Samedi (5), (0-5+7)%7 = 2 jours -> Lundi prochain
+    # Si on est Dimanche (6), (0-6+7)%7 = 1 jour -> Lundi prochain
+    lundi_cible = today + timedelta(days=days_until_monday)
 
-# 2. Calculer la date du Samedi précédent (Lundi - 2 jours)
-samedi_precedent = lundi_actuel - timedelta(days=2)
-date_samedi_str = samedi_precedent.strftime('%Y-%m-%d')
+# 2. Calculer le Samedi CIBLE (le Samedi qui précède le Lundi cible)
+samedi_cible = lundi_cible - timedelta(days=2)
+
+# 3. Formater les chaînes de date
+date_lundi_str = lundi_cible.strftime('%Y-%m-%d')
+date_samedi_str = samedi_cible.strftime('%Y-%m-%d')
 # --- FIN DU BLOC MODIFIÉ ---
 
 
 # Base URLs
-LEMATIN_BASE_URL = "https://lematin.ma"
+LEMATIN_BASE_URL = "https.lematin.ma"
 GUIDE_BASE_URL = "https://www.guidepharmacies.ma"
 
 # URLs for both sources
@@ -91,23 +100,23 @@ LEMATIN_URLS = [
 ]
 
 # --- DÉBUT DU BLOC MODIFIÉ ---
-# Remplacement de GUIDE_CITIES par une configuration plus détaillée
+# Configuration des villes pour GuidePharmacie
 GUIDE_CITY_CONFIG = [
     {
         "path": f"/pharmacies-de-garde/rabat.html?date={date_samedi_str}",
-        "target_date_obj": samedi_precedent  # Rabat recherche la date du Samedi
+        "target_date_obj": samedi_cible  # Rabat recherche la date du Samedi
     },
     {
         "path": f"/pharmacies-de-garde/sale.html?date={date_lundi_str}",
-        "target_date_obj": lundi_actuel      # Salé recherche la date du Lundi
+        "target_date_obj": lundi_cible      # Salé recherche la date du Lundi
     },
     {
         "path": f"/pharmacies-de-garde/temara.html?date={date_lundi_str}",
-        "target_date_obj": lundi_actuel      # Temara recherche la date du Lundi
+        "target_date_obj": lundi_cible      # Temara recherche la date du Lundi
     },
     {
         "path": f"/pharmacies-de-garde/ain-aouda.html?date={date_lundi_str}",
-        "target_date_obj": lundi_actuel      # Ain Aouda recherche la date du Lundi
+        "target_date_obj": lundi_cible      # Ain Aouda recherche la date du Lundi
     }
 ]
 # --- FIN DU BLOC MODIFIÉ ---
