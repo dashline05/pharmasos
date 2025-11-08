@@ -1,11 +1,24 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date
+from datetime import datetime, date, timedelta  # 1. MODIFICATION: timedelta ajouté
 from urllib.parse import urljoin, urlparse, quote
 import re
 import json
 import time
 import pytz
+
+# --- DÉBUT DU BLOC AJOUTÉ ---
+# 2. Calcul dynamique de la date du lundi
+# Utiliser le fuseau horaire 'Africa/Casablanca' (comme dans la fonction main)
+tz = pytz.timezone('Africa/Casablanca')
+today = datetime.now(tz).date()  # Obtenir la date actuelle dans le fuseau horaire
+
+# today.weekday() renvoie 0 pour lundi, ..., 6 pour dimanche.
+# On soustrait le nombre de jours écoulés depuis lundi.
+lundi_actuel = today - timedelta(days=today.weekday())
+date_lundi_str = lundi_actuel.strftime('%Y-%m-%d')
+# --- FIN DU BLOC AJOUTÉ ---
+
 
 # Base URLs
 LEMATIN_BASE_URL = "https://lematin.ma"
@@ -75,12 +88,14 @@ LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde/marrakech/nuit/targa"
 ]
 
+# 3. MODIFICATION: Liste GUIDE_CITIES dynamique
 GUIDE_CITIES = [
-    "/pharmacies-de-garde/rabat.html?date=2025-11-01",
-    "/pharmacies-de-garde/sale.html?date=2025-11-03",
-    "/pharmacies-de-garde/temara.html?date=2025-11-03",
-    "/pharmacies-de-garde/ain-aouda.html?date=2025-11-03"
+    f"/pharmacies-de-garde/rabat.html?date={date_lundi_str}",
+    f"/pharmacies-de-garde/sale.html?date={date_lundi_str}",
+    f"/pharmacies-de-garde/temara.html?date={date_lundi_str}",
+    f"/pharmacies-de-garde/ain-aouda.html?date={date_lundi_str}"
 ]
+
 
 # Translation dictionaries
 month_mapping = {
@@ -2008,7 +2023,6 @@ pharmacy_translations = {
 }
 
 
-
 location_translations = {
     'Aïn Chock': {'fr': 'Aïn Chock', 'en': 'Aïn Chock', 'ar': 'عين الشق'},
     'Aïn Sebaâ': {'fr': 'Aïn Sebaâ', 'en': 'Aïn Sebaâ', 'ar': 'عين السبع'},
@@ -2415,7 +2429,8 @@ def scrape_lematin():
 def scrape_guide():
     """Scrape pharmacies from Guide Pharmacies"""
     result = []
-    target_date = datetime.now().date()
+    # 4. MODIFICATION: Utilisation de la date du lundi calculée
+    target_date = lundi_actuel 
     
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
