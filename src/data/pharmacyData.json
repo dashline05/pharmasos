@@ -1,5 +1,5 @@
 {
-  "date": "2025-11-29",
+  "date": "2025-11-30",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -3900,7 +3900,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 72 97 44",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "N°4 Rue adis Ababa Route cotière | (Prés visite techniqued'auto mobiles) | ",
             "en": "N°4 Rue adis Ababa Route cotière | (Prés visite techniqued'auto mobiles) | ",
@@ -4044,7 +4044,7 @@
             "ar": "Ocean-Orangers"
           },
           "phone": "0537 72 64 95",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "ي252 شارع الحسن الثاني أمام مسجد الأحباس (صقاف) | ومطعم شليحة ديور الجامع | ",
             "en": "ي252 شارع الحسن الثاني أمام مسجد الأحباس (صقاف) | ومطعم شليحة ديور الجامع | ",
@@ -4096,6 +4096,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20FADESA%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20FADESA%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20FADESA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie MIMOSAS",
+            "en": "Pharmacie MIMOSAS",
+            "ar": "Pharmacie MIMOSAS"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour ()",
+            "en": "Yacoub El Mansour ()",
+            "ar": "Yacoub El Mansour ()"
+          },
+          "phone": "0537 29 20 00",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | ",
+            "en": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | ",
+            "ar": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MIMOSAS%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20MIMOSAS%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MIMOSAS%20Rabat"
             }
           }
         },
@@ -4168,42 +4204,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20HAY%20BOUHLAL%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20HAY%20BOUHLAL%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20HAY%20BOUHLAL%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie MIMOSAS",
-            "en": "Pharmacie MIMOSAS",
-            "ar": "Pharmacie MIMOSAS"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 29 20 00",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | ",
-            "en": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | ",
-            "ar": "Magasin 15 Imm 8 Rés.mimosas Hay Elfath C.Y.M | (A Côté Aswak Salam Hay Elfath) | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20MIMOSAS%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20MIMOSAS%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20MIMOSAS%20Rabat"
             }
           }
         },
@@ -4394,53 +4394,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie ELKHARRAS",
-            "en": "Pharmacie ELKHARRAS",
-            "ar": "Pharmacie ELKHARRAS"
+            "fr": "Pharmacie LA FONTAINE",
+            "en": "LA FONTAINE PHARMACY",
+            "ar": "صيدلية النافورة"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "Sala El Jadida ()"
           },
-          "phone": "0530 38 48 38",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Résidence émeraude Hssain Ouled Hlal Maamoura | ",
-            "en": "Résidence émeraude Hssain Ouled Hlal Maamoura | ",
-            "ar": "Résidence émeraude Hssain Ouled Hlal Maamoura | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ELKHARRAS%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ELKHARRAS%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ELKHARRAS%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "Pharmacie LA FONTAINE",
-            "en": "LA FONTAINE PHARMACY",
-            "ar": "صيدلية النافورة"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
           "phone": "0537 53 29 08",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "8 Av HASSAN II | ",
             "en": "8 Av HASSAN II | ",
@@ -4456,6 +4420,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20LA%20FONTAINE%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20LA%20FONTAINE%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20LA%20FONTAINE%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie ELKHARRAS",
+            "en": "Pharmacie ELKHARRAS",
+            "ar": "Pharmacie ELKHARRAS"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0530 38 48 38",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Résidence émeraude Hssain Ouled Hlal Maamoura | ",
+            "en": "Résidence émeraude Hssain Ouled Hlal Maamoura | ",
+            "ar": "Résidence émeraude Hssain Ouled Hlal Maamoura | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ELKHARRAS%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ELKHARRAS%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ELKHARRAS%20Sale"
             }
           }
         },
@@ -4538,42 +4538,6 @@
             "ar": "تمارة"
           },
           "name": {
-            "fr": "PHARMACIE DAKAR",
-            "en": "DAKAR PHARMACY",
-            "ar": "صيدلية دكار"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 38 55",
-          "hours": "",
-          "address": {
-            "fr": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
-            "en": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
-            "ar": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DAKAR%20Temara",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DAKAR%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DAKAR%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
             "fr": "PHARMACIE EL HAQ",
             "en": "EL HAQ PHARMACY",
             "ar": "صيدلية الحق"
@@ -4600,6 +4564,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20HAQ%20Temara",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20HAQ%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20HAQ%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "PHARMACIE DAKAR",
+            "en": "DAKAR PHARMACY",
+            "ar": "صيدلية دكار"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 38 55",
+          "hours": "",
+          "address": {
+            "fr": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
+            "en": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
+            "ar": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DAKAR%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DAKAR%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DAKAR%20Temara"
             }
           }
         },
@@ -4754,6 +4754,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "PHARMACIE REGRAGUI",
+            "en": "REGRAGUI PHARMACY",
+            "ar": "صيدلية الررقجي"
+          },
+          "location": {
+            "fr": "Harhoura",
+            "en": "Harhoura",
+            "ar": "Harhoura"
+          },
+          "phone": "0537 74 43 05",
+          "hours": "",
+          "address": {
+            "fr": "42 Residence attawfik,casino | Plage Harhoura | ",
+            "en": "42 Residence attawfik,casino | Plage Harhoura | ",
+            "ar": "42 Residence attawfik,casino | Plage Harhoura | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20REGRAGUI%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20REGRAGUI%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20REGRAGUI%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie L`OLIVIER",
             "en": "OLIVE TREE PHARMACY",
             "ar": "صيدلية الزيتونة"
@@ -4790,42 +4826,6 @@
             "ar": "Ain-aouda"
           },
           "name": {
-            "fr": "PHARMACIE DAKAR",
-            "en": "DAKAR PHARMACY",
-            "ar": "صيدلية دكار"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Centre",
-            "ar": "Centre"
-          },
-          "phone": "0537 64 38 55",
-          "hours": "",
-          "address": {
-            "fr": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
-            "en": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
-            "ar": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DAKAR%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DAKAR%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DAKAR%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "Ain-aouda"
-          },
-          "name": {
             "fr": "PHARMACIE EL HAQ",
             "en": "EL HAQ PHARMACY",
             "ar": "صيدلية الحق"
@@ -4852,6 +4852,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20HAQ%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20HAQ%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20HAQ%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "PHARMACIE DAKAR",
+            "en": "DAKAR PHARMACY",
+            "ar": "صيدلية دكار"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Centre",
+            "ar": "Centre"
+          },
+          "phone": "0537 64 38 55",
+          "hours": "",
+          "address": {
+            "fr": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
+            "en": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | ",
+            "ar": "68 Avenue Tarik Ibn Ziad Hay Nasr, | Amical Al Moustaqbal | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20DAKAR%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20DAKAR%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20DAKAR%20Ain-aouda"
             }
           }
         },
@@ -5006,6 +5042,42 @@
             "ar": "Ain-aouda"
           },
           "name": {
+            "fr": "PHARMACIE REGRAGUI",
+            "en": "REGRAGUI PHARMACY",
+            "ar": "صيدلية الررقجي"
+          },
+          "location": {
+            "fr": "Harhoura",
+            "en": "Harhoura",
+            "ar": "Harhoura"
+          },
+          "phone": "0537 74 43 05",
+          "hours": "",
+          "address": {
+            "fr": "42 Residence attawfik,casino | Plage Harhoura | ",
+            "en": "42 Residence attawfik,casino | Plage Harhoura | ",
+            "ar": "42 Residence attawfik,casino | Plage Harhoura | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20REGRAGUI%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20REGRAGUI%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20REGRAGUI%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
             "fr": "Pharmacie L`OLIVIER",
             "en": "OLIVE TREE PHARMACY",
             "ar": "صيدلية الزيتونة"
@@ -5038,5 +5110,5 @@
       ]
     }
   },
-  "total_pharmacies": 129
+  "total_pharmacies": 131
 }
