@@ -1,5 +1,5 @@
 {
-  "date": "2026-01-31",
+  "date": "2026-02-01",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2780,7 +2780,7 @@
             "ar": "Akkari-Ocean"
           },
           "phone": "0537 29 72 08",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "7,8Bloc B maché Ksar labhar | (Prés hopital My Youssef) | ",
             "en": "7,8Bloc B maché Ksar labhar | (Prés hopital My Youssef) | ",
@@ -3022,6 +3022,42 @@
             "ar": "الرباط"
           },
           "name": {
+            "fr": "Pharmacie AL KHAWARIZMI",
+            "en": "AL KHAWARIZMI PHARMACY",
+            "ar": "صيدلية الخوارزمي"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour ()",
+            "en": "Yacoub El Mansour ()",
+            "ar": "Yacoub El Mansour ()"
+          },
+          "phone": "0537 79 11 79",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | ",
+            "en": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | ",
+            "ar": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20KHAWARIZMI%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20KHAWARIZMI%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20KHAWARIZMI%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
             "fr": "Pharmacie IBN ZOHR",
             "en": "IBN ZOHR PHARMACY",
             "ar": "صيدلية ابن زهر"
@@ -3048,42 +3084,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20IBN%20ZOHR%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20IBN%20ZOHR%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20IBN%20ZOHR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie AL KHAWARIZMI",
-            "en": "AL KHAWARIZMI PHARMACY",
-            "ar": "صيدلية الخوارزمي"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "Yacoub El Mansour"
-          },
-          "phone": "0537 79 11 79",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | ",
-            "en": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | ",
-            "ar": "N°1180 Avenue El Menzeh Hay El Menzeh C.Y.M | "
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20KHAWARIZMI%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20KHAWARIZMI%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20KHAWARIZMI%20Rabat"
             }
           }
         },
@@ -3351,12 +3351,12 @@
             "ar": "صيدلية شمس"
           },
           "location": {
-            "fr": "Sala El Jadida ()",
-            "en": "Sala El Jadida ()",
-            "ar": "Sala El Jadida ()"
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
           },
           "phone": "0537 83 52 89",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Avenue Zarbia, N°4 Hssain | ",
             "en": "Avenue Zarbia, N°4 Hssain | ",
@@ -3665,6 +3665,42 @@
         },
         {
           "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "LA GRANDE PHARMACIE DE TAMESNA",
+            "en": "LA GRANDE PHARMACIE DE TAMESNA",
+            "ar": "LA GRANDE PHARMACIE DE TAMESNA"
+          },
+          "location": {
+            "fr": "Tamesna",
+            "en": "Tamesna",
+            "ar": "Tamesna"
+          },
+          "phone": "0537 01 30 65",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "172, Marina d'or(à côté de jouteya Tamesna) | ",
+            "en": "172, Marina d'or(à côté de jouteya Tamesna) | ",
+            "ar": "172, Marina d'or(à côté de jouteya Tamesna) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Temara",
+              "waze": "https://www.waze.com/ul?q=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
             "fr": "Ain-aouda",
             "en": "Ain-aouda",
             "ar": "Ain-aouda"
@@ -3878,9 +3914,45 @@
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Ain-aouda"
             }
           }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "Ain-aouda"
+          },
+          "name": {
+            "fr": "LA GRANDE PHARMACIE DE TAMESNA",
+            "en": "LA GRANDE PHARMACIE DE TAMESNA",
+            "ar": "LA GRANDE PHARMACIE DE TAMESNA"
+          },
+          "location": {
+            "fr": "Tamesna",
+            "en": "Tamesna",
+            "ar": "Tamesna"
+          },
+          "phone": "0537 01 30 65",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "172, Marina d'or(à côté de jouteya Tamesna) | ",
+            "en": "172, Marina d'or(à côté de jouteya Tamesna) | ",
+            "ar": "172, Marina d'or(à côté de jouteya Tamesna) | "
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=LA%20GRANDE%20PHARMACIE%20DE%20TAMESNA%20Ain-aouda"
+            }
+          }
         }
       ]
     }
   },
-  "total_pharmacies": 100
+  "total_pharmacies": 102
 }
