@@ -77,17 +77,17 @@ LEMATIN_URLS = [
 ]
 
 GUIDE_CITIES = [
-    "/pharmacies-de-garde/rabat.html?date=2025-07-28",
-    "/pharmacies-de-garde/sale.html?date=2025-07-28",
-    "/pharmacies-de-garde/temara.html?date=2025-07-28",
-    "/pharmacies-de-garde/ain-aouda.html?date=2025-07-28"
+    "/pharmacies-de-garde/rabat.html",
+    "/pharmacies-de-garde/sale.html",
+    "/pharmacies-de-garde/temara.html",
+    "/pharmacies-de-garde/ain-aouda.html"
 ]
 
 # Translation dictionaries
 month_mapping = {
-    'janvier': 1, 'février': 2, 'mars': 3, 'avril': 4,
-    'mai': 5, 'juin': 6, 'juillet': 7, 'août': 8,
-    'septembre': 9, 'octobre': 10, 'novembre': 11, 'décembre': 12
+    'janvier': 1, 'février': 2, 'fevrier': 2, 'mars': 3, 'avril': 4,
+    'mai': 5, 'juin': 6, 'juillet': 7, 'août': 8, 'aout': 8,
+    'septembre': 9, 'octobre': 10, 'novembre': 11, 'décembre': 12, 'decembre': 12
 }
 
 city_translations = {
@@ -2334,8 +2334,11 @@ def parse_name_phone(text):
 
 def fetch_pharmacy_address(url):
     """Fetch pharmacy address from detail page"""
+    # 1. On ajoute un faux navigateur ici
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
     try:
-        response = requests.get(url)
+        # 2. On utilise les headers dans la requête get
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         description_div = soup.find('div', {'class': 'eb-description-details'})
@@ -2452,9 +2455,16 @@ def scrape_lematin():
 def scrape_guide():
     """Scrape pharmacies from Guide Pharmacies"""
     result = []
-    target_date = datetime.now().date()
+    
+    # 1. On force l'heure du Maroc pour éviter les bugs de fuseaux horaires
+    target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
     
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
+    
+    # 2. Faux navigateur pour ne pas être bloqué par le site
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
     
     for city_path in GUIDE_CITIES:
         city_url = f"{GUIDE_BASE_URL}{city_path}"
@@ -2462,7 +2472,8 @@ def scrape_guide():
         print(f"Checking {city_name}...")
         
         try:
-            response = requests.get(city_url)
+            # 3. Requête avec l'Anti-Bot
+            response = requests.get(city_url, headers=headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
