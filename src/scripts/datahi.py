@@ -1,27 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 from urllib.parse import urljoin, urlparse, quote
 import re
 import json
 import time
 import pytz
-
-# --- Logique de date ---
-tz = pytz.timezone('Africa/Casablanca')
-now = datetime.now(tz)
-date_actuelle = now.date() # Ex: 2025-11-08 (Samedi)
-
-# Calculer le Lundi de la semaine actuelle (Aujourd'hui - jours écoulés depuis Lundi)
-lundi_de_la_semaine_actuelle = date_actuelle - timedelta(days=date_actuelle.weekday())
-
-# Formater la chaîne de date pour l'URL (toujours Lundi)
-date_lundi_str = lundi_de_la_semaine_actuelle.strftime('%Y-%m-%d') # Ex: "2025-11-03"
-# --- Fin Logique de date ---
-
+from deep_translator import GoogleTranslator
 
 # Base URLs
-LEMATIN_BASE_URL = "https://lematin.ma" # Corrigé
+LEMATIN_BASE_URL = "https://lematin.ma"
 GUIDE_BASE_URL = "https://www.guidepharmacies.ma"
 
 # URLs for both sources
@@ -88,28 +76,12 @@ LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde/marrakech/nuit/targa"
 ]
 
-# Configuration des villes pour GuidePharmacie
-GUIDE_CITY_CONFIG = [
-    {
-        # On charge TOUJOURS la page du Lundi
-        "path": f"/pharmacies-de-garde/rabat.html?date={date_lundi_str}",
-        # Mais on cherche la date du jour actuel (ex: Samedi 8)
-        "target_date_obj": date_actuelle
-    },
-    {
-        "path": f"/pharmacies-de-garde/sale.html?date={date_lundi_str}",
-        "target_date_obj": date_actuelle
-    },
-    {
-        "path": f"/pharmacies-de-garde/temara.html?date={date_lundi_str}",
-        "target_date_obj": date_actuelle
-    },
-    {
-        "path": f"/pharmacies-de-garde/ain-aouda.html?date={date_lundi_str}",
-        "target_date_obj": date_actuelle
-    }
+GUIDE_CITIES = [
+    "/pharmacies-de-garde/rabat.html?date=2025-07-28",
+    "/pharmacies-de-garde/sale.html?date=2025-07-28",
+    "/pharmacies-de-garde/temara.html?date=2025-07-28",
+    "/pharmacies-de-garde/ain-aouda.html?date=2025-07-28"
 ]
-
 
 # Translation dictionaries
 month_mapping = {
@@ -2032,7 +2004,10 @@ pharmacy_translations = {
     'PHARMACIE ISSAFARNES': {'fr': 'PHARMACIE ISSAFARNES', 'en': 'ISSAFARNES PHARMACY', 'ar': 'صيدلية إيسافرنس'},
     'PHARMACIE BENNOUNA': {'fr': 'PHARMACIE BENNOUNA', 'en': 'BENNOUNA PHARMACY', 'ar': 'صيدلية بنونة'}
 
+
+
 }
+
 
 
 location_translations = {
@@ -2118,6 +2093,22 @@ hours_translations = {
     }
 }
 
+
+def auto_translate(text, target_lang):
+    """Uses Google Translate for unknown words, handles errors gracefully."""
+    # Ne pas traduire les textes vides ou les messages d'erreur
+    if not text or text in ["Address not found", "Address unavailable"]:
+        return text
+    
+    try:
+        # Traduire du français (fr) vers la langue cible (en ou ar)
+        translated_text = GoogleTranslator(source='fr', target=target_lang).translate(text)
+        return translated_text
+    except Exception as e:
+        print(f"Erreur de traduction pour '{text}': {e}")
+        return text # Si ça échoue, on garde le texte original en français
+
+
 def normalize_pharmacy_name(name):
     """Normalize pharmacy name by removing extra spaces and standardizing format"""
     # Remove multiple spaces and trim
@@ -2128,11 +2119,10 @@ def normalize_pharmacy_name(name):
     return name.strip()
 
 def get_pharmacy_translation(name, translations):
-    """Get translation for a pharmacy name, handling different format variations"""
-    # Normalize the input name
+    """Get translation, with a smart API fallback if the exact name isn't found."""
     normalized_name = normalize_pharmacy_name(name)
     
-    # Try different format combinations
+    # 1. Cherche dans tes dictionnaires existants
     possible_keys = [
         f"Pharmacie {normalized_name}",
         f"PHARMACIE {normalized_name}",
@@ -2143,36 +2133,57 @@ def get_pharmacy_translation(name, translations):
         if key in translations:
             return translations[key]
             
-    # If exact match not found, try case-insensitive search
     normalized_name_lower = normalized_name.lower()
     for key in translations:
         if normalize_pharmacy_name(key).lower() == normalized_name_lower:
             return translations[key]
             
-    # If still not found, return original name in all fields
-    return {'fr': name, 'en': name, 'ar': name}
-
+    # 2. Si introuvable dans le dictionnaire, on utilise deep-translator !
+    capitalized_name = normalized_name.title()
+    fr_name = f"Pharmacie {capitalized_name}"
+    en_name = f"{capitalized_name} Pharmacy"
+    
+    # On demande à Google Translate uniquement pour l'arabe
+    ar_name = auto_translate(fr_name, 'ar')
+    
+    return {
+        'fr': fr_name,
+        'en': en_name,
+        'ar': ar_name
+    }
 def translate_field(field, value):
-    """Translate a field value using the translation dictionaries."""
+    """Translate a field value using dictionaries first, then Google Translate."""
     translation_map = {
         'city': city_translations,
         'pharmacy': pharmacy_translations,
         'location': location_translations,
-        'address': address_translations,
         'hours': hours_translations
     }
     
-    translations = translation_map.get(field, {})
-    
-    # Special handling for pharmacy names
+    # Gestion spéciale pour les horaires (on ne veut pas que Google les modifie)
+    if field == 'hours':
+        translations = translation_map.get('hours', {})
+        if value in translations:
+            return translations[value]
+        return {"fr": value, "en": value, "ar": value}
+
+    # Gestion spéciale pour les noms de pharmacies
     if field == 'pharmacy':
+        translations = translation_map.get('pharmacy', {})
         return get_pharmacy_translation(value, translations)
     
-    # Handle other fields as before
+    # Pour la ville, le quartier (location) et l'adresse
+    translations = translation_map.get(field, {})
+    
+    # Si la valeur exacte est dans ton dictionnaire, on l'utilise (Très rapide !)
     if value in translations:
         return translations[value]
-    else:
-        return {"fr": value, "en": value, "ar": value}
+        
+    # Si ce n'est PAS dans le dictionnaire (ou si c'est une adresse), on utilise Google Translate
+    en_val = auto_translate(value, 'en')
+    ar_val = auto_translate(value, 'ar')
+    
+    return {"fr": value, "en": en_val, "ar": ar_val}
 
 def generate_maps_links(name, city):
     """Generate map links using pharmacy name and city only"""
@@ -2224,7 +2235,6 @@ def parse_lematin_pharmacy(url, shift):
             "address": {"fr": "", "en": "", "ar": ""},
             "maps": {
                 "message": {
-                    # --- CORRECTION SYNTAXERROR ---
                     "fr": "Cliquez pour obtenir l'itinéraire sur:",
                     "en": "Click to get directions on:",
                     "ar": "انقر للحصول على الاتجاهات على:"
@@ -2277,7 +2287,7 @@ def get_city_name(url):
 
 def parse_french_date(date_str):
     """Parse French date string"""
-    parts = re.split(r'\s+', date_str.strip()) # ex: "Samedi 08 Novembre 2025"
+    parts = re.split(r'\s+', date_str.strip())
     day = int(parts[1])
     month = month_mapping[parts[2].lower()]
     year = int(parts[3])
@@ -2355,9 +2365,6 @@ def extract_guide_pharmacy_data(soup, city_name, target_date):
         date_text = date_section.get_text(strip=True)
         try:
             section_date = parse_french_date(date_text)
-            
-            # Vérifie si la date de la section (ex: "Samedi 08 Novembre")
-            # correspond à la date cible (la date du jour)
             if section_date == target_date:
                 current_row = date_section.find_parent('tr').find_next_sibling('tr')
                 
@@ -2387,9 +2394,8 @@ def extract_guide_pharmacy_data(soup, city_name, target_date):
                             })
                     
                     current_row = current_row.find_next_sibling('tr')
-                break # Arrête de chercher une fois la bonne date trouvée
-        except (KeyError, ValueError, IndexError):
-            # Continue si la date n'est pas parsable (ex: 'Pharmacies de garde')
+                break
+        except (KeyError, ValueError):
             continue
     
     return pharmacies
@@ -2419,10 +2425,9 @@ def get_translations(name, location, address, city_name):
         },
         'maps': {
             'message': {
-                # --- CORRECTION SYNTAXERROR ---
-                "fr": "Cliquez pour obtenir l'itinéraire sur:",
-                "en": "Click to get directions on:",
-                "ar": "انقر للحصول على الاتجاهات على:"
+                'fr': 'Cliquez pour obtenir l\'itinéraire sur:',
+                'en': 'Click to get directions on:',
+                'ar': 'انقر للحصول على الاتجاهات على:'
             },
             'links': map_links
         }
@@ -2447,25 +2452,20 @@ def scrape_lematin():
 def scrape_guide():
     """Scrape pharmacies from Guide Pharmacies"""
     result = []
+    target_date = datetime.now().date()
     
-    print(f"\nFetching pharmacies from GuidePharmacie...")
+    print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
-    # Boucle sur la configuration (qui contient URL du Lundi et date cible du jour actuel)
-    for config in GUIDE_CITY_CONFIG:
-        city_path = config["path"]
-        target_date = config["target_date_obj"]  # Date cible (ex: Samedi 8)
-        
-        city_url = f"{GUIDE_BASE_URL}{city_path}" # URL (ex: Lundi 3)
+    for city_path in GUIDE_CITIES:
+        city_url = f"{GUIDE_BASE_URL}{city_path}"
         city_name = get_city_name(city_url)
-        
-        print(f"Checking {city_name} (Date cible: {target_date.strftime('%Y-%m-%d')}) using URL: {city_url}")
+        print(f"Checking {city_name}...")
         
         try:
             response = requests.get(city_url)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Passe la date cible correcte (Samedi 8) à l'extracteur
             pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
             result.extend(pharmacies)
             
@@ -2496,7 +2496,7 @@ def main():
     )
     
     # Save combined results
-    filename = f'pharmacies_{date_actuelle.isoformat()}.json' # Utilise date_actuelle
+    filename = f'pharmacies_{date.today().isoformat()}.json'
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(all_pharmacies, f, ensure_ascii=False, indent=2)
     
