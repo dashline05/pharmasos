@@ -1,5 +1,5 @@
 {
-  "date": "2026-02-28",
+  "date": "2026-03-01",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -3944,7 +3944,7 @@
             "ar": "عكاري-المحيط"
           },
           "phone": "0537 73 46 03",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "119 Avenue de la résistance - Ocean | ",
             "en": "119 Avenue de la Résistance - Ocean |",
@@ -3980,7 +3980,7 @@
             "ar": "مركز المدينة"
           },
           "phone": "0537 72 63 23",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "19 Avenue d'Alger Hassan | ",
             "en": "19 Avenue d’Alger Hassan |",
@@ -4042,6 +4042,42 @@
             "ar": "الرباط"
           },
           "name": {
+            "fr": "PHARMACIE CHERQI",
+            "en": "CHERQI PHARMACY",
+            "ar": "صيدلية شرقي"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0537 20 74 74",
+          "hours": "9h à 23h",
+          "address": {
+            "fr": "100-100 BIS avenue Laalou Medina | ",
+            "en": "100-100 BIS avenue Laalou Medina |",
+            "ar": "100-100 BIS جادة لعلو المدينة المنورة |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20CHERQI%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20CHERQI%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20CHERQI%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
             "fr": "Pharmacie DU MINARET",
             "en": "MINARET PHARMACY",
             "ar": "صيدلية المنارة"
@@ -4052,7 +4088,7 @@
             "ar": "أشجار المحيط البرتقالية"
           },
           "phone": "0537 72 64 95",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "ي252 شارع الحسن الثاني أمام مسجد الأحباس (صقاف) | ومطعم شليحة ديور الجامع | ",
             "en": "ي252 شارع الحسن الثاني أمام مسجد الأحباس (صقاف) | ومطعم شليحة ديور الجامع |",
@@ -4150,53 +4186,17 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie AL MASBAH AL KABIR",
-            "en": "AL MASBAH AL KABIR PHARMACY",
-            "ar": "صيدلية المصباح الكبير"
+            "fr": "Pharmacie HAY EL FATH",
+            "en": "HAY EL FATH PHARMACY",
+            "ar": "صيدلية حي الفتح"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "يعقوب المنصور ()"
           },
-          "phone": "0537 29 06 73",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Avenue Chbanat 9 Rue Ibn Taimia | En Face De La CimetiereC.Y.M | ",
-            "en": "Avenue Chbanat 9 Rue Ibn Taimia | In Front of the CemeteryC.Y.M |",
-            "ar": "شارع الشبانات 9 شارع ابن تيمية | امام المقبرة C.Y.M |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie HAY EL FATH",
-            "en": "HAY EL FATH PHARMACY",
-            "ar": "صيدلية حي الفتح"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
           "phone": "0703 01 02 03",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Imm 30 terminus des bus a Hay el fath | La fin du Boulevard Al Massira C.Y.M | Tél / WhatsApp: 0703 01 02 03 | ",
             "en": "Imm 30 bus terminal in Hay el fath | The end of Boulevard Al Massira C.Y.M | Tel / WhatsApp: 0703 01 02 03 |",
@@ -4212,6 +4212,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20HAY%20EL%20FATH%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20HAY%20EL%20FATH%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20HAY%20EL%20FATH%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie AL MASBAH AL KABIR",
+            "en": "AL MASBAH AL KABIR PHARMACY",
+            "ar": "صيدلية المصباح الكبير"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 29 06 73",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Avenue Chbanat 9 Rue Ibn Taimia | En Face De La CimetiereC.Y.M | ",
+            "en": "Avenue Chbanat 9 Rue Ibn Taimia | In Front of the CemeteryC.Y.M |",
+            "ar": "شارع الشبانات 9 شارع ابن تيمية | امام المقبرة C.Y.M |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20MASBAH%20AL%20KABIR%20Rabat"
             }
           }
         },
@@ -4510,53 +4546,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie La Nouvelle Cité Ex: Cite Royale",
-            "en": "La Nouvelle Cité Ex: Cite Royale Pharmacy",
-            "ar": "صيدلية La Nouvelle Cité Ex: Cite Royale"
+            "fr": "PHARMACIE KAMIL",
+            "en": "KAMIL PHARMACY",
+            "ar": "صيدلية كميل"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "سلا الجديدة ()"
           },
-          "phone": "0537 53 26 96",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Avenue Atlass IMB 4 | (Prés Station Taxi & Hamam Zahra) | ",
-            "en": "Avenue Atlass IMB 4 | (Near Taxi Station & Hamam Zahra) |",
-            "ar": "شارع اطلس IMB 4 | (بالقرب من محطة التاكسي وحمام الزهراء) |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "PHARMACIE KAMIL",
-            "en": "KAMIL PHARMACY",
-            "ar": "صيدلية كميل"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "سلا الجديدة"
-          },
           "phone": "0537 82 80 56",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "N° 145, Lot Maamoura, Hssain | Sala Al Jadida | ",
             "en": "No. 145, Lot Maamoura, Hssain | Sala Al Jadida |",
@@ -4582,6 +4582,42 @@
             "ar": "سلا"
           },
           "name": {
+            "fr": "Pharmacie La Nouvelle Cité Ex: Cite Royale",
+            "en": "La Nouvelle Cité Ex: Cite Royale Pharmacy",
+            "ar": "صيدلية La Nouvelle Cité Ex: Cite Royale"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "سلا الجديدة"
+          },
+          "phone": "0537 53 26 96",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Avenue Atlass IMB 4 | (Prés Station Taxi & Hamam Zahra) | ",
+            "en": "Avenue Atlass IMB 4 | (Near Taxi Station & Hamam Zahra) |",
+            "ar": "شارع اطلس IMB 4 | (بالقرب من محطة التاكسي وحمام الزهراء) |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20La%20Nouvelle%20Cit%C3%A9%20Ex%3A%20Cite%20Royale%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
             "fr": "PHARMACIE BAB CHAAFA",
             "en": "BAB CHAAFA PHARMACY",
             "ar": "صيدلية باب الشفاء"
@@ -4594,9 +4630,9 @@
           "phone": "0537 78 26 46",
           "hours": "9h à 00h",
           "address": {
-            "fr": "صيدلية باب شعفة | ",
-            "en": "صيدلية باب شعفة |",
-            "ar": "صيدلية باب الشعفة |"
+            "fr": " | صيدلية باب شعفة | ",
+            "en": "| صيدلية باب شعفة |",
+            "ar": "| صيدلية باب الشعفة |"
           },
           "maps": {
             "message": {
@@ -4916,7 +4952,7 @@
             "ar": "أولاد مطاع"
           },
           "phone": "0537 60 13 53",
-          "hours": "9h00 à 00h00",
+          "hours": "9h00 à 23h00",
           "address": {
             "fr": "Secteur 3, Lot 109, Oulad Mataâ | 0689 25 30 23 | ",
             "en": "Sector 3, Lot 109, Oulad Mataâ | 0689 25 30 23 |",
@@ -5168,7 +5204,7 @@
             "ar": "أولاد مطاع"
           },
           "phone": "0537 60 13 53",
-          "hours": "9h00 à 00h00",
+          "hours": "9h00 à 23h00",
           "address": {
             "fr": "Secteur 3, Lot 109, Oulad Mataâ | 0689 25 30 23 | ",
             "en": "Sector 3, Lot 109, Oulad Mataâ | 0689 25 30 23 |",
@@ -5190,5 +5226,5 @@
       ]
     }
   },
-  "total_pharmacies": 133
+  "total_pharmacies": 134
 }
