@@ -2456,28 +2456,37 @@ def scrape_guide():
     """Scrape pharmacies from Guide Pharmacies"""
     result = []
     
-    # 1. On force l'heure du Maroc pour éviter les bugs de fuseaux horaires
+    # 1. On force l'heure du Maroc pour éviter les bugs de fuseaux horaires de GitHub
     target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
     
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
-    # 2. Faux navigateur pour ne pas être bloqué par le site
+    # 2. On prépare la date au format YYYY-MM-DD pour l'URL (ex: 2026-03-02)
+    date_param = target_date.strftime('%Y-%m-%d')
+    
+    # Faux navigateur (User-Agent) pour ne pas être bloqué par le site
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
     
     for city_path in GUIDE_CITIES:
-        city_url = f"{GUIDE_BASE_URL}{city_path}"
+        # 3. ON FORCE LA DATE DANS L'URL ICI pour contourner le problème de cache du site
+        city_url = f"{GUIDE_BASE_URL}{city_path}?date={date_param}"
+        
         city_name = get_city_name(city_url)
-        print(f"Checking {city_name}...")
+        print(f"Checking {city_name} (URL: {city_url})...")
         
         try:
-            # 3. Requête avec l'Anti-Bot
+            # Requête avec l'Anti-Bot
             response = requests.get(city_url, headers=headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
+            # On extrait les données en passant bien la target_date pour filtrer
             pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
+            
+            if pharmacies:
+                print(f"Found {len(pharmacies)} pharmacies in {city_name}")
             result.extend(pharmacies)
             
         except requests.RequestException as e:
