@@ -2453,44 +2453,56 @@ def scrape_lematin():
     return result
 
 def scrape_guide():
-    """Scrape pharmacies from Guide Pharmacies"""
+    """Scrape pharmacies from Guide Pharmacies with Day-of-Week logic"""
     result = []
     
-    # 1. On force l'heure du Maroc pour éviter les bugs de fuseaux horaires de GitHub
+    # On récupère la date au Maroc
     target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
+    date_param = target_date.strftime('%Y-%m-%d')
+    
+    # On vérifie quel jour de la semaine nous sommes
+    # 0 = Lundi, 1 = Mardi, 2 = Mercredi, ..., 6 = Dimanche
+    jour_semaine = target_date.weekday() 
     
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
-    # 2. On prépare la date au format YYYY-MM-DD pour l'URL (ex: 2026-03-02)
-    date_param = target_date.strftime('%Y-%m-%d')
-    
-    # Faux navigateur (User-Agent) pour ne pas être bloqué par le site
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
     
     for city_path in GUIDE_CITIES:
-        # 3. ON FORCE LA DATE DANS L'URL ICI pour contourner le problème de cache du site
-        city_url = f"{GUIDE_BASE_URL}{city_path}?date={date_param}"
         
+        # --- LA LOGIQUE INTELLIGENTE SELON LE JOUR ---
+        if jour_semaine == 0:
+            # C'est LUNDI : Le lien normal de leur site est en retard (bloqué sur dimanche).
+            # On DOIT forcer la date dans le lien.
+            city_url = f"{GUIDE_BASE_URL}{city_path}?date={date_param}"
+            print(f"-> Mode LUNDI activé : Utilisation de l'URL avec date pour {city_path}")
+        else:
+            # C'est MARDI À DIMANCHE : Le lien normal marche bien.
+            # L'URL avec la date génère de fausses listes, donc on utilise le lien normal.
+            city_url = f"{GUIDE_BASE_URL}{city_path}"
+            print(f"-> Mode SEMAINE activé : Utilisation de l'URL normale pour {city_path}")
+            
         city_name = get_city_name(city_url)
-        print(f"Checking {city_name} (URL: {city_url})...")
+        print(f"Checking {city_name}...")
         
         try:
-            # Requête avec l'Anti-Bot
             response = requests.get(city_url, headers=headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # On extrait les données en passant bien la target_date pour filtrer
+            # On extrait les données
             pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
             
             if pharmacies:
-                print(f"Found {len(pharmacies)} pharmacies in {city_name}")
-            result.extend(pharmacies)
-            
+                print(f"  -> Succès : {len(pharmacies)} pharmacies trouvées pour {city_name}.")
+                result.extend(pharmacies)
+            else:
+                print(f"  -> Échec : Aucune pharmacie trouvée pour {city_name}.")
+                
         except requests.RequestException as e:
-            print(f"Error fetching {city_name} page: {e}")
+            print(f"  -> Erreur de connexion avec le site : {e}")
             continue
             
     return result
