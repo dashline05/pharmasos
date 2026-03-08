@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2816,7 +2816,7 @@
             "ar": "مركز المدينة"
           },
           "phone": "0537 72 62 16",
-          "hours": "9h à 00h",
+          "hours": "9h à 22h",
           "address": {
             "fr": "45, Av Moulay Ismail HASSAN | ",
             "en": "45, Av Moulay Ismail HASSAN |",
@@ -3022,17 +3022,53 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie CHBANAT",
-            "en": "CHBANAT PHARMACY",
-            "ar": "صيدلية الشبانة"
+            "fr": "Pharmacie AL HIKMA",
+            "en": "AL HIKMA PHARMACY",
+            "ar": "صيدلية الحكمة"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "يعقوب المنصور ()"
           },
-          "phone": "0537 29 09 98",
+          "phone": "0537 29 33 92",
           "hours": "24h/24h",
+          "address": {
+            "fr": "numéro 1376 Amal 5 C.Y.M | ",
+            "en": "number 1376 Amal 5 C.Y.M |",
+            "ar": "رقم 1376 أمل 5 C.Y.M |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20HIKMA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20HIKMA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20HIKMA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie CHBANAT",
+            "en": "CHBANAT PHARMACY",
+            "ar": "صيدلية الشبانة"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 29 09 98",
+          "hours": "9h à 00h",
           "address": {
             "fr": "349 Lot Chbanat C.Y.M | 0635 33 30 44 | ",
             "en": "349 Lot Chbanat C.Y.M | 0635 33 30 44 |",
@@ -3048,42 +3084,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20CHBANAT%20Rabat",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20CHBANAT%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20CHBANAT%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "Pharmacie AL HIKMA",
-            "en": "AL HIKMA PHARMACY",
-            "ar": "صيدلية الحكمة"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
-          "phone": "0537 29 33 92",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "Numéro 1376 Amal 5 C.Y.M | ",
-            "en": "Number 1376 Amal 5 C.Y.M |",
-            "ar": "رقم 1376 أمل 5 C.Y.M |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20AL%20HIKMA%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20AL%20HIKMA%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20AL%20HIKMA%20Rabat"
             }
           }
         },
@@ -3346,53 +3346,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie Du Maghreb Arabe",
-            "en": "Du Maghreb Arabe Pharmacy",
-            "ar": "صيدلية المغرب العربي"
+            "fr": "Pharmacie Ellimoune Hssain",
+            "en": "Ellimoune Hssain Pharmacy",
+            "ar": "صيدلية اليمون حسين"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "سلا الجديدة ()"
           },
-          "phone": "0537 53 13 10",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lot Villa 1223 N°4 | (Prés du lycée-Collège du Maghreb Arabe) | ",
-            "en": "Lot Villa 1223 N°4 | (Near the high school-Collège du Maghreb Arabe) |",
-            "ar": "قطعة أرض 1223 رقم 4 | (قرب المدرسة الثانوية-كلية المغرب العربي) |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Du%20Maghreb%20Arabe%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Du%20Maghreb%20Arabe%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Du%20Maghreb%20Arabe%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "Pharmacie Ellimoune Hssain",
-            "en": "Ellimoune Hssain Pharmacy",
-            "ar": "صيدلية اليمون حسين"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "سلا الجديدة"
-          },
           "phone": "0537 83 04 49",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Lotissement Rida N°4 Hssainen Face Ecole Achbal Karaouiene | ",
             "en": "Rida Housing Estate N°4 Hssainen Facing Ecole Achbal Karaouiene |",
@@ -3408,6 +3372,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Ellimoune%20Hssain%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20Ellimoune%20Hssain%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Ellimoune%20Hssain%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Du Maghreb Arabe",
+            "en": "Du Maghreb Arabe Pharmacy",
+            "ar": "صيدلية المغرب العربي"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "سلا الجديدة"
+          },
+          "phone": "0537 53 13 10",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Lot Villa 1223 N°4 | (Prés du lycée-Collège du Maghreb Arabe) | ",
+            "en": "Lot Villa 1223 N°4 | (Near the high school-Collège du Maghreb Arabe) |",
+            "ar": "قطعة أرض 1223 رقم 4 | (قرب المدرسة الثانوية-كلية المغرب العربي) |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Du%20Maghreb%20Arabe%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Du%20Maghreb%20Arabe%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Du%20Maghreb%20Arabe%20Sale"
             }
           }
         },
