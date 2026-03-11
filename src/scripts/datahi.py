@@ -2453,34 +2453,35 @@ def scrape_lematin():
     return result
 
 def scrape_guide():
-    """Scrape pharmacies from Guide Pharmacies with Day-of-Week logic"""
+    """Scrape pharmacies from Guide Pharmacies with Day-of-Week logic and Anti-Bot headers"""
     result = []
     
     # On récupère la date au Maroc
     target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
     date_param = target_date.strftime('%Y-%m-%d')
     
-    # On vérifie quel jour de la semaine nous sommes
-    # 0 = Lundi, 1 = Mardi, 2 = Mercredi, ..., 6 = Dimanche
+    # On vérifie quel jour de la semaine nous sommes (0 = Lundi, 1 = Mardi...)
     jour_semaine = target_date.weekday() 
     
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
+    # Faux navigateur ultra-complet pour contourner le pare-feu (Erreur 415)
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
     }
     
     for city_path in GUIDE_CITIES:
         
-        # --- LA LOGIQUE INTELLIGENTE SELON LE JOUR ---
         if jour_semaine == 0:
-            # C'est LUNDI : Le lien normal de leur site est en retard (bloqué sur dimanche).
-            # On DOIT forcer la date dans le lien.
+            # Mode LUNDI
             city_url = f"{GUIDE_BASE_URL}{city_path}?date={date_param}"
             print(f"-> Mode LUNDI activé : Utilisation de l'URL avec date pour {city_path}")
         else:
-            # C'est MARDI À DIMANCHE : Le lien normal marche bien.
-            # L'URL avec la date génère de fausses listes, donc on utilise le lien normal.
+            # Mode SEMAINE (Mardi à Dimanche)
             city_url = f"{GUIDE_BASE_URL}{city_path}"
             print(f"-> Mode SEMAINE activé : Utilisation de l'URL normale pour {city_path}")
             
@@ -2492,7 +2493,6 @@ def scrape_guide():
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # On extrait les données
             pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
             
             if pharmacies:
