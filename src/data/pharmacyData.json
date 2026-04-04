@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-04",
+  "date": "2026-04-05",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -2924,7 +2924,7 @@
             "ar": "المحيط البرتقالي"
           },
           "phone": "0537 20 19 63",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Angle Avenue Misr Et Rue Qobross | ",
             "en": "Corner of Avenue Misr and Rue Qobross |",
@@ -3022,53 +3022,17 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie Centre De Transfusion Sanguine",
-            "en": "Centre De Transfusion Sanguine Pharmacy",
-            "ar": "صيدلية مركز نقل الدم"
+            "fr": "PHARMACIE BOUCHRA AL OUM",
+            "en": "BOUCHRA AL OUM PHARMACY",
+            "ar": "صيدلية بشرى الأم"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "يعقوب المنصور ()"
           },
-          "phone": "0537 69 24 69",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Résidence Aribat N°9 entre Av Hassan II | et Douar Rjaf Laah C.Y.M | ",
-            "en": "Residence Aribat N°9 between Av Hassan II | and Douar Rjaf Laah C.Y.M |",
-            "ar": "إقامة عريبات رقم 9 بين شارع الحسن الثاني | ودوار رجاف لاه C.Y.M |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "PHARMACIE BOUCHRA AL OUM",
-            "en": "BOUCHRA AL OUM PHARMACY",
-            "ar": "صيدلية بشرى الأم"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
           "phone": "0537 29 12 45",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 | ",
             "en": "Cité Chbanat, 502 C.Y.M | 0670 80 35 93 |",
@@ -3084,6 +3048,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20BOUCHRA%20AL%20OUM%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Centre De Transfusion Sanguine",
+            "en": "Centre De Transfusion Sanguine Pharmacy",
+            "ar": "صيدلية مركز نقل الدم"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 69 24 69",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Résidence Aribat N°9 entre Av Hassan II | et Douar Rjaf Laah C.Y.M | ",
+            "en": "Residence Aribat N°9 between Av Hassan II | and Douar Rjaf Laah C.Y.M |",
+            "ar": "إقامة عريبات رقم 9 بين شارع الحسن الثاني | ودوار رجاف لاه C.Y.M |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Centre%20De%20Transfusion%20Sanguine%20Rabat"
             }
           }
         },
@@ -3279,12 +3279,12 @@
             "ar": "صيدلية الشافية"
           },
           "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "سلا الجديدة"
+            "fr": "Sala El Jadida ()",
+            "en": "Sala El Jadida ()",
+            "ar": "سلا الجديدة ()"
           },
           "phone": "0537 83 07 97",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Cité Safâa 4 imm 23 app 7 sala al jadida | ",
             "en": "Cité Safâa 4 imm 23 app 7 sala al jadida |",
