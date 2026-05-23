@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-24",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -4176,7 +4176,7 @@
             "ar": "مركز المدينة"
           },
           "phone": "08 08 50 86 79",
-          "hours": "24h/24h",
+          "hours": "9h à 00h",
           "address": {
             "fr": "1, Avenue Allal Ben Abdellah | 06 66 24 68 25 | ",
             "en": "1, Avenue Allal Ben Abdellah | 06 66 24 68 25 |",
@@ -4284,7 +4284,7 @@
             "ar": "أشجار المحيط البرتقالية"
           },
           "phone": "0537 26 27 73",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "425 Bd Hassan II n°7 Diour Jamâa | (Prés Hôtel OSCAR) | ",
             "en": "425 Bd Hassan II n°7 Diour Jamâa | (Near Hotel OSCAR) |",
@@ -4382,17 +4382,53 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie Rabat Corniche",
-            "en": "Rabat Corniche Pharmacy",
-            "ar": "صيدلية كورنيش الرباط"
+            "fr": "PHARMACIE AL MOUNTALAK",
+            "en": "AL MOUNTALAK PHARMACY",
+            "ar": "صيدلية المنطلق"
           },
           "location": {
             "fr": "Yacoub El Mansour ()",
             "en": "Yacoub El Mansour ()",
             "ar": "يعقوب المنصور ()"
           },
-          "phone": "0537 69 84 88",
+          "phone": "0537 29 44 80",
           "hours": "24h/24h",
+          "address": {
+            "fr": "23, Hay Al Mountalak - Hay Al Fath - C.Y.M | ",
+            "en": "23, Hay Al Mountalak - Hay Al Fath - C.Y.M |",
+            "ar": "23 حي الجبل - حي الفتح - C.Y.M |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20MOUNTALAK%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20MOUNTALAK%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20MOUNTALAK%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Rabat Corniche",
+            "en": "Rabat Corniche Pharmacy",
+            "ar": "صيدلية كورنيش الرباط"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 69 84 88",
+          "hours": "9h à 00h",
           "address": {
             "fr": "Rue 13, N°2, Hay Al Ahbass Route Côtière - C.Y.M | ",
             "en": "Street 13, No. 2, Hay Al Ahbass Coastal Road - C.Y.M |",
@@ -4444,42 +4480,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20CHIFAE%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20CHIFAE%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20CHIFAE%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "PHARMACIE AL MOUNTALAK",
-            "en": "AL MOUNTALAK PHARMACY",
-            "ar": "صيدلية المنطلق"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
-          "phone": "0537 29 44 80",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "23, Hay Al Mountalak - Hay Al Fath - C.Y.M | ",
-            "en": "23, Hay Al Mountalak - Hay Al Fath - C.Y.M |",
-            "ar": "23 حي الجبل - حي الفتح - C.Y.M |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20MOUNTALAK%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20MOUNTALAK%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20MOUNTALAK%20Rabat"
             }
           }
         },
@@ -4814,53 +4814,17 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie ASSABIL",
-            "en": "ASSABIL Pharmacy",
-            "ar": "صيدلية السبيل"
+            "fr": "Pharmacie Elkharras",
+            "en": "Elkharras Pharmacy",
+            "ar": "صيدلية الخراس"
           },
           "location": {
             "fr": "Sala El Jadida ()",
             "en": "Sala El Jadida ()",
             "ar": "سلا الجديدة ()"
           },
-          "phone": "0530 00 24 34",
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Villa 542, Lotissementdes villas | ",
-            "en": "Villa 542, Subdivision of villas |",
-            "ar": "فيلا 542 تقسيم الفيلات |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ASSABIL%20Sale",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20ASSABIL%20Sale&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ASSABIL%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Sale",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
-            "fr": "Pharmacie Elkharras",
-            "en": "Elkharras Pharmacy",
-            "ar": "صيدلية الخراس"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "سلا الجديدة"
-          },
           "phone": "0530 38 48 38",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Résidence émeraude Hssain Ouled Hlal Maamoura | ",
             "en": "Emerald residence Hssain Ouled Hlal Maamoura |",
@@ -4876,6 +4840,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Elkharras%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20Elkharras%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Elkharras%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie ASSABIL",
+            "en": "ASSABIL Pharmacy",
+            "ar": "صيدلية السبيل"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "سلا الجديدة"
+          },
+          "phone": "0530 00 24 34",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Villa 542, Lotissementdes villas | ",
+            "en": "Villa 542, Subdivision of villas |",
+            "ar": "فيلا 542 تقسيم الفيلات |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20ASSABIL%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20ASSABIL%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20ASSABIL%20Sale"
             }
           }
         },
@@ -4912,42 +4912,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20IBN%20ROCHD%20Sale",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20IBN%20ROCHD%20Sale&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20IBN%20ROCHD%20Sale"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
-            "fr": "PHARMACIE EL MOUMEN",
-            "en": "EL MOUMEN PHARMACY",
-            "ar": "صيدلية المومن"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Center",
-            "ar": "مركز"
-          },
-          "phone": "0537 60 44 11",
-          "hours": "",
-          "address": {
-            "fr": "N°28 hay nahda 1 bd zerktouni | ( a côté de l'école Al Irfane ) | ",
-            "en": "N°28 hay nahda 1 bd zerktouni | (next to Al Irfane school) |",
-            "ar": "رقم 28 حي ​​النهضة 1 ق الزرقطوني | (بجانب مدرسة العرفان) |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MOUMEN%20Temara",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MOUMEN%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MOUMEN%20Temara"
             }
           }
         },
@@ -5030,6 +4994,42 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "PHARMACIE EL MOUMEN",
+            "en": "EL MOUMEN PHARMACY",
+            "ar": "صيدلية المومن"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "0537 60 44 11",
+          "hours": "",
+          "address": {
+            "fr": "N°28 hay nahda 1 bd zerktouni | ( a côté de l'école Al Irfane ) | ",
+            "en": "N°28 hay nahda 1 bd zerktouni | (next to Al Irfane school) |",
+            "ar": "رقم 28 حي ​​النهضة 1 ق الزرقطوني | (بجانب مدرسة العرفان) |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MOUMEN%20Temara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MOUMEN%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MOUMEN%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "PHARMACIE DES CITES",
             "en": "CITES PHARMACY",
             "ar": "صيدلية سايتس"
@@ -5071,12 +5071,12 @@
             "ar": "صيدلية المعارف"
           },
           "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "المسيرة"
+            "fr": "El Massira ()",
+            "en": "El Massira ()",
+            "ar": "المسيرة ()"
           },
           "phone": "0537 60 43 10",
-          "hours": "",
+          "hours": "24h/24h",
           "address": {
             "fr": "Secteur 1 N°252 hay Maghreb Arabie (chiga) massira 2 | ",
             "en": "Sector 1 N°252 hay Maghreb Arabia (chiga) massira 2 |",
@@ -5112,7 +5112,7 @@
             "ar": "أولاد مطاع"
           },
           "phone": "0537 60 13 53",
-          "hours": "9h00 à 00h00",
+          "hours": "9h00 à 23h00",
           "address": {
             "fr": "Secteur 3, Lot 109, Oulad Mataâ | 0689 25 30 23 | ",
             "en": "Sector 3, Lot 109, Oulad Mataâ | 0689 25 30 23 |",
@@ -5164,42 +5164,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Madar%20Nour%20Temara",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20Madar%20Nour%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Madar%20Nour%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "عين عودة"
-          },
-          "name": {
-            "fr": "PHARMACIE EL MOUMEN",
-            "en": "EL MOUMEN PHARMACY",
-            "ar": "صيدلية المومن"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Center",
-            "ar": "مركز"
-          },
-          "phone": "0537 60 44 11",
-          "hours": "",
-          "address": {
-            "fr": "N°28 hay nahda 1 bd zerktouni | ( a côté de l'école Al Irfane ) | ",
-            "en": "N°28 hay nahda 1 bd zerktouni | (next to Al Irfane school) |",
-            "ar": "رقم 28 حي ​​النهضة 1 ق الزرقطوني | (بجانب مدرسة العرفان) |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MOUMEN%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MOUMEN%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MOUMEN%20Ain-aouda"
             }
           }
         },
@@ -5282,6 +5246,42 @@
             "ar": "عين عودة"
           },
           "name": {
+            "fr": "PHARMACIE EL MOUMEN",
+            "en": "EL MOUMEN PHARMACY",
+            "ar": "صيدلية المومن"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "0537 60 44 11",
+          "hours": "",
+          "address": {
+            "fr": "N°28 hay nahda 1 bd zerktouni | ( a côté de l'école Al Irfane ) | ",
+            "en": "N°28 hay nahda 1 bd zerktouni | (next to Al Irfane school) |",
+            "ar": "رقم 28 حي ​​النهضة 1 ق الزرقطوني | (بجانب مدرسة العرفان) |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MOUMEN%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MOUMEN%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MOUMEN%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
             "fr": "PHARMACIE DES CITES",
             "en": "CITES PHARMACY",
             "ar": "صيدلية سايتس"
@@ -5323,12 +5323,12 @@
             "ar": "صيدلية المعارف"
           },
           "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "المسيرة"
+            "fr": "El Massira ()",
+            "en": "El Massira ()",
+            "ar": "المسيرة ()"
           },
           "phone": "0537 60 43 10",
-          "hours": "",
+          "hours": "24h/24h",
           "address": {
             "fr": "Secteur 1 N°252 hay Maghreb Arabie (chiga) massira 2 | ",
             "en": "Sector 1 N°252 hay Maghreb Arabia (chiga) massira 2 |",
@@ -5364,7 +5364,7 @@
             "ar": "أولاد مطاع"
           },
           "phone": "0537 60 13 53",
-          "hours": "9h00 à 00h00",
+          "hours": "9h00 à 23h00",
           "address": {
             "fr": "Secteur 3, Lot 109, Oulad Mataâ | 0689 25 30 23 | ",
             "en": "Sector 3, Lot 109, Oulad Mataâ | 0689 25 30 23 |",
