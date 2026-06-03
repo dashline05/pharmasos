@@ -2,7 +2,7 @@ name: Update Pharmacy Data
 
 on:
   schedule:
-    - cron: '01 00 * * *'  # 00:01 Casablanca time
+    - cron: '21 00 * * *'  # 00:01 Casablanca time
   workflow_dispatch:
 
 jobs:
