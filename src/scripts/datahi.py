@@ -12,6 +12,15 @@ from deep_translator import GoogleTranslator
 LEMATIN_BASE_URL = "https://lematin.ma"
 GUIDE_BASE_URL = "https://www.guidepharmacies.ma"
 
+# Global Browser Headers to bypass data-center blocks on GitHub Actions
+GLOBAL_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Cache-Control': 'max-age=0',
+    'Connection': 'keep-alive'
+}
+
 # URLs for both sources
 LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde-casablanca/jour/ain-chock",
@@ -76,12 +85,8 @@ LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde/marrakech/nuit/targa"
 ]
 
-GUIDE_CITIES = [
-    "/pharmacies-de-garde/rabat.html",
-    "/pharmacies-de-garde/sale.html",
-    "/pharmacies-de-garde/temara.html",
-    "/pharmacies-de-garde/ain-aouda.html"
-]
+# Clean slug identifiers for GuidePharmacie routing fallbacks
+GUIDE_CITIES = ["rabat", "sale", "temara", "ain-aouda"]
 
 # Translation dictionaries
 month_mapping = {
@@ -2008,8 +2013,6 @@ pharmacy_translations = {
 
 }
 
-
-
 location_translations = {
     'Aïn Chock': {'fr': 'Aïn Chock', 'en': 'Aïn Chock', 'ar': 'عين الشق'},
     'Aïn Sebaâ': {'fr': 'Aïn Sebaâ', 'en': 'Aïn Sebaâ', 'ar': 'عين السبع'},
@@ -2040,94 +2043,37 @@ location_translations = {
     'Targa': {'fr': 'Targa', 'en': 'Targa', 'ar': 'تارڭا'}
 }
 
-address_translations = {
-    "Rue": {'en': 'Street', 'ar': 'شارع'},
-    "Avenue": {'en': 'Avenue', 'ar': 'شارع'},
-    "Av": {'en': 'Ave', 'ar': 'شارع'},  # Abbreviation expanded
-    "Boulevard": {'en': 'Boulevard', 'ar': 'شارع'},
-    "Bloc": {'en': 'Block', 'ar': 'بلوك'},
-    "Secteur": {'en': 'Sector', 'ar': 'قطاع'},
-    "Résidence": {'en': 'Residence', 'ar': 'إقامة'},
-    "Centre": {'en': 'Center', 'ar': 'مركز'},
-    "commercial": {'en': 'Commercial', 'ar': 'تجاري'},
-    "Angle": {'en': 'Corner', 'ar': 'زاوية'},
-    "En face": {'en': 'Opposite', 'ar': 'مقابل'},
-    "Prés": {'en': 'Near', 'ar': 'قرب'},
-    "du": {'en': 'of the', 'ar': 'من'},  # Prepositions/contextual
-    "de": {'en': 'of', 'ar': 'من'},
-    "la": {'en': 'the', 'ar': 'ال'},     # Articles
-    "le": {'en': 'the', 'ar': 'ال'},
-    "Al": {'en': 'Al', 'ar': 'ال'},      # Retained as part of names
-    "et": {'en': 'and', 'ar': 'و'},
-    "Hay": {'en': 'Neighborhood', 'ar': 'حي'},
-    "Imm": {'en': 'Building', 'ar': 'عمارة'},
-    "Lotissement": {'en': 'Subdivision', 'ar': 'تجزئة'},
-    "Villa": {'en': 'Villa', 'ar': 'فيلا'},
-    "Douar": {'en': 'Douar', 'ar': 'دوار'},  # Retained (cultural term)
-    "Centre dentaire": {'en': 'Dental Center', 'ar': 'مركز طب الأسنان'},
-    "gare routiere": {'en': 'Bus Station', 'ar': 'محطة الحافلات'},
-    "Rond-Point": {'en': 'Roundabout', 'ar': 'الدوار'},
-}
-
-
 hours_translations = {
-    "Day et Nuit": {
-        "fr": "24h/24h",
-        "en": "24h/24h",
-        "ar": "24h/24h"
-    },
-    "Day": {
-        "fr": "09h00 - 00h00",
-        "en": "09h00 - 00h00",
-        "ar": "09h00 - 00h00"
-    },
-    "Nuit": {
-        "fr": "24h/24h",
-        "en": "24h/24h",
-        "ar": "24h/24h"
-    },
-    "Unknown": {
-        "fr": "aucune",
-        "en": "none",
-        "ar": "غير متوفر"
-    }
+    "Day et Nuit": {"fr": "24h/24h", "en": "24h/24h", "ar": "24h/24h"},
+    "Day": {"fr": "09h00 - 00h00", "en": "09h00 - 00h00", "ar": "09h00 - 00h00"},
+    "Nuit": {"fr": "24h/24h", "en": "24h/24h", "ar": "24h/24h"},
+    "Unknown": {"fr": "aucune", "en": "none", "ar": "غير متوفر"}
 }
 
 
 def auto_translate(text, target_lang):
     """Uses Google Translate for unknown words, handles errors gracefully."""
-    # Ne pas traduire les textes vides ou les messages d'erreur
     if not text or text in ["Address not found", "Address unavailable"]:
         return text
-    
     try:
-        # Traduire du français (fr) vers la langue cible (en ou ar)
-        translated_text = GoogleTranslator(source='fr', target=target_lang).translate(text)
-        return translated_text
+        return GoogleTranslator(source='fr', target=target_lang).translate(text)
     except Exception as e:
         print(f"Erreur de traduction pour '{text}': {e}")
-        return text # Si ça échoue, on garde le texte original en français
+        return text 
 
 
 def normalize_pharmacy_name(name):
     """Normalize pharmacy name by removing extra spaces and standardizing format"""
-    # Remove multiple spaces and trim
     name = ' '.join(name.split())
-    # Remove "Pharmacie " or "PHARMACIE " prefix if present
     if name.lower().startswith('pharmacie '):
         name = name[10:]
     return name.strip()
 
+
 def get_pharmacy_translation(name, translations):
     """Get translation, with a smart API fallback if the exact name isn't found."""
     normalized_name = normalize_pharmacy_name(name)
-    
-    # 1. Cherche dans tes dictionnaires existants
-    possible_keys = [
-        f"Pharmacie {normalized_name}",
-        f"PHARMACIE {normalized_name}",
-        normalized_name
-    ]
+    possible_keys = [f"Pharmacie {normalized_name}", f"PHARMACIE {normalized_name}", normalized_name]
     
     for key in possible_keys:
         if key in translations:
@@ -2138,19 +2084,14 @@ def get_pharmacy_translation(name, translations):
         if normalize_pharmacy_name(key).lower() == normalized_name_lower:
             return translations[key]
             
-    # 2. Si introuvable dans le dictionnaire, on utilise deep-translator !
     capitalized_name = normalized_name.title()
     fr_name = f"Pharmacie {capitalized_name}"
     en_name = f"{capitalized_name} Pharmacy"
-    
-    # On demande à Google Translate uniquement pour l'arabe
     ar_name = auto_translate(fr_name, 'ar')
     
-    return {
-        'fr': fr_name,
-        'en': en_name,
-        'ar': ar_name
-    }
+    return {'fr': fr_name, 'en': en_name, 'ar': ar_name}
+
+
 def translate_field(field, value):
     """Translate a field value using dictionaries first, then Google Translate."""
     translation_map = {
@@ -2160,30 +2101,24 @@ def translate_field(field, value):
         'hours': hours_translations
     }
     
-    # Gestion spéciale pour les horaires (on ne veut pas que Google les modifie)
     if field == 'hours':
         translations = translation_map.get('hours', {})
         if value in translations:
             return translations[value]
         return {"fr": value, "en": value, "ar": value}
 
-    # Gestion spéciale pour les noms de pharmacies
     if field == 'pharmacy':
         translations = translation_map.get('pharmacy', {})
         return get_pharmacy_translation(value, translations)
     
-    # Pour la ville, le quartier (location) et l'adresse
     translations = translation_map.get(field, {})
-    
-    # Si la valeur exacte est dans ton dictionnaire, on l'utilise (Très rapide !)
     if value in translations:
         return translations[value]
         
-    # Si ce n'est PAS dans le dictionnaire (ou si c'est une adresse), on utilise Google Translate
     en_val = auto_translate(value, 'en')
     ar_val = auto_translate(value, 'ar')
-    
     return {"fr": value, "en": en_val, "ar": ar_val}
+
 
 def generate_maps_links(name, city):
     """Generate map links using pharmacy name and city only"""
@@ -2195,35 +2130,34 @@ def generate_maps_links(name, city):
         "apple_maps": f"http://maps.apple.com/?q={encoded_query}"
     }
 
+
 # LeMatin scraping functions
 def get_lematin_pharmacy_links():
     """Get pharmacy links from LeMatin"""
     pharmacy_links = []
     for url in LEMATIN_URLS:
         try:
-            # Determine shift from URL
             shift = 'jour' if '/jour/' in url else 'nuit' if '/nuit/' in url else 'unknown'
-            response = requests.get(url)
+            response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
             soup = BeautifulSoup(response.text, 'html.parser')
             records = soup.select('div.pharmacies div.ph-record')
             
             for record in records:
-                link = record.select_one('div.ph-name a')['href']
-                full_url = urljoin(LEMATIN_BASE_URL, link)
-                pharmacy_links.append({'url': full_url, 'shift': shift})
-            
-            time.sleep(1)
+                link_tag = record.select_one('div.ph-name a')
+                if link_tag and 'href' in link_tag.attrs:
+                    full_url = urljoin(LEMATIN_BASE_URL, link_tag['href'])
+                    pharmacy_links.append({'url': full_url, 'shift': shift})
+            time.sleep(0.5)
         except Exception as e:
             print(f"Error fetching {url}: {str(e)}")
     return pharmacy_links
 
+
 def parse_lematin_pharmacy(url, shift):
     """Parse individual pharmacy from LeMatin"""
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
         soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Determine hours key
         hours_key = 'Day' if shift == 'jour' else 'Nuit' if shift == 'nuit' else 'Unknown'
         
         data = {
@@ -2243,7 +2177,6 @@ def parse_lematin_pharmacy(url, shift):
             }
         }
 
-        # Extract pharmacy details
         name_tag = soup.select_one('.record.pharmacy-name')
         if name_tag:
             raw_parts = [text.strip() for text in name_tag.find_all(text=True, recursive=True) 
@@ -2251,7 +2184,6 @@ def parse_lematin_pharmacy(url, shift):
             raw_name = " ".join(raw_parts).strip()
             data["name"] = translate_field('pharmacy', raw_name)
 
-        # Extract other details
         details = soup.select('.ph-details p')
         for detail in details:
             text = detail.get_text(strip=True)
@@ -2267,24 +2199,15 @@ def parse_lematin_pharmacy(url, shift):
                 city = text.split(':')[-1].strip()
                 data["city"] = translate_field('city', city)
 
-        # Generate maps links
         if data["name"]["fr"] and data["city"]["fr"]:
-            data["maps"]["links"] = generate_maps_links(
-                data["name"]["fr"], 
-                data["city"]["fr"]
-            )
-
+            data["maps"]["links"] = generate_maps_links(data["name"]["fr"], data["city"]["fr"])
         return data
     except Exception as e:
         print(f"Error parsing {url}: {str(e)}")
         return None
 
-# Guide Pharmacies scraping functions
-def get_city_name(url):
-    """Extract city name from URL"""
-    path = urlparse(url).path
-    return path.split('/')[-1].replace('.html', '').capitalize()
 
+# Guide Pharmacies scraping functions
 def parse_french_date(date_str):
     """Parse French date string"""
     parts = re.split(r'\s+', date_str.strip())
@@ -2293,20 +2216,15 @@ def parse_french_date(date_str):
     year = int(parts[3])
     return datetime(year, month, day).date()
 
+
 def parse_location_hours(text):
     """Parse location and hours from text"""
     text = text.strip()
     if not text:
         return '', ''
-    
     text = re.sub(r'\(\d+\)', '', text).strip()
     
-    hour_patterns = [
-        r'24h/24h',
-        r'\d+h à \d+h',
-        r'\d+h à \d+h:\d+'
-    ]
-    
+    hour_patterns = [r'24h/24h', r'\d+h à \d+h', r'\d+h à \d+h:\d+']
     hours = ''
     for pattern in hour_patterns:
         match = re.search(pattern, text)
@@ -2317,47 +2235,37 @@ def parse_location_hours(text):
     
     if not hours and '(' in text:
         parts = text.split('(', 1)
-        if len(parts) > 1:
-            location = parts[0].strip()
-            hours = parts[1].replace(')', '').strip()
-        else:
-            location = text.strip()
+        location = parts[0].strip() if len(parts) > 1 else text.strip()
+        hours = parts[1].replace(')', '').strip() if len(parts) > 1 else ''
     else:
         location = text.strip()
-    
+        
     return location, hours
+
 
 def parse_name_phone(text):
     """Parse name and phone from text"""
     parts = text.split(' - ', 1)
     return parts[0].strip(), parts[1].strip() if len(parts) > 1 else ''
 
+
 def fetch_pharmacy_address(url):
     """Fetch pharmacy address from detail page"""
-    # 1. On ajoute un faux navigateur ici
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
     try:
-        # 2. On utilise les headers dans la requête get
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=GLOBAL_HEADERS, timeout=10)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         description_div = soup.find('div', {'class': 'eb-description-details'})
         
         if description_div:
-            address_paragraphs = description_div.find_all(
-                'p', 
-                style=re.compile(r'text-align:\s*center', re.IGNORECASE)
-            )
-            address_lines = [
-                p.get_text(strip=True) 
-                for p in address_paragraphs 
-                if 'Tél:' not in p.get_text()
-            ]
+            address_paragraphs = description_div.find_all('p', style=re.compile(r'text-align:\s*center', re.IGNORECASE))
+            address_lines = [p.get_text(strip=True) for p in address_paragraphs if 'Tél:' not in p.get_text()]
             return ' | '.join(address_lines) or "Address not found"
         return "Address not found"
     except Exception as e:
-        print(f"Error fetching address: {e}")
+        print(f"Error fetching address from {url}: {e}")
         return "Address unavailable"
+
 
 def extract_guide_pharmacy_data(soup, city_name, target_date):
     """Extract pharmacy data from Guide Pharmacies"""
@@ -2395,18 +2303,16 @@ def extract_guide_pharmacy_data(soup, city_name, target_date):
                                 'address': translations['address'],
                                 'maps': translations['maps']
                             })
-                    
                     current_row = current_row.find_next_sibling('tr')
                 break
         except (KeyError, ValueError):
             continue
-    
     return pharmacies
+
 
 def get_translations(name, location, address, city_name):
     """Get translations for all fields"""
     location = re.sub(r'\(\d+\)', '', location).strip()
-    
     pharmacy_trans = translate_field('pharmacy', name)
     location_trans = translate_field('location', location)
     city_trans = translate_field('city', city_name)
@@ -2414,18 +2320,13 @@ def get_translations(name, location, address, city_name):
     address_fr = address
     address_en = translate_field('address', address)['en']
     address_ar = translate_field('address', address)['ar']
-    
     map_links = generate_maps_links(pharmacy_trans['fr'], city_trans['fr'])
     
     return {
         'name': pharmacy_trans,
         'location': location_trans,
         'city': city_trans,
-        'address': {
-            'fr': address_fr,
-            'en': address_en,
-            'ar': address_ar
-        },
+        'address': {'fr': address_fr, 'en': address_en, 'ar': address_ar},
         'maps': {
             'message': {
                 'fr': 'Cliquez pour obtenir l\'itinéraire sur:',
@@ -2435,6 +2336,7 @@ def get_translations(name, location, address, city_name):
             'links': map_links
         }
     }
+
 
 def scrape_lematin():
     """Scrape pharmacies from LeMatin"""
@@ -2449,85 +2351,62 @@ def scrape_lematin():
         if pharmacy_data:
             result.append(pharmacy_data)
         time.sleep(1)
-    
     return result
 
+
 def scrape_guide():
-    """Scrape pharmacies from Guide Pharmacies with Day-of-Week logic and Anti-Bot headers"""
+    """Scrape pharmacies from Guide Pharmacies handling Weekday/Weekend router views"""
     result = []
-    
-    # On récupère la date au Maroc
     target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
-    date_param = target_date.strftime('%Y-%m-%d')
-    
-    # On vérifie quel jour de la semaine nous sommes (0 = Lundi, 1 = Mardi...)
-    jour_semaine = target_date.weekday() 
-    
     print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
     
-    # Faux navigateur ultra-complet pour contourner le pare-feu (Erreur 415)
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
-    }
-    
-    for city_path in GUIDE_CITIES:
-        
-        if jour_semaine == 0:
-            # Mode LUNDI
-            city_url = f"{GUIDE_BASE_URL}{city_path}?date={date_param}"
-            print(f"-> Mode LUNDI activé : Utilisation de l'URL avec date pour {city_path}")
-        else:
-            # Mode SEMAINE (Mardi à Dimanche)
-            city_url = f"{GUIDE_BASE_URL}{city_path}"
-            print(f"-> Mode SEMAINE activé : Utilisation de l'URL normale pour {city_path}")
-            
-        city_name = get_city_name(city_url)
+    for city in GUIDE_CITIES:
+        city_name = city.capitalize()
         print(f"Checking {city_name}...")
         
-        try:
-            response = requests.get(city_url, headers=headers)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
-            
-            if pharmacies:
-                print(f"  -> Succès : {len(pharmacies)} pharmacies trouvées pour {city_name}.")
-                result.extend(pharmacies)
-            else:
-                print(f"  -> Échec : Aucune pharmacie trouvée pour {city_name}.")
+        # Test paths sequentially. Weekday shifts live under /week/; weekends/holidays fall back to the root path index.
+        urls_to_try = [
+            f"{GUIDE_BASE_URL}/pharmacies-de-garde/week/{city}.html",
+            f"{GUIDE_BASE_URL}/pharmacies-de-garde/{city}.html"
+        ]
+        
+        pharmacies = []
+        for url in urls_to_try:
+            try:
+                response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
+                    if pharmacies:
+                        print(f"-> Succès : {len(pharmacies)} pharmacies trouvées pour {city_name}")
+                        break
+            except requests.RequestException as e:
+                print(f"Error fetching route {url}: {e}")
+                continue
                 
-        except requests.RequestException as e:
-            print(f"  -> Erreur de connexion avec le site : {e}")
-            continue
+        if not pharmacies:
+            print(f"-> Échec : Aucune pharmacie trouvée pour {city_name}.")
             
+        result.extend(pharmacies)
+        time.sleep(2)
     return result
+
 
 def main():
     """Main function to scrape both sources and combine results"""
     all_pharmacies = {
          "date": datetime.now(pytz.timezone('Africa/Casablanca')).date().isoformat(),
         "sources": {
-            "lematin": {
-                "pharmacies": scrape_lematin()
-            },
-            "guide": {
-                "pharmacies": scrape_guide()
-            }
+            "lematin": {"pharmacies": scrape_lematin()},
+            "guide": {"pharmacies": scrape_guide()}
         }
     }
     
-    # Add summary statistics
     all_pharmacies["total_pharmacies"] = (
         len(all_pharmacies["sources"]["lematin"]["pharmacies"]) +
         len(all_pharmacies["sources"]["guide"]["pharmacies"])
     )
     
-    # Save combined results
     filename = f'pharmacies_{date.today().isoformat()}.json'
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(all_pharmacies, f, ensure_ascii=False, indent=2)
@@ -2536,6 +2415,7 @@ def main():
     print(f"Total pharmacies found: {all_pharmacies['total_pharmacies']}")
     print(f"- LeMatin: {len(all_pharmacies['sources']['lematin']['pharmacies'])}")
     print(f"- GuidePharmacie: {len(all_pharmacies['sources']['guide']['pharmacies'])}")
+
 
 if __name__ == "__main__":
     main()
