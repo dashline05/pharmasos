@@ -8,6 +8,12 @@ import time
 import pytz
 from deep_translator import GoogleTranslator
 
+try:
+    import cloudscraper
+    USE_CLOUDSCRAPER = True
+except ImportError:
+    USE_CLOUDSCRAPER = False
+
 # Base URLs
 LEMATIN_BASE_URL = "https://lematin.ma"
 GUIDE_BASE_URL = "https://www.guidepharmacies.ma"
@@ -19,6 +25,21 @@ GLOBAL_HEADERS = {
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive'
 }
+
+# Persistent HTTP Client to bypass Cloudflare and speed up requests
+def create_http_client():
+    if USE_CLOUDSCRAPER:
+        return cloudscraper.create_scraper(browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        })
+    else:
+        session = requests.Session()
+        session.headers.update(GLOBAL_HEADERS)
+        return session
+
+http_client = create_http_client()
 
 LEMATIN_URLS = [
     "https://lematin.ma/pharmacie-garde-casablanca/jour/ain-chock",
@@ -2116,7 +2137,7 @@ def get_lematin_pharmacy_links():
     for url in LEMATIN_URLS:
         try:
             shift = 'jour' if '/jour/' in url else 'nuit' if '/nuit/' in url else 'unknown'
-            response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
+            response = http_client.get(url, timeout=15)
             soup = BeautifulSoup(response.text, 'html.parser')
             records = soup.select('div.pharmacies div.ph-record')
             
@@ -2125,14 +2146,14 @@ def get_lematin_pharmacy_links():
                 if link_tag and 'href' in link_tag.attrs:
                     full_url = urljoin(LEMATIN_BASE_URL, link_tag['href'])
                     pharmacy_links.append({'url': full_url, 'shift': shift})
-            time.sleep(0.2)
+            time.sleep(0.1)
         except Exception as e:
             print(f"Error fetching {url}: {str(e)}")
     return pharmacy_links
 
 def parse_lematin_pharmacy(url, shift):
     try:
-        response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
+        response = http_client.get(url, timeout=15)
         soup = BeautifulSoup(response.text, 'html.parser')
         hours_key = 'Day' if shift == 'jour' else 'Nuit' if shift == 'nuit' else 'Unknown'
         
@@ -2213,7 +2234,7 @@ def parse_name_phone(text):
 
 def fetch_pharmacy_address(url):
     try:
-        response = requests.get(url, headers=GLOBAL_HEADERS, timeout=10)
+        response = http_client.get(url, timeout=10)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         description_div = soup.find('div', {'class': 'eb-description-details'})
@@ -2228,14 +2249,14 @@ def fetch_pharmacy_address(url):
         return "Address unavailable"
 
 def extract_guide_pharmacy_data(soup, city_name):
-    """Extract pharmacy data by targeting today's date explicitly, with fallback options"""
+    """Smart Extraction: Actively targets the current day's table block to avoid old headers"""
     pharmacies = []
     
-    # Get current Casablanca time and build the French date string match
-    # Example: "05" and "juin"
+    # Calculate today's French date strings for exact matching
     tz = pytz.timezone('Africa/Casablanca')
     now = datetime.now(tz)
-    day_str = now.strftime('%d')
+    day_str_0 = now.strftime('%d') # e.g. "05"
+    day_str_n = str(now.day)       # e.g. "5"
     
     french_months = {
         1: 'janvier', 2: 'février', 3: 'mars', 4: 'avril', 5: 'mai', 6: 'juin',
@@ -2247,20 +2268,20 @@ def extract_guide_pharmacy_data(soup, city_name):
     date_sections = soup.find_all('td', {'class': 'tableh2'})
     target_section = None
 
-    # Strategy 1: Look specifically for today's date block
+    # Strategy 1: Find the block explicitly labeled with today's date
     for section in date_sections:
         text_lower = section.get_text(strip=True).lower()
-        if day_str in text_lower and month_str in text_lower and year_str in text_lower:
+        if (day_str_0 in text_lower or f" {day_str_n} " in text_lower) and month_str in text_lower and year_str in text_lower:
             target_section = section
             print(f"   -> Found exact match for today's date section: {section.get_text(strip=True)}")
             break
 
-    # Strategy 2 Fallback: If today's date isn't explicitly on the page yet, take the first available block
+    # Strategy 2: If today's date isn't found, fallback to the first block available
     if not target_section and date_sections:
         target_section = date_sections[0]
         print(f"   -> Today's date not found. Falling back to first available section: {target_section.get_text(strip=True)}")
 
-    # Parse the selected section block
+    # Parse the selected block correctly
     if target_section:
         current_row = target_section.find_parent('tr').find_next_sibling('tr')
         while current_row and not current_row.find('td', {'class': 'tableh2'}):
@@ -2274,7 +2295,7 @@ def extract_guide_pharmacy_data(soup, city_name):
         if pharmacies:
             return pharmacies
 
-    # Strategy 3 Fallback: If no headers exist at all, scrape all row entries on the page
+    # Strategy 3: Blind Scrape (if table formatting is completely broken)
     entries = soup.find_all('td', {'class': 'tableb'})
     for entry in entries:
         pharm_data = parse_single_row(entry, city_name)
@@ -2361,7 +2382,7 @@ def scrape_guide():
         pharmacies = []
         for url in urls_to_try:
             try:
-                response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
+                response = http_client.get(url, timeout=15)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, 'html.parser')
                     pharmacies = extract_guide_pharmacy_data(soup, city_name)
