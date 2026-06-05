@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 from urllib.parse import urljoin, quote
 import re
 import json
@@ -85,12 +85,6 @@ LEMATIN_URLS = [
 
 GUIDE_CITIES = ["rabat", "sale", "temara", "ain-aouda"]
 
-month_mapping = {
-    'janvier': 1, 'février': 2, 'fevrier': 2, 'mars': 3, 'avril': 4,
-    'mai': 5, 'juin': 6, 'juillet': 7, 'août': 8, 'aout': 8,
-    'septembre': 9, 'octobre': 10, 'novembre': 11, 'décembre': 12, 'decembre': 12
-}
-
 city_translations = {
     'Rabat': {'fr': 'Rabat', 'en': 'Rabat', 'ar': 'الرباط'},
     'Sale': {'fr': 'Sale', 'en': 'Sale', 'ar': 'سلا'},
@@ -98,6 +92,17 @@ city_translations = {
     'Casablanca': {'fr': 'Casablanca', 'en': 'Casablanca', 'ar': 'الدار البيضاء'},
     'Marrakech': {'fr': 'Marrakech', 'en': 'Marrakech', 'ar': 'مراكش'}
 }
+
+pharmacy_translations = {
+    'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
+    'Pharmacie YAACOUB EL MANSOUR': {'fr': 'Pharmacie YAACOUB EL MANSOUR', 'en': 'YAACOUB EL MANSOUR Pharmacy', 'ar': 'صيدلية يعقوب المنصور'},
+    'Pharmacie KARIOUN': {'fr': 'Pharmacie KARIOUN', 'en': 'KARIOUN Pharmacy', 'ar': 'صيدلية قاريون'},
+    'Pharmacie AL AMANA': {'fr': 'Pharmacie AL AMANA', 'en': 'AL AMANA Pharmacy', 'ar': 'صيدلية الامانة'},
+    'Pharmacie ISWANE': {'fr': 'Pharmacie ISWANE', 'en': 'ISWANE Pharmacy', 'ar': 'صيدلية إيسوان'},
+    'Pharmacie DU THEATRE': {'fr': 'Pharmacie DU THEATRE', 'en': 'THEATER Pharmacy', 'ar': 'صيدلية المسرح'},
+    'Pharmacie AL JAZAA': {'fr': 'Pharmacie AL JAZAA', 'en': 'AL JAZAA Pharmacy', 'ar': 'صيدلية الجزاء'},
+}
+
 pharmacy_translations = {
     'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
     'Pharmacie YAACOUB EL MANSOUR': {'fr': 'Pharmacie YAACOUB EL MANSOUR', 'en': 'YAACOUB EL MANSOUR Pharmacy', 'ar': 'صيدلية يعقوب المنصور'},
@@ -2188,13 +2193,6 @@ def parse_lematin_pharmacy(url, shift):
         return None
 
 # Guide Pharmacies scraping functions
-def parse_french_date(date_str):
-    parts = re.split(r'\s+', date_str.strip())
-    day = int(parts[1])
-    month = month_mapping[parts[2].lower()]
-    year = int(parts[3])
-    return datetime(year, month, day).date()
-
 def parse_location_hours(text):
     text = text.strip()
     if not text:
@@ -2239,40 +2237,34 @@ def fetch_pharmacy_address(url):
         print(f"Error fetching address from {url}: {e}")
         return "Address unavailable"
 
-def extract_guide_pharmacy_data(soup, city_name, target_date):
-    """Extract pharmacy data handling shift logic and early morning rollovers"""
+def extract_guide_pharmacy_data(soup, city_name):
+    """Extract pharmacy data by grabbing the first date block safely, ignoring what date is written"""
     pharmacies = []
-    date_sections = soup.find_all('td', {'class': 'tableh2'})
     
-    # We allow target date matching for either today or yesterday (to handle midnight shifts smoothly)
-    allowed_dates = [target_date, target_date - timedelta(days=1)]
+    # Strategy 1: Grab the very first date section table block (it's always the current shift)
+    date_sections = soup.find_all('td', {'class': 'tableh2'})
+    if date_sections:
+        first_section = date_sections[0]
+        current_row = first_section.find_parent('tr').find_next_sibling('tr')
+        
+        while current_row and not current_row.find('td', {'class': 'tableh2'}):
+            entry = current_row.find('td', {'class': 'tableb'})
+            if entry:
+                pharm_data = parse_single_row(entry, city_name)
+                if pharm_data:
+                    pharmacies.append(pharm_data)
+            current_row = current_row.find_next_sibling('tr')
+            
+        if pharmacies:
+            return pharmacies
 
-    for date_section in date_sections:
-        date_text = date_section.get_text(strip=True)
-        try:
-            section_date = parse_french_date(date_text)
-            if section_date in allowed_dates:
-                current_row = date_section.find_parent('tr').find_next_sibling('tr')
-                while current_row and not current_row.find('td', {'class': 'tableh2'}):
-                    entry = current_row.find('td', {'class': 'tableb'})
-                    if entry:
-                        pharm_data = parse_single_row(entry, city_name)
-                        if pharm_data:
-                            pharmacies.append(pharm_data)
-                    current_row = current_row.find_next_sibling('tr')
-                if pharmacies:
-                    return pharmacies
-        except Exception:
-            continue
-
-    # Fallback Strategy: If date layout block parsing yields zero results, pull all visible items on page
-    if not pharmacies:
-        entries = soup.find_all('td', {'class': 'tableb'})
-        for entry in entries:
-            pharm_data = parse_single_row(entry, city_name)
-            if pharm_data:
-                pharmacies.append(pharm_data)
-                
+    # Strategy 2 Fallback: If date layouts are completely missing, grab every table item
+    entries = soup.find_all('td', {'class': 'tableb'})
+    for entry in entries:
+        pharm_data = parse_single_row(entry, city_name)
+        if pharm_data and pharm_data not in pharmacies:
+            pharmacies.append(pharm_data)
+            
     return pharmacies
 
 def parse_single_row(entry, city_name):
@@ -2338,8 +2330,7 @@ def scrape_lematin():
 
 def scrape_guide():
     result = []
-    target_date = datetime.now(pytz.timezone('Africa/Casablanca')).date()
-    print(f"\nFetching pharmacies from GuidePharmacie for: {target_date.strftime('%d/%m/%Y')}")
+    print("\nFetching pharmacies from GuidePharmacie...")
     
     for city in GUIDE_CITIES:
         city_name = city.capitalize()
@@ -2357,10 +2348,12 @@ def scrape_guide():
                 response = requests.get(url, headers=GLOBAL_HEADERS, timeout=15)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, 'html.parser')
-                    pharmacies = extract_guide_pharmacy_data(soup, city_name, target_date)
+                    pharmacies = extract_guide_pharmacy_data(soup, city_name)
                     if pharmacies:
                         print(f"-> Succès : {len(pharmacies)} pharmacies trouvées pour {city_name} via {url}")
                         break
+                else:
+                    print(f"-> Erreur HTTP {response.status_code} sur {url}")
             except requests.RequestException as e:
                 print(f"Error fetching route {url}: {e}")
                 continue
