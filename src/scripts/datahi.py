@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from urllib.parse import urljoin, quote
 import re
 import json
@@ -91,16 +91,6 @@ city_translations = {
     'Temara': {'fr': 'Temara', 'en': 'Temara', 'ar': 'تمارة'},
     'Casablanca': {'fr': 'Casablanca', 'en': 'Casablanca', 'ar': 'الدار البيضاء'},
     'Marrakech': {'fr': 'Marrakech', 'en': 'Marrakech', 'ar': 'مراكش'}
-}
-
-pharmacy_translations = {
-    'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
-    'Pharmacie YAACOUB EL MANSOUR': {'fr': 'Pharmacie YAACOUB EL MANSOUR', 'en': 'YAACOUB EL MANSOUR Pharmacy', 'ar': 'صيدلية يعقوب المنصور'},
-    'Pharmacie KARIOUN': {'fr': 'Pharmacie KARIOUN', 'en': 'KARIOUN Pharmacy', 'ar': 'صيدلية قاريون'},
-    'Pharmacie AL AMANA': {'fr': 'Pharmacie AL AMANA', 'en': 'AL AMANA Pharmacy', 'ar': 'صيدلية الامانة'},
-    'Pharmacie ISWANE': {'fr': 'Pharmacie ISWANE', 'en': 'ISWANE Pharmacy', 'ar': 'صيدلية إيسوان'},
-    'Pharmacie DU THEATRE': {'fr': 'Pharmacie DU THEATRE', 'en': 'THEATER Pharmacy', 'ar': 'صيدلية المسرح'},
-    'Pharmacie AL JAZAA': {'fr': 'Pharmacie AL JAZAA', 'en': 'AL JAZAA Pharmacy', 'ar': 'صيدلية الجزاء'},
 }
 
 pharmacy_translations = {
@@ -2238,15 +2228,41 @@ def fetch_pharmacy_address(url):
         return "Address unavailable"
 
 def extract_guide_pharmacy_data(soup, city_name):
-    """Extract pharmacy data by grabbing the first date block safely, ignoring what date is written"""
+    """Extract pharmacy data by targeting today's date explicitly, with fallback options"""
     pharmacies = []
     
-    # Strategy 1: Grab the very first date section table block (it's always the current shift)
+    # Get current Casablanca time and build the French date string match
+    # Example: "05" and "juin"
+    tz = pytz.timezone('Africa/Casablanca')
+    now = datetime.now(tz)
+    day_str = now.strftime('%d')
+    
+    french_months = {
+        1: 'janvier', 2: 'février', 3: 'mars', 4: 'avril', 5: 'mai', 6: 'juin',
+        7: 'juillet', 8: 'août', 9: 'septembre', 10: 'octobre', 11: 'novembre', 12: 'décembre'
+    }
+    month_str = french_months[now.month]
+    year_str = str(now.year)
+
     date_sections = soup.find_all('td', {'class': 'tableh2'})
-    if date_sections:
-        first_section = date_sections[0]
-        current_row = first_section.find_parent('tr').find_next_sibling('tr')
-        
+    target_section = None
+
+    # Strategy 1: Look specifically for today's date block
+    for section in date_sections:
+        text_lower = section.get_text(strip=True).lower()
+        if day_str in text_lower and month_str in text_lower and year_str in text_lower:
+            target_section = section
+            print(f"   -> Found exact match for today's date section: {section.get_text(strip=True)}")
+            break
+
+    # Strategy 2 Fallback: If today's date isn't explicitly on the page yet, take the first available block
+    if not target_section and date_sections:
+        target_section = date_sections[0]
+        print(f"   -> Today's date not found. Falling back to first available section: {target_section.get_text(strip=True)}")
+
+    # Parse the selected section block
+    if target_section:
+        current_row = target_section.find_parent('tr').find_next_sibling('tr')
         while current_row and not current_row.find('td', {'class': 'tableh2'}):
             entry = current_row.find('td', {'class': 'tableb'})
             if entry:
@@ -2258,7 +2274,7 @@ def extract_guide_pharmacy_data(soup, city_name):
         if pharmacies:
             return pharmacies
 
-    # Strategy 2 Fallback: If date layouts are completely missing, grab every table item
+    # Strategy 3 Fallback: If no headers exist at all, scrape all row entries on the page
     entries = soup.find_all('td', {'class': 'tableb'})
     for entry in entries:
         pharm_data = parse_single_row(entry, city_name)
