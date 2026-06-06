@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -3562,6 +3562,86 @@
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20El%20Massmoudi%20Marrakech"
             }
           }
+        },
+        {
+          "city": {
+            "fr": "Marrakech",
+            "en": "Marrakech",
+            "ar": "مراكش"
+          },
+          "name": {
+            "fr": "PHARMACIE L’UNITE",
+            "en": "THE UNITY PHARMACY",
+            "ar": "صيدلية الوحدة"
+          },
+          "location": {
+            "fr": "Guéliz",
+            "en": "Guéliz",
+            "ar": "ڭليز"
+          },
+          "phone": "0524-44-85-54",
+          "hours": {
+            "fr": "24h/24h",
+            "en": "24h/24h",
+            "ar": "24h/24h"
+          },
+          "address": {
+            "fr": "Av. Hassan II, en face de la Gendarmerie Royale",
+            "en": "Av. Hassan II, opposite the Royal Gendarmerie",
+            "ar": "شارع. الحسن الثاني، مقابل الدرك الملكي"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20L%E2%80%99UNITE%20Marrakech",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20L%E2%80%99UNITE%20Marrakech&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20L%E2%80%99UNITE%20Marrakech"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Marrakech",
+            "en": "Marrakech",
+            "ar": "مراكش"
+          },
+          "name": {
+            "fr": "Pharmacie La Mosquee",
+            "en": "La Mosquee Pharmacy",
+            "ar": "صيدلية لا موسكي"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0524387057",
+          "hours": {
+            "fr": "24h/24h",
+            "en": "24h/24h",
+            "ar": "24h/24h"
+          },
+          "address": {
+            "fr": "85 bd Fatima Zahra R'mila",
+            "en": "85 bd Fatima Zahra R'mila",
+            "ar": "85 ش فاطمة الزهراء الرميلة"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20La%20Mosquee%20Marrakech",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20La%20Mosquee%20Marrakech&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20La%20Mosquee%20Marrakech"
+            }
+          }
         }
       ]
     },
@@ -3826,6 +3906,42 @@
             "ar": "الرباط"
           },
           "name": {
+            "fr": "PHARMACIE SOFIA",
+            "en": "SOFIA PHARMACY",
+            "ar": "صيدلية صوفيا"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour ()",
+            "en": "Yacoub El Mansour ()",
+            "ar": "يعقوب المنصور ()"
+          },
+          "phone": "0537 28 29 28",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "1205 Bis Avenue Al Massira Hay El Menzeh | ",
+            "en": "1205 Bis Avenue Al Massira Hay El Menzeh |",
+            "ar": "1205 مكرر شارع المسيرة حي المنزه |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20SOFIA%20Rabat",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20SOFIA%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20SOFIA%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
             "fr": "PHARMACIE AL KAWTHAR",
             "en": "AL KAWTHAR PHARMACY",
             "ar": "صيدلية الكوثر"
@@ -3852,42 +3968,6 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20KAWTHAR%20Rabat",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20KAWTHAR%20Rabat&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20KAWTHAR%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
-            "fr": "PHARMACIE SOFIA",
-            "en": "SOFIA PHARMACY",
-            "ar": "صيدلية صوفيا"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
-          "phone": "0537 28 29 28",
-          "hours": "9h à 00h",
-          "address": {
-            "fr": "1205 Bis Avenue Al Massira Hay El Menzeh | ",
-            "en": "1205 Bis Avenue Al Massira Hay El Menzeh |",
-            "ar": "1205 مكرر شارع المسيرة حي المنزه |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20SOFIA%20Rabat",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20SOFIA%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20SOFIA%20Rabat"
             }
           }
         },
@@ -4155,12 +4235,12 @@
             "ar": "صيدلية شمس"
           },
           "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "سلا الجديدة"
+            "fr": "Sala El Jadida ()",
+            "en": "Sala El Jadida ()",
+            "ar": "سلا الجديدة ()"
           },
           "phone": "0537 83 52 89",
-          "hours": "9h à 00h",
+          "hours": "24h/24h",
           "address": {
             "fr": "Avenue Zarbia, N°4 Hssain | ",
             "en": "Avenue Zarbia, N°4 Hssain |",
@@ -4198,9 +4278,9 @@
           "phone": "0537 78 26 46",
           "hours": "9h à 00h",
           "address": {
-            "fr": "صيدلية باب شعفة | ",
-            "en": "صيدلية باب شعفة |",
-            "ar": "صيدلية باب الشعفة |"
+            "fr": " | صيدلية باب شعفة | ",
+            "en": "| صيدلية باب شعفة |",
+            "ar": "| صيدلية باب الشعفة |"
           },
           "maps": {
             "message": {
@@ -4258,42 +4338,6 @@
             "ar": "تمارة"
           },
           "name": {
-            "fr": "Pharmacie Al Hilal",
-            "en": "Al Hilal Pharmacy",
-            "ar": "صيدلية الهلال"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Center",
-            "ar": "مركز"
-          },
-          "phone": "0537 40 30 88",
-          "hours": "",
-          "address": {
-            "fr": "Avenue tarik ibn ziad (route al fourate) | Résidence al khaizourane 4 commerce 16 | ",
-            "en": "Avenue tarik ibn ziad (al fourate road) | Residence al khaizourane 4 commerce 16 |",
-            "ar": "شارع طارق بن زياد (طريق الفرات) | سكن الخيزران 4 تجارة 16 |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Hilal%20Temara",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Hilal%20Temara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Hilal%20Temara"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Temara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
             "fr": "PHARMACIE KOUTOUBIA",
             "en": "KOUTOUBIA PHARMACY",
             "ar": "صيدلية الكتبية"
@@ -4320,6 +4364,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20KOUTOUBIA%20Temara",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20KOUTOUBIA%20Temara&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20KOUTOUBIA%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Al Hilal",
+            "en": "Al Hilal Pharmacy",
+            "ar": "صيدلية الهلال"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "0537 40 30 88",
+          "hours": "",
+          "address": {
+            "fr": "Avenue tarik ibn ziad (route al fourate) | Résidence al khaizourane 4 commerce 16 | ",
+            "en": "Avenue tarik ibn ziad (al fourate road) | Residence al khaizourane 4 commerce 16 |",
+            "ar": "شارع طارق بن زياد (طريق الفرات) | سكن الخيزران 4 تجارة 16 |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Hilal%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Hilal%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Hilal%20Temara"
             }
           }
         },
@@ -4474,42 +4554,6 @@
             "ar": "عين عودة"
           },
           "name": {
-            "fr": "Pharmacie Al Hilal",
-            "en": "Al Hilal Pharmacy",
-            "ar": "صيدلية الهلال"
-          },
-          "location": {
-            "fr": "Centre",
-            "en": "Center",
-            "ar": "مركز"
-          },
-          "phone": "0537 40 30 88",
-          "hours": "",
-          "address": {
-            "fr": "Avenue tarik ibn ziad (route al fourate) | Résidence al khaizourane 4 commerce 16 | ",
-            "en": "Avenue tarik ibn ziad (al fourate road) | Residence al khaizourane 4 commerce 16 |",
-            "ar": "شارع طارق بن زياد (طريق الفرات) | سكن الخيزران 4 تجارة 16 |"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Hilal%20Ain-aouda",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Hilal%20Ain-aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Hilal%20Ain-aouda"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain-aouda",
-            "en": "Ain-aouda",
-            "ar": "عين عودة"
-          },
-          "name": {
             "fr": "PHARMACIE KOUTOUBIA",
             "en": "KOUTOUBIA PHARMACY",
             "ar": "صيدلية الكتبية"
@@ -4536,6 +4580,42 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20KOUTOUBIA%20Ain-aouda",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20KOUTOUBIA%20Ain-aouda&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20KOUTOUBIA%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Al Hilal",
+            "en": "Al Hilal Pharmacy",
+            "ar": "صيدلية الهلال"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "0537 40 30 88",
+          "hours": "",
+          "address": {
+            "fr": "Avenue tarik ibn ziad (route al fourate) | Résidence al khaizourane 4 commerce 16 | ",
+            "en": "Avenue tarik ibn ziad (al fourate road) | Residence al khaizourane 4 commerce 16 |",
+            "ar": "شارع طارق بن زياد (طريق الفرات) | سكن الخيزران 4 تجارة 16 |"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Hilal%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Hilal%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Hilal%20Ain-aouda"
             }
           }
         },
@@ -4686,5 +4766,5 @@
       ]
     }
   },
-  "total_pharmacies": 120
+  "total_pharmacies": 122
 }
