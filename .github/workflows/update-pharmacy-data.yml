@@ -22,7 +22,6 @@ jobs:
         echo "Event: ${{ github.event_name }}"
         echo "=================="
 
-    # CORRECTED: Passé de v3 à v4 pour corriger le warning Node.js
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
@@ -30,7 +29,6 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    # CORRECTED: Passé de v4 à v5 pour corriger le warning Node.js
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -58,7 +56,7 @@ jobs:
         os.environ['TZ'] = 'Africa/Casablanca'
         time.tzset()
         
-        casablanca_tz = pytz.timezone('Africa/Calasblanca')
+        casablanca_tz = pytz.timezone('Africa/Casablanca')
         current_time = datetime.now(casablanca_tz)
         print(f"Current Casablanca time: {current_time}")
         print(f"Current timezone: {time.tzname}")
