@@ -1508,7 +1508,7 @@
           "address": {
             "fr": "BD. AL QODS - HAY MOULAY ABDELLAH, RUE 226 N° 23 - 25 (CENTRE DE FORMATION AIN CHOCK)",
             "en": "BD. AL QODS - HAY MOULAY ABDELLAH, STREET 226 N° 23 - 25 (AIN CHOCK TRAINING CENTER)",
-            "ar": "دينار بحريني. القدس - حي مولاي عبد الله، شارع 226 رقم 23 - 25 (مركز عين الشوك للتدريب)"
+            "ar": "دينار بحريني. القدس - حي مولاي عبد الله، شارع 226 رقم 23 - 25 (مركز عين الشق للتدريب)"
           },
           "maps": {
             "message": {
@@ -1588,7 +1588,7 @@
           "address": {
             "fr": "BAB ANASSI AL AZHAR TR 03 GH 15 ENTREE 12 N° 267 SIDI BERNOUSSI",
             "en": "BAB ANASSI AL AZHAR TR 03 GH 15 ENTRY 12 N° 267 SIDI BERNOUSSI",
-            "ar": "باب أنسي الأزهر ط 03 غ 15 مدخل 12 رقم 267 سيدي البرنوصي"
+            "ar": "باب أناسي الأزهر ط 03 غ 15 مدخل 12 رقم 267 سيدي البرنوصي"
           },
           "maps": {
             "message": {
@@ -2227,8 +2227,8 @@
           },
           "address": {
             "fr": "36, BD. DU 9 AVRIL PALMIER FACE HOTEL RANIA (ROND POINT MORTADA)",
-            "en": "36, BD. FROM APRIL 9 PALM TREE OPPOSITE HOTEL RANIA (ROND POINT MORTADA)",
-            "ar": "36 دينار بحريني. من 9 أبريل، شجرة النخيل مقابل فندق رانيا (روند بوينت مرتضى)"
+            "en": "36, BD. FROM APRIL 9 PALM TREE OPPOSITE HOTEL RANIA (MORTADA ROUND POINT)",
+            "ar": "36 دينار بحريني. من 9 أبريل، شجرة النخيل مقابل فندق رانيا (نقطة مستديرة مرتضى)"
           },
           "maps": {
             "message": {
@@ -2508,7 +2508,7 @@
           "address": {
             "fr": "92, RUE EL ADARISSA - SIDI MOUMEN EL JADID",
             "en": "92, RUE EL ADARISSA - SIDI MOUMEN EL JADID",
-            "ar": "92 شارع الأدارسة - سيدي مومن الجديد"
+            "ar": "92 نهج الأدارسة - سيدي مومن الجديد"
           },
           "maps": {
             "message": {
@@ -2566,8 +2566,1269 @@
       ]
     },
     "guide": {
-      "pharmacies": []
+      "pharmacies": [
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Agdal",
+            "en": "Agdal",
+            "ar": "أكدال"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Akkari-Ocean",
+            "en": "Akkari-Ocean",
+            "ar": "عكاري-المحيط"
+          },
+          "phone": "",
+          "hours": "9h à 22h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Centre Ville",
+            "en": "City Center",
+            "ar": "مركز المدينة"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Hay Riad",
+            "en": "Hay Riad",
+            "ar": "حي رياض"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "",
+          "hours": "9h à 22h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Ocean-Orangers",
+            "en": "Ocean-Orange trees",
+            "ar": "أشجار المحيط البرتقالية"
+          },
+          "phone": "",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Takadoum & Souissi ()",
+            "en": "Takadoum & Souissi ()",
+            "ar": "التقدم والسويسي ()"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Takadoum & Souissi ()",
+            "en": "Takadoum & Souissi ()",
+            "ar": "التقدم والسويسي ()"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour ()",
+            "en": "Yacoub El Mansour ()",
+            "ar": "يعقوب المنصور ()"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Al Mohit Abouab Sala",
+            "en": "Al Mohit Abouab Sala",
+            "ar": "المحيط ابواب صلاح"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Bettana",
+            "en": "Bettana",
+            "ar": "بيتانا"
+          },
+          "phone": "",
+          "hours": "9h à 01h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "EL Karia",
+            "en": "EL Karia",
+            "ar": "الكاريا"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "El Mazza Sidi Abdellah",
+            "en": "El Mazza Sidi Abdellah",
+            "ar": "المزة سيدي عبد الله"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Hay Arrahma ()",
+            "en": "Hay Arrahma ()",
+            "ar": "حي الرحمة ()"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Hay Essalam",
+            "en": "Hay Essalam",
+            "ar": "حي السلام"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Laayayda",
+            "en": "Laayayda",
+            "ar": "العيايدة"
+          },
+          "phone": "",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "My Ismail",
+            "en": "My Ismail",
+            "ar": "إسماعيل بلدي"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Sala El Jadida ()",
+            "en": "Sala El Jadida ()",
+            "ar": "سلا الجديدة ()"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "سلا الجديدة"
+          },
+          "phone": "",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Salé Médina",
+            "en": "Salé Medina",
+            "ar": "سلا المدينة المنورة"
+          },
+          "phone": "",
+          "hours": "9h à 00h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Sidi Moussa",
+            "en": "Sidi Moussa",
+            "ar": "سيدي موسى"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Sale",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Tabriquet",
+            "en": "Tabriquet",
+            "ar": "تبريكيت"
+          },
+          "phone": "",
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Sale"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Oulad Mtaâ",
+            "en": "Oulad Mtaâ",
+            "ar": "أولاد مطاع"
+          },
+          "phone": "",
+          "hours": "9h00 à 23h00",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Temara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Tamesna",
+            "en": "Tamesna",
+            "ar": "تامسنا"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Temara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Centre",
+            "en": "Center",
+            "ar": "مركز"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Oulad Mtaâ",
+            "en": "Oulad Mtaâ",
+            "ar": "أولاد مطاع"
+          },
+          "phone": "",
+          "hours": "9h00 à 23h00",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain-aouda",
+            "en": "Ain-aouda",
+            "ar": "عين عودة"
+          },
+          "name": {
+            "fr": "Pharmacie Itinéraire →",
+            "en": "Itinéraire → Pharmacy",
+            "ar": "اتجاهات الصيدلية →"
+          },
+          "location": {
+            "fr": "Tamesna",
+            "en": "Tamesna",
+            "ar": "تامسنا"
+          },
+          "phone": "",
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Itin%C3%A9raire%20%E2%86%92%20Ain-aouda"
+            }
+          }
+        }
+      ]
     }
   },
-  "total_pharmacies": 64
+  "total_pharmacies": 99
 }
