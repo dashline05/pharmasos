@@ -370,46 +370,6 @@
             "ar": "الدار البيضاء"
           },
           "name": {
-            "fr": "PHARMACIE AL MOLK",
-            "en": "AL MOLK PHARMACY",
-            "ar": "صيدلية الملك"
-          },
-          "location": {
-            "fr": "Annasi",
-            "en": "Annasi",
-            "ar": "أناسي"
-          },
-          "phone": "0522.73.73.53",
-          "hours": {
-            "fr": "09h00 - 00h00",
-            "en": "09h00 - 00h00",
-            "ar": "09h00 - 00h00"
-          },
-          "address": {
-            "fr": "LOT SALAMA II Z 16 AHL LEGHLAME",
-            "en": "LOT SALAMA II Z 16 AHL LEGHLAME",
-            "ar": "لوط سلامة II Z 16 AHL LEGHLAME"
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20AL%20MOLK%20Casablanca",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20AL%20MOLK%20Casablanca&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20AL%20MOLK%20Casablanca"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Casablanca",
-            "en": "Casablanca",
-            "ar": "الدار البيضاء"
-          },
-          "name": {
             "fr": "Pharmacie El Hamzaoui",
             "en": "El Hamzaoui Pharmacy",
             "ar": "صيدلية الحمزاوي"
@@ -4148,7 +4108,7 @@
           "address": {
             "fr": "74, Entrée de Souikat Houman Fetouaki du côté de Jrida et Bab Aghmat SYBA",
             "en": "74, Entrance of Souikat Houman Fetouaki on the side of Jrida and Bab Aghmat SYBA",
-            "ar": "74, Entrée de Souikat Houman Fetouaki du côté de Jrida et Bab Aghmat SYBA"
+            "ar": "74 مدخل سويكة حومان فتواكي من جهة بريدة وباب أغمات سيبا"
           },
           "maps": {
             "message": {
@@ -4209,5 +4169,5 @@
       "pharmacies": []
     }
   },
-  "total_pharmacies": 105
+  "total_pharmacies": 104
 }
