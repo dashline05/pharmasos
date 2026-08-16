@@ -1,26 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Scraper Pharmacies de garde
-  - lematin.ma        (Casablanca...)  -> inchangé
-  - guidepharmacies.ma (Rabat, Salé, Témara, Ain Aouda) -> parseur réécrit
-
-Changement côté guidepharmacies.ma (2025/2026) :
-  chaque ligne de garde contient maintenant DEUX liens :
-      <a href="#">Itinéraire →</a>   puis   <a href="https://www.guidepharmacies.ma/rabat-2/pharmacie-xxx.html">Pharmacie XXX - 0537 ...</a>
-  L'ancien code prenait le PREMIER <a> => nom = "Itinéraire →", téléphone vide,
-  et l'URL de la fiche devenait "https://www.guidepharmacies.ma#" => "Address not found".
-
-Corrections apportées :
-  * on identifie le lien de la fiche par son href (et non par sa position)
-  * les href sont désormais absolus -> urljoin au lieu de la concaténation
-  * détection des sections de date sans dépendre des classes <td class="tableh2">
-  * extraction du téléphone depuis le titre ET depuis la fiche
-  * extraction des coordonnées GPS depuis le lien Google Maps de la fiche
-    -> vrais liens d'itinéraire (Google Maps / Waze / Apple Maps)
-  * adresses en arabe correctement gérées (ar = original, fr/en = traduction)
-  * cache de traduction + cache des fiches (moins d'appels réseau)
-"""
-
 import json
 import re
 import time
