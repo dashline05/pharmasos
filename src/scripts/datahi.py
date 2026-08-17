@@ -2031,7 +2031,7 @@ pharmacy_translations = {
     'PHARMACIE ISSAFARNES': {'fr': 'PHARMACIE ISSAFARNES', 'en': 'ISSAFARNES PHARMACY', 'ar': 'صيدلية إيسافرنس'},
     'PHARMACIE BENNOUNA': {'fr': 'PHARMACIE BENNOUNA', 'en': 'BENNOUNA PHARMACY', 'ar': 'صيدلية بنونة'}
 
-    },
+
 }
 
 location_translations = {
