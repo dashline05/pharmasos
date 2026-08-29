@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -206,8 +206,8 @@
           },
           "address": {
             "fr": "LOT. AMAL- ANG. BOULEVARD EL FIDA PROLONGE & AVENUE ABDELLAH SENHAJI",
-            "en": "LOT. AMAL- ANG. EL FIDA BOULEVARD PROLONGE & AVENUE ABDELLAH SENHAJI",
-            "ar": "كثير. أمل- أنج. شارع الفداء امتداد وشارع عبد الله الصنهاجي"
+            "en": "LOT. AMAL- ANG. EL FIDA BOULEVARD PROLONGE & ABDELLAH SENHAJI AVENUE",
+            "ar": "كثير. أمل- أنج. بوليفارد الفداء وشارع عبد الله الصنهاجي"
           },
           "coordinates": null,
           "maps": {
@@ -954,8 +954,8 @@
           },
           "address": {
             "fr": "80, ANGLE BOULEVARD DE LA LIBERTE & BOULEVARD D'ALSACE QUARTIER BEN JDIA",
-            "en": "80, ANGLE BOULEVARD DE LA LIBERTE & BOULEVARD D'ALSACE BEN JDIA NEIGHBORHOOD",
-            "ar": "80، زاوية بوليفارد دي لا ليبرتي وبوليفارد دالساس حي بن جديا"
+            "en": "80, ANGLE BOULEVARD DE LA LIBERTE & BOULEVARD D'ALSACE QUARTIER BEN JDIA",
+            "ar": "80، زاوية بوليفارد دي لا ليبرتي وبوليفارد دالساس كوارتير بن جديا"
           },
           "coordinates": null,
           "maps": {
@@ -1043,7 +1043,7 @@
           "address": {
             "fr": "62, RUE CHASSEUR JULES GROS - OASIS (SUR LE BOULEVARD IMAM MOUSLIM COTE SUD MARCHE DE L'OASIS - CLUB MOBIL)",
             "en": "62, RUE CHASSEUR JULES GROS - OASIS (ON BOULEVARD IMAM MOUSLIM SOUTH COAST MARCHE DE L'OASIS - CLUB MOBIL)",
-            "ar": "62، شارع شاسور جولز جروس - الواحة (في شارع الإمام مسلم، الساحل الجنوبي، مارش دو لاسيس - كلوب موبيل)"
+            "ar": "62، شارع شاسور جولز جروس - الواحة (في شارع الإمام مسلم، الساحل الجنوبي، مارش دو لواز - نادي موبيل)"
           },
           "coordinates": null,
           "maps": {
@@ -1307,7 +1307,7 @@
           "address": {
             "fr": "38,LOTISSEMENT AL OTHMANIA - SIDI MAAROUF",
             "en": "38,LOTISSEMENT AL OTHMANIA - SIDI MAAROUF",
-            "ar": "38,لوتيسة العثمانية - سيدي معروف"
+            "ar": "38 ش لوتيسة العثمانية - سيدي معروف"
           },
           "coordinates": null,
           "maps": {
@@ -1658,8 +1658,8 @@
           },
           "address": {
             "fr": "LOT. AMAL- ANG. BOULEVARD EL FIDA PROLONGE & AVENUE ABDELLAH SENHAJI",
-            "en": "LOT. AMAL- ANG. EL FIDA BOULEVARD PROLONGE & AVENUE ABDELLAH SENHAJI",
-            "ar": "كثير. أمل- أنج. شارع الفداء امتداد وشارع عبد الله الصنهاجي"
+            "en": "LOT. AMAL- ANG. EL FIDA BOULEVARD PROLONGE & ABDELLAH SENHAJI AVENUE",
+            "ar": "كثير. أمل- أنج. بوليفارد الفداء وشارع عبد الله الصنهاجي"
           },
           "coordinates": null,
           "maps": {
@@ -2363,7 +2363,7 @@
           "address": {
             "fr": "62, RUE CHASSEUR JULES GROS - OASIS (SUR LE BOULEVARD IMAM MOUSLIM COTE SUD MARCHE DE L'OASIS - CLUB MOBIL)",
             "en": "62, RUE CHASSEUR JULES GROS - OASIS (ON BOULEVARD IMAM MOUSLIM SOUTH COAST MARCHE DE L'OASIS - CLUB MOBIL)",
-            "ar": "62، شارع شاسور جولز جروس - الواحة (في شارع الإمام مسلم، الساحل الجنوبي، مارش دو لاسيس - كلوب موبيل)"
+            "ar": "62، شارع شاسور جولز جروس - الواحة (في شارع الإمام مسلم، الساحل الجنوبي، مارش دو لواز - نادي موبيل)"
           },
           "coordinates": null,
           "maps": {
@@ -2583,7 +2583,7 @@
           "address": {
             "fr": "38,LOTISSEMENT AL OTHMANIA - SIDI MAAROUF",
             "en": "38,LOTISSEMENT AL OTHMANIA - SIDI MAAROUF",
-            "ar": "38,لوتيسة العثمانية - سيدي معروف"
+            "ar": "38 ش لوتيسة العثمانية - سيدي معروف"
           },
           "coordinates": null,
           "maps": {
@@ -2799,7 +2799,7 @@
           "phones": [
             "0530 47 41 31"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "N°2, Rue Bamako",
             "en": "No. 2, Rue Bamako",
@@ -2839,7 +2839,7 @@
           "phones": [
             "0537 76 42 57"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "2 Rue Patrice Lumumba | (A coté du lycée Lalla Aicha) | 0537 | 76 42 57",
             "en": "2 Rue Patrice Lumumba | (Next to Lalla Aicha high school) | 0537 | 76 42 57",
@@ -2952,47 +2952,6 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie Louka Pharma",
-            "en": "Louka Pharma Pharmacy",
-            "ar": "صيدلية ميدو فارما"
-          },
-          "location": {
-            "fr": "Takadoum & Souissi",
-            "en": "Takadoum & Souissi",
-            "ar": "التقدم والسويسي"
-          },
-          "phone": "0537 63 49 12",
-          "phones": [
-            "0537 63 49 12",
-            "0537 63 46 96"
-          ],
-          "hours": "24h/24h",
-          "address": {
-            "fr": "23 Avenue Mohammed VI",
-            "en": "23 Avenue Mohammed VI",
-            "ar": "23 شارع محمد السادس"
-          },
-          "coordinates": null,
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Louka%20Pharma%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Louka%20Pharma%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Louka%20Pharma%20Rabat"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
             "fr": "Pharmacie Jnane Ennahda",
             "en": "Jnane Ennahda Pharmacy",
             "ar": "صيدلية جنان النهضة"
@@ -3036,6 +2995,90 @@
             "ar": "الرباط"
           },
           "name": {
+            "fr": "Pharmacie Louka Pharma",
+            "en": "Louka Pharma Pharmacy",
+            "ar": "صيدلية ميدو فارما"
+          },
+          "location": {
+            "fr": "Takadoum & Souissi",
+            "en": "Takadoum & Souissi",
+            "ar": "التقدم والسويسي"
+          },
+          "phone": "0537 63 49 12",
+          "phones": [
+            "0537 63 49 12",
+            "0537 63 46 96"
+          ],
+          "hours": "24h/24h",
+          "address": {
+            "fr": "23 Avenue Mohammed VI",
+            "en": "23 Avenue Mohammed VI",
+            "ar": "23 شارع محمد السادس"
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Louka%20Pharma%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Louka%20Pharma%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Louka%20Pharma%20Rabat"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie El Kouass",
+            "en": "El Kouass Pharmacy",
+            "ar": "صيدلية El Kouass"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 79 40 99",
+          "phones": [
+            "0537 79 40 99"
+          ],
+          "hours": "24h/24h",
+          "address": {
+            "fr": "732 J5 Boulevard Al Massira Al Khadra C.Y.M",
+            "en": "732 J5 Boulevard Al Massira Al Khadra C.Y.M",
+            "ar": "732 J5 Boulevard Al Massira Al Khadra C.Y.M"
+          },
+          "coordinates": {
+            "lat": 33.981278,
+            "lng": -6.881694
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.981278,-6.881694",
+              "waze": "https://waze.com/ul?ll=33.981278,-6.881694&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=33.981278,-6.881694&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
             "fr": "PHARMACIE ASSABAH",
             "en": "ASSABAH PHARMACY",
             "ar": "صيدلية الصباح"
@@ -3049,7 +3092,7 @@
           "phones": [
             "0537 79 03 75"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "Residence Assabah Ilot 7 C3 C.Y.M",
             "en": "Residence Assabah Ilot 7 C3 C.Y.M",
@@ -3116,29 +3159,24 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie El Kouass",
-            "en": "El Kouass Pharmacy",
-            "ar": "صيدلية El Kouass"
+            "fr": "Pharmacies De Garde >>",
+            "en": "Pharmacies De Garde >>",
+            "ar": "صيدليات تحت الطلب >>"
           },
           "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
+            "fr": "",
+            "en": "",
+            "ar": ""
           },
-          "phone": "0537 79 40 99",
-          "phones": [
-            "0537 79 40 99"
-          ],
-          "hours": "9h à 00h00",
+          "phone": "",
+          "phones": [],
+          "hours": "",
           "address": {
-            "fr": "732 J5 Boulevard Al Massira Al Khadra C.Y.M",
-            "en": "732 J5 Boulevard Al Massira Al Khadra C.Y.M",
-            "ar": "732 J5 Boulevard Al Massira Al Khadra C.Y.M"
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
           },
-          "coordinates": {
-            "lat": 33.981278,
-            "lng": -6.881694
-          },
+          "coordinates": null,
           "maps": {
             "message": {
               "fr": "Cliquez pour obtenir l'itinéraire sur:",
@@ -3146,9 +3184,9 @@
               "ar": "انقر للحصول على الاتجاهات على:"
             },
             "links": {
-              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.981278,-6.881694",
-              "waze": "https://waze.com/ul?ll=33.981278,-6.881694&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?daddr=33.981278,-6.881694&dirflg=d"
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacies%20De%20Garde%20%3E%3E%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacies%20De%20Garde%20%3E%3E%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacies%20De%20Garde%20%3E%3E%20Rabat"
             }
           }
         },
@@ -3366,50 +3404,6 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie Ellimoune Hssain",
-            "en": "Ellimoune Hssain Pharmacy",
-            "ar": "صيدلية المون حسين"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
-          "phone": "0537 83 04 49",
-          "phones": [
-            "0537 83 04 49",
-            "0698 19 67 02"
-          ],
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Lotissement Rida N°4 Hssain | en Face Ecole Achbal Karaouiene",
-            "en": "Rida subdivision No. 4 Hssain | opposite Achbal Karaouiene School",
-            "ar": "مخطط الرضا رقم 4 حسين | مقابل مدرسة أشبال القرويين"
-          },
-          "coordinates": {
-            "lat": 34.0215254,
-            "lng": -6.7522842
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.0215254,-6.7522842",
-              "waze": "https://waze.com/ul?ll=34.0215254,-6.7522842&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?daddr=34.0215254,-6.7522842&dirflg=d"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Salé",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
             "fr": "Pharmacie TAIBA",
             "en": "TAIBA Pharmacy",
             "ar": "صيدلية طيبة"
@@ -3423,7 +3417,7 @@
           "phones": [
             "0537 81 73 68"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Lotissement des villas, Mosquée Taiba, 85 | Sala Al Jadida",
             "en": "Subdivision of villas, Taiba Mosque, 85 | Sala Al Jadida",
@@ -3443,6 +3437,50 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.0025,-6.721833",
               "waze": "https://waze.com/ul?ll=34.0025,-6.721833&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=34.0025,-6.721833&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Salé",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie Ellimoune Hssain",
+            "en": "Ellimoune Hssain Pharmacy",
+            "ar": "صيدلية المون حسين"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0537 83 04 49",
+          "phones": [
+            "0537 83 04 49",
+            "0698 19 67 02"
+          ],
+          "hours": "9h à 00h00",
+          "address": {
+            "fr": "Lotissement Rida N°4 Hssain | en Face Ecole Achbal Karaouiene",
+            "en": "Rida subdivision No. 4 Hssain | opposite Achbal Karaouiene School",
+            "ar": "مخطط الرضا رقم 4 حسين | مقابل مدرسة أشبال القرويين"
+          },
+          "coordinates": {
+            "lat": 34.0215254,
+            "lng": -6.7522842
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.0215254,-6.7522842",
+              "waze": "https://waze.com/ul?ll=34.0215254,-6.7522842&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=34.0215254,-6.7522842&dirflg=d"
             }
           }
         },
@@ -3527,6 +3565,44 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20ROSTANE%20Sal%C3%A9",
               "waze": "https://www.waze.com/ul?q=PHARMACIE%20ROSTANE%20Sal%C3%A9&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20ROSTANE%20Sal%C3%A9"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Salé",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacies De Garde >>",
+            "en": "Pharmacies De Garde >>",
+            "ar": "صيدليات تحت الطلب >>"
+          },
+          "location": {
+            "fr": "",
+            "en": "",
+            "ar": ""
+          },
+          "phone": "",
+          "phones": [],
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacies%20De%20Garde%20%3E%3E%20Sal%C3%A9",
+              "waze": "https://www.waze.com/ul?q=Pharmacies%20De%20Garde%20%3E%3E%20Sal%C3%A9&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacies%20De%20Garde%20%3E%3E%20Sal%C3%A9"
             }
           }
         },
@@ -3736,6 +3812,44 @@
         },
         {
           "city": {
+            "fr": "Témara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
+            "fr": "Pharmacies De Garde >>",
+            "en": "Pharmacies De Garde >>",
+            "ar": "صيدليات تحت الطلب >>"
+          },
+          "location": {
+            "fr": "",
+            "en": "",
+            "ar": ""
+          },
+          "phone": "",
+          "phones": [],
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacies%20De%20Garde%20%3E%3E%20T%C3%A9mara",
+              "waze": "https://www.waze.com/ul?q=Pharmacies%20De%20Garde%20%3E%3E%20T%C3%A9mara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacies%20De%20Garde%20%3E%3E%20T%C3%A9mara"
+            }
+          }
+        },
+        {
+          "city": {
             "fr": "Ain Aouda",
             "en": "Ain Aouda",
             "ar": "عين العودة"
@@ -3937,9 +4051,47 @@
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Ain%20Aouda"
             }
           }
+        },
+        {
+          "city": {
+            "fr": "Ain Aouda",
+            "en": "Ain Aouda",
+            "ar": "عين العودة"
+          },
+          "name": {
+            "fr": "Pharmacies De Garde >>",
+            "en": "Pharmacies De Garde >>",
+            "ar": "صيدليات تحت الطلب >>"
+          },
+          "location": {
+            "fr": "",
+            "en": "",
+            "ar": ""
+          },
+          "phone": "",
+          "phones": [],
+          "hours": "",
+          "address": {
+            "fr": "Address not found",
+            "en": "Address not found",
+            "ar": "Address not found"
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacies%20De%20Garde%20%3E%3E%20Ain%20Aouda",
+              "waze": "https://www.waze.com/ul?q=Pharmacies%20De%20Garde%20%3E%3E%20Ain%20Aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacies%20De%20Garde%20%3E%3E%20Ain%20Aouda"
+            }
+          }
         }
       ]
     }
   },
-  "total_pharmacies": 91
+  "total_pharmacies": 95
 }
