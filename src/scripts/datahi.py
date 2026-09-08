@@ -124,9 +124,8 @@ city_translations = {
     'Marrakech': {'fr': 'Marrakech', 'en': 'Marrakech', 'ar': 'مراكش'},
 }
 
-
 pharmacy_translations = {
-    'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
+'Pharmacie RELAIS DES MEDECINS': {'fr': 'Pharmacie RELAIS DES MEDECINS', 'en': 'Pharmacy RELAIS DES DOCTORS', 'ar': 'صيدلية راليه دي ميديسين'},
     'Pharmacie YAACOUB EL MANSOUR': {'fr': 'Pharmacie YAACOUB EL MANSOUR', 'en': 'YAACOUB EL MANSOUR Pharmacy', 'ar': 'صيدلية يعقوب المنصور'},
     'Pharmacie KARIOUN': {'fr': 'Pharmacie KARIOUN', 'en': 'KARIOUN Pharmacy', 'ar': 'صيدلية قاريون'},
     'Pharmacie AL AMANA': {'fr': 'Pharmacie AL AMANA', 'en': 'AL AMANA Pharmacy', 'ar': 'صيدلية الامانة'},
@@ -2034,6 +2033,7 @@ pharmacy_translations = {
 
 }
 
+
 location_translations = {
     'Aïn Chock': {'fr': 'Aïn Chock', 'en': 'Aïn Chock', 'ar': 'عين الشق'},
     'Aïn Sebaâ': {'fr': 'Aïn Sebaâ', 'en': 'Aïn Sebaâ', 'ar': 'عين السبع'},
@@ -2283,7 +2283,7 @@ MAPS_MESSAGE = {
     "ar": "انقر للحصول على الاتجاهات على:",
 }
 
-# ------------------------------------------------------------ LEMATIN -------
+# -------------------------------------------------------------------
 
 def get_lematin_pharmacy_links():
     pharmacy_links = []
@@ -2371,7 +2371,7 @@ def scrape_lematin():
         time.sleep(SLEEP_BETWEEN_REQUESTS)
     return result
 
-# ------------------------------------------------- GUIDEPHARMACIES.MA -------
+# --------------------------------------------------------
 
 def parse_french_date(text):
     """'Dimanche 16 Août 2026' -> date(2026, 8, 16). None si pas une date."""
@@ -2402,8 +2402,11 @@ def is_pharmacy_link(href):
     path = parsed.path.lower()
     if not path.endswith('.html'):
         return False
-    if '/pharmacies-de-garde/' in path:   # pages de listing / menu
+        
+    # CORRECTION : On exclut spécifiquement la page menu, sans bloquer les sous-dossiers des villes
+    if path.endswith('/pharmacies-de-garde.html'):
         return False
+        
     slug = path.rsplit('/', 1)[-1]
     return 'pharmacie' in slug or 'phie' in slug
 
