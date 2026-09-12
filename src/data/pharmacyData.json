@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -779,7 +779,7 @@
           "address": {
             "fr": "BD. LOUIS FERRE - QUARTIER ARSALANE RUE 7 N° 11 - AIN BORJA",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-            "ar": "دينار بحريني. لويس فيري - عين برجة - 7 رقم 11 شارع"
+            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
           },
           "coordinates": null,
           "maps": {
@@ -2925,7 +2925,7 @@
           "phones": [
             "0537 69 27 46"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "21 bis rue Mohammed El mollakh - Akkari",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -2968,11 +2968,11 @@
           "phones": [
             "0537 72 51 20"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "8 Rue Al Mouahidine angle Bd Alaouine Hassan | 0537 | 72 51 20",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-            "ar": "8 شارع الموحدين زاوية شارع علاء حسن | 0537 | 72 51 20"
+            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
           },
           "coordinates": {
             "lat": 34.0237279,
@@ -3226,7 +3226,7 @@
           "phones": [
             "0537 29 58 09"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "9,Av Sidi Mohamed Ben Abdellah - C.Y.M",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -3591,46 +3591,6 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie BAYT ASSIHA",
-            "en": "BAYT ASSIHA PHARMACY",
-            "ar": "صيدلية بيت الصحة"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
-          "phone": "0666 08 92 68",
-          "phones": [
-            "0666 08 92 68"
-          ],
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Avenue Zarbia, lot Issam,immeuble 13 mag2",
-            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
-          },
-          "coordinates": null,
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Salé",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
             "fr": "Pharmacie CENTRALE",
             "en": "CENTRAL Pharmacy",
             "ar": "الصيدلية المركزية"
@@ -3644,7 +3604,7 @@
           "phones": [
             "0537 53 06 91"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Angle de l'avenue Med ben al Hassan et de | l'avenue Hassan II | Imm 44A.C4",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -3661,6 +3621,46 @@
               "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20CENTRALE%20Sal%C3%A9",
               "waze": "https://www.waze.com/ul?q=Pharmacie%20CENTRALE%20Sal%C3%A9&navigate=yes",
               "apple_maps": "http://maps.apple.com/?q=Pharmacie%20CENTRALE%20Sal%C3%A9"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Salé",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie BAYT ASSIHA",
+            "en": "BAYT ASSIHA PHARMACY",
+            "ar": "صيدلية بيت الصحة"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0666 08 92 68",
+          "phones": [
+            "0666 08 92 68"
+          ],
+          "hours": "9h à 00h00",
+          "address": {
+            "fr": "Avenue Zarbia, lot Issam,immeuble 13 mag2",
+            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20BAYT%20ASSIHA%20Sal%C3%A9"
             }
           }
         },
@@ -3807,7 +3807,7 @@
           "phones": [
             "0537 64 20 40"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "Avenue Tarik Ibn Ziad satr allah 1 magasin 3",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -3963,6 +3963,46 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "PHARMACIE EL MASSIRA",
+            "en": "EL MASSIRA PHARMACY",
+            "ar": "صيدلية المسيرة"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "0537 60 60 57",
+          "phones": [
+            "0537 60 60 57"
+          ],
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Sect3 N°336 | (Prés de l'institut Najah)",
+            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Témara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie L'Espoir",
             "en": "L'Espoir Pharmacy",
             "ar": "صيدلية Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
@@ -3976,7 +4016,7 @@
           "phones": [
             "0537 60 08 33"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -3996,46 +4036,6 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.921778,-6.889528",
               "waze": "https://waze.com/ul?ll=33.921778,-6.889528&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=33.921778,-6.889528&dirflg=d"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Témara",
-            "en": "Temara",
-            "ar": "تمارة"
-          },
-          "name": {
-            "fr": "PHARMACIE EL MASSIRA",
-            "en": "EL MASSIRA PHARMACY",
-            "ar": "صيدلية المسيرة"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "المسيرة"
-          },
-          "phone": "0537 60 60 57",
-          "phones": [
-            "0537 60 60 57"
-          ],
-          "hours": "9h à 00h00",
-          "address": {
-            "fr": "Sect3 N°336 | (Prés de l'institut Najah)",
-            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
-          },
-          "coordinates": null,
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MASSIRA%20T%C3%A9mara"
             }
           }
         },
@@ -4102,7 +4102,7 @@
           "phones": [
             "0537 64 20 40"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "Avenue Tarik Ibn Ziad satr allah 1 magasin 3",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -4258,6 +4258,46 @@
             "ar": "عين العودة"
           },
           "name": {
+            "fr": "PHARMACIE EL MASSIRA",
+            "en": "EL MASSIRA PHARMACY",
+            "ar": "صيدلية المسيرة"
+          },
+          "location": {
+            "fr": "El Massira",
+            "en": "El Massira",
+            "ar": "المسيرة"
+          },
+          "phone": "0537 60 60 57",
+          "phones": [
+            "0537 60 60 57"
+          ],
+          "hours": "24h/24h",
+          "address": {
+            "fr": "Sect3 N°336 | (Prés de l'institut Najah)",
+            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain Aouda",
+            "en": "Ain Aouda",
+            "ar": "عين العودة"
+          },
+          "name": {
             "fr": "Pharmacie L'Espoir",
             "en": "L'Espoir Pharmacy",
             "ar": "صيدلية Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
@@ -4271,7 +4311,7 @@
           "phones": [
             "0537 60 08 33"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "Hay Al Maghrib Al Arabi N°3465 Massira 2",
             "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -4291,46 +4331,6 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.921778,-6.889528",
               "waze": "https://waze.com/ul?ll=33.921778,-6.889528&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=33.921778,-6.889528&dirflg=d"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Ain Aouda",
-            "en": "Ain Aouda",
-            "ar": "عين العودة"
-          },
-          "name": {
-            "fr": "PHARMACIE EL MASSIRA",
-            "en": "EL MASSIRA PHARMACY",
-            "ar": "صيدلية المسيرة"
-          },
-          "location": {
-            "fr": "El Massira",
-            "en": "El Massira",
-            "ar": "المسيرة"
-          },
-          "phone": "0537 60 60 57",
-          "phones": [
-            "0537 60 60 57"
-          ],
-          "hours": "9h à 00h00",
-          "address": {
-            "fr": "Sect3 N°336 | (Prés de l'institut Najah)",
-            "en": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-            "ar": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
-          },
-          "coordinates": null,
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda",
-              "waze": "https://www.waze.com/ul?q=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20EL%20MASSIRA%20Ain%20Aouda"
             }
           }
         },
