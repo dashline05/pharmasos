@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -4376,7 +4376,7 @@
           "phones": [
             "0537 70 70 01"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "5 Rue Zagora Hassan (A cote de l'école ST GABRIEL)",
             "en": "5 Rue Zagora Hassan (A cote de l'école ST GABRIEL)",
@@ -4439,6 +4439,49 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.944528,-6.86925",
               "waze": "https://waze.com/ul?ll=33.944528,-6.86925&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=33.944528,-6.86925&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie De La Medina",
+            "en": "De La Medina Pharmacy",
+            "ar": "صيدلية De La Medina"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0537 72 70 62",
+          "phones": [
+            "0537 72 70 62"
+          ],
+          "hours": "9h à 22h30",
+          "address": {
+            "fr": "6 Bis Rue Bab Chellah | 0537 | 72 70 62",
+            "en": "6 Bis Rue Bab Chellah | 0537 | 72 70 62",
+            "ar": "6 Bis Rue Bab Chellah | 0537 | 72 70 62"
+          },
+          "coordinates": {
+            "lat": 34.025417,
+            "lng": -6.833667
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.025417,-6.833667",
+              "waze": "https://waze.com/ul?ll=34.025417,-6.833667&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=34.025417,-6.833667&dirflg=d"
             }
           }
         },
@@ -4579,26 +4622,29 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie Al Mithaliya",
-            "en": "Al Mithaliya Pharmacy",
-            "ar": "صيدلية Al Mithaliya"
+            "fr": "PHARMACIE MARCHE DE GROS",
+            "en": "PHARMACY WHOLESALE MARKET",
+            "ar": "سوق الصيدلة بالجملة"
           },
           "location": {
             "fr": "Yacoub El Mansour",
             "en": "Yacoub El Mansour",
             "ar": "يعقوب المنصور"
           },
-          "phone": "0537 79 59 34",
+          "phone": "0537 23 11 77",
           "phones": [
-            "0537 79 59 34"
+            "0537 23 11 77"
           ],
           "hours": "24h/24h",
           "address": {
-            "fr": "594 Av. Menzeh C.Y.M Hay El Menzeh",
-            "en": "594 Av. Menzeh C.Y.M Hay El Menzeh",
-            "ar": "594 Av. Menzeh C.Y.M Hay El Menzeh"
+            "fr": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M",
+            "en": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M",
+            "ar": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M"
           },
-          "coordinates": null,
+          "coordinates": {
+            "lat": 34.0042276,
+            "lng": -6.8688589
+          },
           "maps": {
             "message": {
               "fr": "Cliquez pour obtenir l'itinéraire sur:",
@@ -4606,9 +4652,9 @@
               "ar": "انقر للحصول على الاتجاهات على:"
             },
             "links": {
-              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Mithaliya%20Rabat",
-              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Mithaliya%20Rabat&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Mithaliya%20Rabat"
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.0042276,-6.8688589",
+              "waze": "https://waze.com/ul?ll=34.0042276,-6.8688589&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=34.0042276,-6.8688589&dirflg=d"
             }
           }
         },
@@ -4662,29 +4708,26 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "PHARMACIE MARCHE DE GROS",
-            "en": "PHARMACY WHOLESALE MARKET",
-            "ar": "سوق الصيدلة بالجملة"
+            "fr": "Pharmacie Al Mithaliya",
+            "en": "Al Mithaliya Pharmacy",
+            "ar": "صيدلية Al Mithaliya"
           },
           "location": {
             "fr": "Yacoub El Mansour",
             "en": "Yacoub El Mansour",
             "ar": "يعقوب المنصور"
           },
-          "phone": "0537 23 11 77",
+          "phone": "0537 79 59 34",
           "phones": [
-            "0537 23 11 77"
+            "0537 79 59 34"
           ],
           "hours": "9h à 00h00",
           "address": {
-            "fr": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M",
-            "en": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M",
-            "ar": "67, Rue N°7, Souk Al Joumla Hay Al Ahbass C.Y.M"
+            "fr": "594 Av. Menzeh C.Y.M Hay El Menzeh",
+            "en": "594 Av. Menzeh C.Y.M Hay El Menzeh",
+            "ar": "594 Av. Menzeh C.Y.M Hay El Menzeh"
           },
-          "coordinates": {
-            "lat": 34.0042276,
-            "lng": -6.8688589
-          },
+          "coordinates": null,
           "maps": {
             "message": {
               "fr": "Cliquez pour obtenir l'itinéraire sur:",
@@ -4692,9 +4735,9 @@
               "ar": "انقر للحصول على الاتجاهات على:"
             },
             "links": {
-              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.0042276,-6.8688589",
-              "waze": "https://waze.com/ul?ll=34.0042276,-6.8688589&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?daddr=34.0042276,-6.8688589&dirflg=d"
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=Pharmacie%20Al%20Mithaliya%20Rabat",
+              "waze": "https://www.waze.com/ul?q=Pharmacie%20Al%20Mithaliya%20Rabat&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=Pharmacie%20Al%20Mithaliya%20Rabat"
             }
           }
         },
@@ -4998,50 +5041,6 @@
             "ar": "سلا"
           },
           "name": {
-            "fr": "Pharmacie CHAFIA",
-            "en": "CHAFIA PHARMACY",
-            "ar": "صيدلية الشافية"
-          },
-          "location": {
-            "fr": "Sala El Jadida",
-            "en": "Sala El Jadida",
-            "ar": "Sala El Jadida"
-          },
-          "phone": "0628 31 48 48",
-          "phones": [
-            "0628 31 48 48",
-            "0537 83 07 97"
-          ],
-          "hours": "24h/24h",
-          "address": {
-            "fr": "Cité Safâa 4 imm 23 app 7 sala al jadida",
-            "en": "Cité Safâa 4 imm 23 app 7 sala al jadida",
-            "ar": "Cité Safâa 4 imm 23 app 7 sala al jadida"
-          },
-          "coordinates": {
-            "lat": 34.015194,
-            "lng": -6.739972
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.015194,-6.739972",
-              "waze": "https://waze.com/ul?ll=34.015194,-6.739972&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?daddr=34.015194,-6.739972&dirflg=d"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Salé",
-            "en": "Sale",
-            "ar": "سلا"
-          },
-          "name": {
             "fr": "Pharmacie ASSABIL",
             "en": "ASSABIL Pharmacy",
             "ar": "صيدلية السبيل"
@@ -5055,7 +5054,7 @@
           "phones": [
             "0530 00 24 34"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Villa 542, Lotissement | des villas",
             "en": "Villa 542, Lotissement | des villas",
@@ -5075,6 +5074,50 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.000778,-6.729417",
               "waze": "https://waze.com/ul?ll=34.000778,-6.729417&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=34.000778,-6.729417&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Salé",
+            "en": "Sale",
+            "ar": "سلا"
+          },
+          "name": {
+            "fr": "Pharmacie CHAFIA",
+            "en": "CHAFIA PHARMACY",
+            "ar": "صيدلية الشافية"
+          },
+          "location": {
+            "fr": "Sala El Jadida",
+            "en": "Sala El Jadida",
+            "ar": "Sala El Jadida"
+          },
+          "phone": "0628 31 48 48",
+          "phones": [
+            "0628 31 48 48",
+            "0537 83 07 97"
+          ],
+          "hours": "9h à 00h00",
+          "address": {
+            "fr": "Cité Safâa 4 imm 23 app 7 sala al jadida",
+            "en": "Cité Safâa 4 imm 23 app 7 sala al jadida",
+            "ar": "Cité Safâa 4 imm 23 app 7 sala al jadida"
+          },
+          "coordinates": {
+            "lat": 34.015194,
+            "lng": -6.739972
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.015194,-6.739972",
+              "waze": "https://waze.com/ul?ll=34.015194,-6.739972&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=34.015194,-6.739972&dirflg=d"
             }
           }
         },
@@ -5271,7 +5314,7 @@
           "phones": [
             "0537 60 85 99"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Rue Imame Chettebi 1992 - Massira I",
             "en": "Rue Imame Chettebi 1992 - Massira I",
@@ -5486,7 +5529,7 @@
           "phones": [
             "0537 60 85 99"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Rue Imame Chettebi 1992 - Massira I",
             "en": "Rue Imame Chettebi 1992 - Massira I",
@@ -5597,5 +5640,5 @@
       ]
     }
   },
-  "total_pharmacies": 128
+  "total_pharmacies": 129
 }
