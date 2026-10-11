@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "sources": {
     "lematin": {
       "pharmacies": [
@@ -4234,6 +4234,50 @@
             "ar": "مراكش"
           },
           "name": {
+            "fr": "PHARMACIE LAMHAMID",
+            "en": "LAMHAMID PHARMACY",
+            "ar": "صيدلية لمحاميد"
+          },
+          "location": {
+            "fr": "M'Hamid",
+            "en": "M'Hamid",
+            "ar": "مْحاميد"
+          },
+          "phone": "0524-36-01-59",
+          "phones": [
+            "0524-36-01-59"
+          ],
+          "hours": {
+            "fr": "24h/24h",
+            "en": "24h/24h",
+            "ar": "24h/24h"
+          },
+          "address": {
+            "fr": "241, Saâda IV Lamhamid Laqwas, près du Docteur Haraki",
+            "en": "241, Saâda IV Lamhamid Laqwas, près du Docteur Haraki",
+            "ar": "241, Saâda IV Lamhamid Laqwas, près du Docteur Haraki"
+          },
+          "coordinates": null,
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=PHARMACIE%20LAMHAMID%20Marrakech",
+              "waze": "https://www.waze.com/ul?q=PHARMACIE%20LAMHAMID%20Marrakech&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?q=PHARMACIE%20LAMHAMID%20Marrakech"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Marrakech",
+            "en": "Marrakech",
+            "ar": "مراكش"
+          },
+          "name": {
             "fr": "Pharmacie Arset Lamaâch",
             "en": "Arset Lamaâch Pharmacy",
             "ar": "صيدلية Arset Lamaâch"
@@ -4426,7 +4470,7 @@
           "phones": [
             "0537 69 19 37"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "184 Av sidi Mohammed Ben Abdellah Akkari | Entre Hôpital My Youssef et la commune de Yaacoub el Mansour",
             "en": "184 Av sidi Mohammed Ben Abdellah Akkari | Entre Hôpital My Youssef et la commune de Yaacoub el Mansour",
@@ -4468,7 +4512,7 @@
             "0537 26 13 00",
             "0662 73 58 59"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "356 Bd Mohamed V",
             "en": "356 Bd Mohamed V",
@@ -4528,6 +4572,49 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.957972,-6.8685",
               "waze": "https://waze.com/ul?ll=33.957972,-6.8685&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=33.957972,-6.8685&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "PHARMACIE CHERQI",
+            "en": "CHERQI PHARMACY",
+            "ar": "صيدلية شرقي"
+          },
+          "location": {
+            "fr": "Medina",
+            "en": "Medina",
+            "ar": "المدينة"
+          },
+          "phone": "0537 20 74 74",
+          "phones": [
+            "0537 20 74 74"
+          ],
+          "hours": "9h à 21h30",
+          "address": {
+            "fr": "100-100 BIS avenue Laalou Medina | 0537 | 20 74 74",
+            "en": "100-100 BIS avenue Laalou Medina | 0537 | 20 74 74",
+            "ar": "100-100 BIS avenue Laalou Medina | 0537 | 20 74 74"
+          },
+          "coordinates": {
+            "lat": 34.028694,
+            "lng": -6.838917
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.028694,-6.838917",
+              "waze": "https://waze.com/ul?ll=34.028694,-6.838917&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=34.028694,-6.838917&dirflg=d"
             }
           }
         },
@@ -4661,50 +4748,6 @@
             "ar": "الرباط"
           },
           "name": {
-            "fr": "Pharmacie ATTAISSIR",
-            "en": "ATTAISSIR PHARMACY",
-            "ar": "صيدلية التيسير"
-          },
-          "location": {
-            "fr": "Yacoub El Mansour",
-            "en": "Yacoub El Mansour",
-            "ar": "يعقوب المنصور"
-          },
-          "phone": "0537 28 02 96",
-          "phones": [
-            "0537 28 02 96",
-            "0537 79 78 26"
-          ],
-          "hours": "24h/24h",
-          "address": {
-            "fr": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)",
-            "en": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)",
-            "ar": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)"
-          },
-          "coordinates": {
-            "lat": 33.977889,
-            "lng": -6.892361
-          },
-          "maps": {
-            "message": {
-              "fr": "Cliquez pour obtenir l'itinéraire sur:",
-              "en": "Click to get directions on:",
-              "ar": "انقر للحصول على الاتجاهات على:"
-            },
-            "links": {
-              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.977889,-6.892361",
-              "waze": "https://waze.com/ul?ll=33.977889,-6.892361&navigate=yes",
-              "apple_maps": "http://maps.apple.com/?daddr=33.977889,-6.892361&dirflg=d"
-            }
-          }
-        },
-        {
-          "city": {
-            "fr": "Rabat",
-            "en": "Rabat",
-            "ar": "الرباط"
-          },
-          "name": {
             "fr": "Pharmacie CHOUKROALLAH",
             "en": "CHOUKROALLAH PHARMACY",
             "ar": "صيدلية شكر الله"
@@ -4738,6 +4781,50 @@
               "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.9876508,-6.8732679",
               "waze": "https://waze.com/ul?ll=33.9876508,-6.8732679&navigate=yes",
               "apple_maps": "http://maps.apple.com/?daddr=33.9876508,-6.8732679&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Rabat",
+            "en": "Rabat",
+            "ar": "الرباط"
+          },
+          "name": {
+            "fr": "Pharmacie ATTAISSIR",
+            "en": "ATTAISSIR PHARMACY",
+            "ar": "صيدلية التيسير"
+          },
+          "location": {
+            "fr": "Yacoub El Mansour",
+            "en": "Yacoub El Mansour",
+            "ar": "يعقوب المنصور"
+          },
+          "phone": "0537 28 02 96",
+          "phones": [
+            "0537 28 02 96",
+            "0537 79 78 26"
+          ],
+          "hours": "9h à 00h00",
+          "address": {
+            "fr": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)",
+            "en": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)",
+            "ar": "443 Rue Alhassoune Hay Al Manzah C.Y.M | (A Côté De Youpi Et Du Restaurant Piccola Italia)"
+          },
+          "coordinates": {
+            "lat": 33.977889,
+            "lng": -6.892361
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.977889,-6.892361",
+              "waze": "https://waze.com/ul?ll=33.977889,-6.892361&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=33.977889,-6.892361&dirflg=d"
             }
           }
         },
@@ -5055,7 +5142,7 @@
             "0537 53 02 63",
             "0706 53 20 45"
           ],
-          "hours": "24h/24h",
+          "hours": "9h à 00h00",
           "address": {
             "fr": "N°1 Alleé Said Hajji",
             "en": "N°1 Alleé Said Hajji",
@@ -5226,7 +5313,7 @@
             "0537 64 24 23",
             "0673 03 07 10"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf)",
             "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf)",
@@ -5253,6 +5340,50 @@
             "ar": "تمارة"
           },
           "name": {
+            "fr": "PHARMACIE RIM",
+            "en": "RIM PHARMACY",
+            "ar": "صيدلية ريم"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "الكيش أوداية"
+          },
+          "phone": "0537 56 18 13",
+          "phones": [
+            "0537 56 18 13",
+            "0611 10 31 34"
+          ],
+          "hours": "9h à 23h00",
+          "address": {
+            "fr": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13",
+            "en": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13",
+            "ar": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13"
+          },
+          "coordinates": {
+            "lat": 33.940889,
+            "lng": -6.888611
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.940889,-6.888611",
+              "waze": "https://waze.com/ul?ll=33.940889,-6.888611&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=33.940889,-6.888611&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Témara",
+            "en": "Temara",
+            "ar": "تمارة"
+          },
+          "name": {
             "fr": "Pharmacie BEN CHEIKH",
             "en": "BEN CHEIKH PHARMACY",
             "ar": "صيدلية بن الشيخ"
@@ -5266,7 +5397,7 @@
           "phones": [
             "0537 60 69 99"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "N°116, Secteur 5 , Lot 50 Hectar Massira 2",
             "en": "N°116, Secteur 5 , Lot 50 Hectar Massira 2",
@@ -5470,7 +5601,7 @@
             "0537 64 24 23",
             "0673 03 07 10"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf)",
             "en": "Lot Zahrat Al Amal Imm 20 N°2 (Route Ain Hallouf)",
@@ -5497,6 +5628,50 @@
             "ar": "عين العودة"
           },
           "name": {
+            "fr": "PHARMACIE RIM",
+            "en": "RIM PHARMACY",
+            "ar": "صيدلية ريم"
+          },
+          "location": {
+            "fr": "El Guich Oudaya",
+            "en": "El Guich Oudaya",
+            "ar": "الكيش أوداية"
+          },
+          "phone": "0537 56 18 13",
+          "phones": [
+            "0537 56 18 13",
+            "0611 10 31 34"
+          ],
+          "hours": "9h à 23h00",
+          "address": {
+            "fr": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13",
+            "en": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13",
+            "ar": "496 Guich Oudayas | (En Face BIM et à 150M | de la mosquée belbachir | et attijariwafa bank) | 0537 | 56 18 13"
+          },
+          "coordinates": {
+            "lat": 33.940889,
+            "lng": -6.888611
+          },
+          "maps": {
+            "message": {
+              "fr": "Cliquez pour obtenir l'itinéraire sur:",
+              "en": "Click to get directions on:",
+              "ar": "انقر للحصول على الاتجاهات على:"
+            },
+            "links": {
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=33.940889,-6.888611",
+              "waze": "https://waze.com/ul?ll=33.940889,-6.888611&navigate=yes",
+              "apple_maps": "http://maps.apple.com/?daddr=33.940889,-6.888611&dirflg=d"
+            }
+          }
+        },
+        {
+          "city": {
+            "fr": "Ain Aouda",
+            "en": "Ain Aouda",
+            "ar": "عين العودة"
+          },
+          "name": {
             "fr": "Pharmacie BEN CHEIKH",
             "en": "BEN CHEIKH PHARMACY",
             "ar": "صيدلية بن الشيخ"
@@ -5510,7 +5685,7 @@
           "phones": [
             "0537 60 69 99"
           ],
-          "hours": "9h à 00h00",
+          "hours": "24h/24h",
           "address": {
             "fr": "N°116, Secteur 5 , Lot 50 Hectar Massira 2",
             "en": "N°116, Secteur 5 , Lot 50 Hectar Massira 2",
@@ -5656,5 +5831,5 @@
       ]
     }
   },
-  "total_pharmacies": 130
+  "total_pharmacies": 134
 }
